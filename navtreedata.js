@@ -24,7 +24,7 @@
 */
 var NAVTREE =
 [
-  [ "Optimized Machine Learning Inference for Unreal", "index.html", [
+  [ "NNEngine", "index.html", [
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
