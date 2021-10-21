@@ -45,4 +45,5 @@ rem del html\_pose_detector_8h_source.html
 rem del html\_pose_estimator_8h_source.html
 del html\_texture_process_component_8h_source.html
 
-rd /s /q  %doxypath%\Plugins
+rd /s /q  Plugins
+rd /s /q  latex
