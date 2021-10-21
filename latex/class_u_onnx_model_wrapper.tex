@@ -1,0 +1,223 @@
+\hypertarget{class_u_onnx_model_wrapper}{}\doxysection{UOnnx\+Model\+Wrapper Class Reference}
+\label{class_u_onnx_model_wrapper}\index{UOnnxModelWrapper@{UOnnxModelWrapper}}
+
+
+Inheritance diagram for UOnnx\+Model\+Wrapper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=190pt]{class_u_onnx_model_wrapper__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UOnnx\+Model\+Wrapper\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=216pt]{class_u_onnx_model_wrapper__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a89b68daf2e43a065d3c21e1ea20fcefe}{init}} (const FString \&onnx\+File\+Path, const EOnnx\+Provider onnx\+Provider, const int gpu\+Device\+Id)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a931644a8f8d0352a00a0faeab3f4ca13}{get\+Input\+Tensors\+Info}} (TArray$<$ \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} $>$ \&input\+Tensors\+Info)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a9b824227fc1b174238030a869b1a6332}{get\+Output\+Tensors\+Info}} (TArray$<$ \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} $>$ \&output\+Tensors\+Info)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a203e2c17a63e4af428661d19c416dc51}{bind\+Input\+Byte\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ uint8 $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_acc76e7b38acdbba18c0c95ff4eea0e28}{bind\+Input\+Int\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ int $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a640ad16a6c5b9bec9935dbd9705784a9}{bind\+Input\+Int64\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ int64 $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_af3b60caf92c6ebb01e0684619cce796b}{bind\+Input\+Float\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ float $>$ \&input)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a21ee4fb11f7a7ed5cd5849c2267f24fb}{bind\+Output\+Byte\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ uint8 $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a3fd46d1bb10483eded2a354a55f04925}{bind\+Output\+Int\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ int $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a058f76d3a49819977a4be34dc439ad3b}{bind\+Output\+Int64\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ int64 $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_adf5ba3c8022c987c579f9ab3a723ac23}{bind\+Output\+Float\+Array}} (const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&tensor\+Info, UPARAM(ref) TArray$<$ float $>$ \&data\+Buffer)
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_abf37a54dcbd573ae85c60e3df19cafb8}{clear\+Bound\+Inputs}} ()
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a4346680518426c2f3efd79057d498c42}{clear\+Bound\+Outputs}} ()
+\item 
+void \mbox{\hyperlink{class_u_onnx_model_wrapper_a07eeeea962e22e743d7e22c9067637f3}{run}} ()
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a42206f65ebf57356569c1e544a00945f}\label{class_u_onnx_model_wrapper_a42206f65ebf57356569c1e544a00945f}} 
+\mbox{\hyperlink{class_onnx_model}{Onnx\+Model}} $\ast$ {\bfseries onnx\+Model}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Wrapper of \mbox{\hyperlink{class_onnx_model}{Onnx\+Model}} to expose functions to Bludprint. 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a203e2c17a63e4af428661d19c416dc51}\label{class_u_onnx_model_wrapper_a203e2c17a63e4af428661d19c416dc51}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindInputByteArray@{bindInputByteArray}}
+\index{bindInputByteArray@{bindInputByteArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindInputByteArray()}{bindInputByteArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Input\+Byte\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ uint8 $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used as the input to this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the input tensor. For models with fixed shape, just use input\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in input\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used as the input to this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_af3b60caf92c6ebb01e0684619cce796b}\label{class_u_onnx_model_wrapper_af3b60caf92c6ebb01e0684619cce796b}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindInputFloatArray@{bindInputFloatArray}}
+\index{bindInputFloatArray@{bindInputFloatArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindInputFloatArray()}{bindInputFloatArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Input\+Float\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ float $>$ \&}]{input }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used as the input to this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the input tensor. For models with fixed shape, just use input\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in input\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used as the input to this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a640ad16a6c5b9bec9935dbd9705784a9}\label{class_u_onnx_model_wrapper_a640ad16a6c5b9bec9935dbd9705784a9}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindInputInt64Array@{bindInputInt64Array}}
+\index{bindInputInt64Array@{bindInputInt64Array}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindInputInt64Array()}{bindInputInt64Array()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Input\+Int64\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ int64 $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used as the input to this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the input tensor. For models with fixed shape, just use input\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in input\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used as the input to this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_acc76e7b38acdbba18c0c95ff4eea0e28}\label{class_u_onnx_model_wrapper_acc76e7b38acdbba18c0c95ff4eea0e28}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindInputIntArray@{bindInputIntArray}}
+\index{bindInputIntArray@{bindInputIntArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindInputIntArray()}{bindInputIntArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Input\+Int\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ int $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used as the input to this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the input tensor. For models with fixed shape, just use input\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in input\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used as the input to this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a21ee4fb11f7a7ed5cd5849c2267f24fb}\label{class_u_onnx_model_wrapper_a21ee4fb11f7a7ed5cd5849c2267f24fb}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindOutputByteArray@{bindOutputByteArray}}
+\index{bindOutputByteArray@{bindOutputByteArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindOutputByteArray()}{bindOutputByteArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Output\+Byte\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ uint8 $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used for the output from this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the output tensor. For models with fixed shape, just use output\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in output\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used for the output from this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_adf5ba3c8022c987c579f9ab3a723ac23}\label{class_u_onnx_model_wrapper_adf5ba3c8022c987c579f9ab3a723ac23}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindOutputFloatArray@{bindOutputFloatArray}}
+\index{bindOutputFloatArray@{bindOutputFloatArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindOutputFloatArray()}{bindOutputFloatArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Output\+Float\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ float $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used for the output from this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the output tensor. For models with fixed shape, just use output\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in output\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used for the output from this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a058f76d3a49819977a4be34dc439ad3b}\label{class_u_onnx_model_wrapper_a058f76d3a49819977a4be34dc439ad3b}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindOutputInt64Array@{bindOutputInt64Array}}
+\index{bindOutputInt64Array@{bindOutputInt64Array}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindOutputInt64Array()}{bindOutputInt64Array()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Output\+Int64\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ int64 $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used for the output from this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the output tensor. For models with fixed shape, just use output\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in output\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used for the output from this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a3fd46d1bb10483eded2a354a55f04925}\label{class_u_onnx_model_wrapper_a3fd46d1bb10483eded2a354a55f04925}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!bindOutputIntArray@{bindOutputIntArray}}
+\index{bindOutputIntArray@{bindOutputIntArray}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{bindOutputIntArray()}{bindOutputIntArray()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::bind\+Output\+Int\+Array (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} \&}]{tensor\+Info,  }\item[{UPARAM(ref) TArray$<$ int $>$ \&}]{data\+Buffer }\end{DoxyParamCaption})}
+
+Specify a pre-\/allocated data buffer that will be used for the output from this model. The data will be interpreted as a tensor of specified information. 
+\begin{DoxyParams}{Parameters}
+{\em tensor\+Info} & The information (name, shape, etc.) of the output tensor. For models with fixed shape, just use output\+Tensors\+Info. For models with dynamic shape, change the values of size and shape in output\+Tensors\+Info \\
+\hline
+{\em data\+Buffer} & Pointer for the pre-\/allocated data buffer that will be used for the output from this model \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_abf37a54dcbd573ae85c60e3df19cafb8}\label{class_u_onnx_model_wrapper_abf37a54dcbd573ae85c60e3df19cafb8}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!clearBoundInputs@{clearBoundInputs}}
+\index{clearBoundInputs@{clearBoundInputs}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{clearBoundInputs()}{clearBoundInputs()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::clear\+Bound\+Inputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the boud inputs \mbox{\Hypertarget{class_u_onnx_model_wrapper_a4346680518426c2f3efd79057d498c42}\label{class_u_onnx_model_wrapper_a4346680518426c2f3efd79057d498c42}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!clearBoundOutputs@{clearBoundOutputs}}
+\index{clearBoundOutputs@{clearBoundOutputs}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{clearBoundOutputs()}{clearBoundOutputs()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::clear\+Bound\+Outputs (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Clear the boud outputs \mbox{\Hypertarget{class_u_onnx_model_wrapper_a931644a8f8d0352a00a0faeab3f4ca13}\label{class_u_onnx_model_wrapper_a931644a8f8d0352a00a0faeab3f4ca13}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!getInputTensorsInfo@{getInputTensorsInfo}}
+\index{getInputTensorsInfo@{getInputTensorsInfo}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{getInputTensorsInfo()}{getInputTensorsInfo()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::get\+Input\+Tensors\+Info (\begin{DoxyParamCaption}\item[{TArray$<$ \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} $>$ \&}]{input\+Tensors\+Info }\end{DoxyParamCaption})}
+
+Get the name, size, shape, and type of the input tensors of this model 
+\begin{DoxyParams}{Parameters}
+{\em input\+Tensors\+Info} & The name, size, shape, and type of the input tensors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a9b824227fc1b174238030a869b1a6332}\label{class_u_onnx_model_wrapper_a9b824227fc1b174238030a869b1a6332}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!getOutputTensorsInfo@{getOutputTensorsInfo}}
+\index{getOutputTensorsInfo@{getOutputTensorsInfo}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{getOutputTensorsInfo()}{getOutputTensorsInfo()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::get\+Output\+Tensors\+Info (\begin{DoxyParamCaption}\item[{TArray$<$ \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnx\+Tensor\+Info}} $>$ \&}]{output\+Tensors\+Info }\end{DoxyParamCaption})}
+
+Get the name, size, shape, and type of the output tensors of this model 
+\begin{DoxyParams}{Parameters}
+{\em output\+Tensors\+Info} & The name, size, shape, and type of the output tensors \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a89b68daf2e43a065d3c21e1ea20fcefe}\label{class_u_onnx_model_wrapper_a89b68daf2e43a065d3c21e1ea20fcefe}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!init@{init}}
+\index{init@{init}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::init (\begin{DoxyParamCaption}\item[{const FString \&}]{onnx\+File\+Path,  }\item[{const EOnnx\+Provider}]{onnx\+Provider,  }\item[{const int}]{gpu\+Device\+Id }\end{DoxyParamCaption})}
+
+Open ONNX model and initialize it. 
+\begin{DoxyParams}{Parameters}
+{\em onnx\+File\+Path} & Path of the .onnx file \\
+\hline
+{\em onnx\+Provider} & Execution provider used for this model \\
+\hline
+{\em gpu\+Device\+Id} & Which GPU to be used \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_onnx_model_wrapper_a07eeeea962e22e743d7e22c9067637f3}\label{class_u_onnx_model_wrapper_a07eeeea962e22e743d7e22c9067637f3}} 
+\index{UOnnxModelWrapper@{UOnnxModelWrapper}!run@{run}}
+\index{run@{run}!UOnnxModelWrapper@{UOnnxModelWrapper}}
+\doxysubsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily void UOnnx\+Model\+Wrapper\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Execute the model. Note that you need to bind input and output before calling this method. 

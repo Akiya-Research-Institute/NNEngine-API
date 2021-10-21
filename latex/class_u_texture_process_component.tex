@@ -1,0 +1,171 @@
+\hypertarget{class_u_texture_process_component}{}\doxysection{UTexture\+Process\+Component Class Reference}
+\label{class_u_texture_process_component}\index{UTextureProcessComponent@{UTextureProcessComponent}}
+
+
+Inheritance diagram for UTexture\+Process\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_texture_process_component__inherit__graph}
+\end{center}
+\end{figure}
+
+
+Collaboration diagram for UTexture\+Process\+Component\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=221pt]{class_u_texture_process_component__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_u_texture_process_component_a5e4d21aea8a060563a6e3204ef41b763}{UTexture\+Process\+Component}} ()
+\item 
+void \mbox{\hyperlink{class_u_texture_process_component_a04a028218773fff1b6a2857678282f5f}{resize}} (UTexture $\ast$input\+Texture, TArray$<$ uint8 $>$ \&output\+Hx\+Wx\+BGR, FVector2D \&uv\+Scaling\+Factor, const bool do\+Flip\+Image=false, const EImage\+Rotation do\+Rotate\+Image=EImage\+Rotation\+::\+None)
+\item 
+void \mbox{\hyperlink{class_u_texture_process_component_a3459566b686aa23acb7f401df521c123}{affine\+Transform}} (UTexture $\ast$input\+Texture, TArray$<$ uint8 $>$ \&output\+Hx\+Wx\+BGR, const \mbox{\hyperlink{struct_f_affine_mat2_d}{FAffine\+Mat2D}} \&inverse\+Normalized\+Affine\+Mat, const bool do\+Flip\+Image=false, const EImage\+Rotation do\+Rotate\+Image=EImage\+Rotation\+::\+None)
+\item 
+UTexture\+Render\+Target2D $\ast$ \mbox{\hyperlink{class_u_texture_process_component_a005393743c52fafd56f51c27f8e26c4a}{render\+Affine\+Transformed\+Frame}} (UTexture $\ast$input\+Texture, const \mbox{\hyperlink{struct_f_affine_mat2_d}{FAffine\+Mat2D}} \&inverse\+Normalized\+Affine\+Mat, const bool do\+Flip\+Image, const EImage\+Rotation do\+Rotate\+Image)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_u_texture_process_component_ae17d8e93376e423531f7c2938c75a57e}{destination\+Width}}
+\item 
+int \mbox{\hyperlink{class_u_texture_process_component_a957b8209bf1b4ca00992b7e8547daba4}{destination\+Height}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_u_texture_process_component_a680e21e2f336d36ef4809109cf8eb718}{calc\+Aspect\+Ratio}} (UTexture $\ast$input\+Texture, FVector2D \&uv\+Scaling\+Factor)
+\item 
+void \mbox{\hyperlink{class_u_texture_process_component_ae47a677909c282f7327b5f8a59c0dc18}{get\+Pixel\+Data}} (UTexture\+Render\+Target2D $\ast$render\+Target, TArray$<$ uint8 $>$ \&output\+Hx\+Wx\+BGR)
+\end{DoxyCompactItemize}
+\doxysubsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+TArray$<$ uint8 $>$ \mbox{\hyperlink{class_u_texture_process_component_ad0a1d58e409973d3e0d2673d21098884}{output\+Image\+Buffer}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Compnent to precess UTexture 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_u_texture_process_component_a5e4d21aea8a060563a6e3204ef41b763}\label{class_u_texture_process_component_a5e4d21aea8a060563a6e3204ef41b763}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!UTextureProcessComponent@{UTextureProcessComponent}}
+\index{UTextureProcessComponent@{UTextureProcessComponent}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{UTextureProcessComponent()}{UTextureProcessComponent()}}
+{\footnotesize\ttfamily UTexture\+Process\+Component\+::\+UTexture\+Process\+Component (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Default constructor 
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_u_texture_process_component_a3459566b686aa23acb7f401df521c123}\label{class_u_texture_process_component_a3459566b686aa23acb7f401df521c123}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!affineTransform@{affineTransform}}
+\index{affineTransform@{affineTransform}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{affineTransform()}{affineTransform()}}
+{\footnotesize\ttfamily void UTexture\+Process\+Component\+::affine\+Transform (\begin{DoxyParamCaption}\item[{UTexture $\ast$}]{input\+Texture,  }\item[{TArray$<$ uint8 $>$ \&}]{output\+Hx\+Wx\+BGR,  }\item[{const \mbox{\hyperlink{struct_f_affine_mat2_d}{FAffine\+Mat2D}} \&}]{inverse\+Normalized\+Affine\+Mat,  }\item[{const bool}]{do\+Flip\+Image = {\ttfamily false},  }\item[{const EImage\+Rotation}]{do\+Rotate\+Image = {\ttfamily EImageRotation\+:\+:None} }\end{DoxyParamCaption})}
+
+Affine transform the image to (destination\+Height x destination\+Width) 
+\begin{DoxyParams}{Parameters}
+{\em input\+Texture} & Original image \\
+\hline
+{\em output\+Hx\+Wx\+BGR} & The image after affine transform as an array of bytes whose length is (Height x Width x 3) \\
+\hline
+{\em inverse\+Normalized\+Affine\+Mat} & The matrix of inverse of the affine transform. The scales of original and destination images must be normalized to (1, 1). This is equivalent to the matrix which represents the affine transform in the UV space. \\
+\hline
+{\em do\+Flip\+Image} & Whether to flip the image during resizing. \\
+\hline
+{\em do\+Rotate\+Image} & Whether to rotate the image during resizing. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_texture_process_component_a680e21e2f336d36ef4809109cf8eb718}\label{class_u_texture_process_component_a680e21e2f336d36ef4809109cf8eb718}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!calcAspectRatio@{calcAspectRatio}}
+\index{calcAspectRatio@{calcAspectRatio}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{calcAspectRatio()}{calcAspectRatio()}}
+{\footnotesize\ttfamily void UTexture\+Process\+Component\+::calc\+Aspect\+Ratio (\begin{DoxyParamCaption}\item[{UTexture $\ast$}]{input\+Texture,  }\item[{FVector2D \&}]{uv\+Scaling\+Factor }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Calculate the aspect ratio of the image. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Texture} & Input image \\
+\hline
+{\em uv\+Scaling\+Factor} & The scaling factor of the UV of the image to keep the aspect ratio of the image. X = 1 and Y \texorpdfstring{$>$}{>} 1 for a landscape image. X \texorpdfstring{$>$}{>} 1 and Y = 1 for a portrait image. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_texture_process_component_ae47a677909c282f7327b5f8a59c0dc18}\label{class_u_texture_process_component_ae47a677909c282f7327b5f8a59c0dc18}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!getPixelData@{getPixelData}}
+\index{getPixelData@{getPixelData}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{getPixelData()}{getPixelData()}}
+{\footnotesize\ttfamily void UTexture\+Process\+Component\+::get\+Pixel\+Data (\begin{DoxyParamCaption}\item[{UTexture\+Render\+Target2D $\ast$}]{render\+Target,  }\item[{TArray$<$ uint8 $>$ \&}]{output\+Hx\+Wx\+BGR }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [protected]}}
+
+Get raw data of the pixels of render target. The alpha channel of the original image gets removed in the output. 
+\begin{DoxyParams}{Parameters}
+{\em render\+Target} & Original image \\
+\hline
+{\em output\+Hx\+Wx\+BGR} & The raw data of the pixels as an array of bytes whose length is (Height x Width x 3) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_u_texture_process_component_a005393743c52fafd56f51c27f8e26c4a}\label{class_u_texture_process_component_a005393743c52fafd56f51c27f8e26c4a}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!renderAffineTransformedFrame@{renderAffineTransformedFrame}}
+\index{renderAffineTransformedFrame@{renderAffineTransformedFrame}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{renderAffineTransformedFrame()}{renderAffineTransformedFrame()}}
+{\footnotesize\ttfamily UTexture\+Render\+Target2D $\ast$ UTexture\+Process\+Component\+::render\+Affine\+Transformed\+Frame (\begin{DoxyParamCaption}\item[{UTexture $\ast$}]{input\+Texture,  }\item[{const \mbox{\hyperlink{struct_f_affine_mat2_d}{FAffine\+Mat2D}} \&}]{inverse\+Normalized\+Affine\+Mat,  }\item[{const bool}]{do\+Flip\+Image,  }\item[{const EImage\+Rotation}]{do\+Rotate\+Image }\end{DoxyParamCaption})}
+
+Execute the affine transform, implemented by BP 
+\begin{DoxyParams}{Parameters}
+{\em input\+Texture} & Original image \\
+\hline
+{\em inverse\+Normalized\+Affine\+Mat} & The matrix of inverse of the affine transform. The scales of original and destination images must be normalized to (1, 1). \\
+\hline
+{\em do\+Flip\+Image} & Whether to flip the image during resizing. \\
+\hline
+{\em do\+Rotate\+Image} & Whether to rotate the image during resizing. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The image after affine transform 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_u_texture_process_component_a04a028218773fff1b6a2857678282f5f}\label{class_u_texture_process_component_a04a028218773fff1b6a2857678282f5f}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!resize@{resize}}
+\index{resize@{resize}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily void UTexture\+Process\+Component\+::resize (\begin{DoxyParamCaption}\item[{UTexture $\ast$}]{input\+Texture,  }\item[{TArray$<$ uint8 $>$ \&}]{output\+Hx\+Wx\+BGR,  }\item[{FVector2D \&}]{uv\+Scaling\+Factor,  }\item[{const bool}]{do\+Flip\+Image = {\ttfamily false},  }\item[{const EImage\+Rotation}]{do\+Rotate\+Image = {\ttfamily EImageRotation\+:\+:None} }\end{DoxyParamCaption})}
+
+Resize the image to (destination\+Height x destination\+Width) while maintaining the aspect ratio. 
+\begin{DoxyParams}{Parameters}
+{\em input\+Texture} & Original image \\
+\hline
+{\em output\+Hx\+Wx\+BGR} & Resized image as an array of bytes whose length is (destination\+Height x destination\+Width x 3) \\
+\hline
+{\em uv\+Scaling\+Factor} & The scaling factor of the UV of the image to keep the aspect ratio of the image. X = 1 and Y \texorpdfstring{$>$}{>} 1 for a landscape image. X \texorpdfstring{$>$}{>} 1 and Y = 1 for a portrait image. \\
+\hline
+{\em do\+Flip\+Image} & Whether to flip the image during resizing. \\
+\hline
+{\em do\+Rotate\+Image} & Whether to rotate the image during resizing. \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_u_texture_process_component_a957b8209bf1b4ca00992b7e8547daba4}\label{class_u_texture_process_component_a957b8209bf1b4ca00992b7e8547daba4}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!destinationHeight@{destinationHeight}}
+\index{destinationHeight@{destinationHeight}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{destinationHeight}{destinationHeight}}
+{\footnotesize\ttfamily int UTexture\+Process\+Component\+::destination\+Height}
+
+The height of the image after processing \mbox{\Hypertarget{class_u_texture_process_component_ae17d8e93376e423531f7c2938c75a57e}\label{class_u_texture_process_component_ae17d8e93376e423531f7c2938c75a57e}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!destinationWidth@{destinationWidth}}
+\index{destinationWidth@{destinationWidth}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{destinationWidth}{destinationWidth}}
+{\footnotesize\ttfamily int UTexture\+Process\+Component\+::destination\+Width}
+
+The width of the image after processing \mbox{\Hypertarget{class_u_texture_process_component_ad0a1d58e409973d3e0d2673d21098884}\label{class_u_texture_process_component_ad0a1d58e409973d3e0d2673d21098884}} 
+\index{UTextureProcessComponent@{UTextureProcessComponent}!outputImageBuffer@{outputImageBuffer}}
+\index{outputImageBuffer@{outputImageBuffer}!UTextureProcessComponent@{UTextureProcessComponent}}
+\doxysubsubsection{\texorpdfstring{outputImageBuffer}{outputImageBuffer}}
+{\footnotesize\ttfamily TArray$<$uint8$>$ UTexture\+Process\+Component\+::output\+Image\+Buffer\hspace{0.3cm}{\ttfamily [protected]}}
+
+The buffer for the image after processing 

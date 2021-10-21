@@ -1,0 +1,41 @@
+\hypertarget{_onnx_model_8h_source}{}\doxysection{Onnx\+Model.\+h}
+\label{_onnx_model_8h_source}\index{Plugins/OnnxRuntime/Source/OnnxRuntime/Public/OnnxModel.h@{Plugins/OnnxRuntime/Source/OnnxRuntime/Public/OnnxModel.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Copyright 2021 Akiya Research Institute, Inc. All Rights Reserved}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include "{}OnnxUtilityLibrary.h"{}}}
+\DoxyCodeLine{7 }
+\DoxyCodeLine{11 \textcolor{keyword}{class }ONNXRUNTIME\_API \mbox{\hyperlink{class_onnx_model}{OnnxModel}}}
+\DoxyCodeLine{12 \{}
+\DoxyCodeLine{13 \textcolor{keyword}{public}:}
+\DoxyCodeLine{20     \mbox{\hyperlink{class_onnx_model_a2508b98cced724f617049c30644b5c3b}{OnnxModel}}(\textcolor{keyword}{const} FString onnxFilePath, \textcolor{keyword}{const} EOnnxProvider onnxProvider, \textcolor{keyword}{const} \textcolor{keywordtype}{int} gpuDeviceId = 0);}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{25     \mbox{\hyperlink{class_onnx_model_ad565f282fd7e7552063d09476e22a9a5}{\string~OnnxModel}}();}
+\DoxyCodeLine{26 }
+\DoxyCodeLine{30     TArray<FOnnxTensorInfo> \mbox{\hyperlink{class_onnx_model_a61e41b7556d8b7a9d492b755041bda74}{inputTensorsInfo}};}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{35     TArray<FOnnxTensorInfo> \mbox{\hyperlink{class_onnx_model_abc55011b9b82388c9b79bf8966122a94}{outputTensorsInfo}};}
+\DoxyCodeLine{36 }
+\DoxyCodeLine{43     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_onnx_model_abc4f9b17570cb07d52ea68a01a02d81e}{bindInput}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnxTensorInfo}}\& tensorInfo, \textcolor{keywordtype}{void}* dataBuffer);}
+\DoxyCodeLine{44 }
+\DoxyCodeLine{51     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_onnx_model_ab4e00009de2d664ad4141da7165d8a85}{bindOutput}}(\textcolor{keyword}{const} \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnxTensorInfo}}\& tensorInfo, \textcolor{keywordtype}{void}* dataBuffer);}
+\DoxyCodeLine{52 }
+\DoxyCodeLine{56     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_onnx_model_a1612ec615d739088a9b461ed7cd6fb2d}{clearBoundInputs}}();}
+\DoxyCodeLine{57 }
+\DoxyCodeLine{61     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_onnx_model_ab0fe91d917dec120a51cd7375c3259fb}{clearBoundOutputs}}();}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{67     \textcolor{keywordtype}{void} \mbox{\hyperlink{class_onnx_model_a3a2e9b1616ee1967d9238716a2d2383b}{run}}();}
+\DoxyCodeLine{68 }
+\DoxyCodeLine{69 \textcolor{keyword}{private}:}
+\DoxyCodeLine{70     Ort::Env env\{ ORT\_LOGGING\_LEVEL\_ERROR, \textcolor{stringliteral}{"{}Default"{}} \};}
+\DoxyCodeLine{71     Ort::MemoryInfo memoryInfo = Ort::MemoryInfo::CreateCpu(OrtAllocatorType::OrtArenaAllocator, OrtMemTypeDefault);}
+\DoxyCodeLine{72     Ort::Session* session;}
+\DoxyCodeLine{73     Ort::SessionOptions* sessionOption;}
+\DoxyCodeLine{74     Ort::IoBinding* binding;}
+\DoxyCodeLine{75 \};}
+
+\end{DoxyCode}

@@ -1,0 +1,94 @@
+\hypertarget{_onnx_utility_library_8h_source}{}\doxysection{Onnx\+Utility\+Library.\+h}
+\label{_onnx_utility_library_8h_source}\index{Plugins/OnnxRuntime/Source/OnnxRuntime/Public/OnnxUtilityLibrary.h@{Plugins/OnnxRuntime/Source/OnnxRuntime/Public/OnnxUtilityLibrary.h}}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{comment}{// Copyright 2021 Akiya Research Institute, Inc. All Rights Reserved}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{4 \textcolor{preprocessor}{\#pragma warning(disable: 4668) }\textcolor{comment}{// Disable <'symbol' is not defined as a preprocessor macro, replacing with '0' for 'directives'>}}
+\DoxyCodeLine{5 }
+\DoxyCodeLine{6 \textcolor{preprocessor}{\#include <onnxruntime\_cxx\_api.h>}}
+\DoxyCodeLine{7 \textcolor{preprocessor}{\#ifdef USE\_CUDA}}
+\DoxyCodeLine{8 \textcolor{preprocessor}{\#include <onnxruntime/core/providers/cuda/cuda\_provider\_factory.h>}}
+\DoxyCodeLine{9 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{10 \textcolor{preprocessor}{\#ifdef USE\_TensorRT}}
+\DoxyCodeLine{11 \textcolor{preprocessor}{\#include <onnxruntime/core/providers/tensorrt/tensorrt\_provider\_factory.h>}}
+\DoxyCodeLine{12 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{13 \textcolor{preprocessor}{\#ifdef USE\_DirectML}}
+\DoxyCodeLine{14 \textcolor{preprocessor}{\#include <onnxruntime/core/providers/dml/dml\_provider\_factory.h>}}
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{16 }
+\DoxyCodeLine{17 \textcolor{preprocessor}{\#include "{}CoreMinimal.h"{}}}
+\DoxyCodeLine{18 \textcolor{preprocessor}{\#include "{}Kismet/BlueprintFunctionLibrary.h"{}}}
+\DoxyCodeLine{19 \textcolor{preprocessor}{\#include "{}OnnxUtilityLibrary.generated.h"{}}}
+\DoxyCodeLine{20 }
+\DoxyCodeLine{21 UENUM(BlueprintType, Category = \textcolor{stringliteral}{"{}ONNX Runtime"{}}) }
+\DoxyCodeLine{22 }
+\DoxyCodeLine{23 enum class EOnnxProvider : uint8}
+\DoxyCodeLine{24 \{}
+\DoxyCodeLine{26     CPU,}
+\DoxyCodeLine{28     GPU\_DirectML,}
+\DoxyCodeLine{30     GPU\_CUDA,}
+\DoxyCodeLine{32     GPU\_TensorRT}
+\DoxyCodeLine{33 \};}
+\DoxyCodeLine{34 }
+\DoxyCodeLine{35 UENUM(BlueprintType, Category = \textcolor{stringliteral}{"{}ONNX Runtime"{}}) }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 enum class EOnnxTensorDataType : uint8}
+\DoxyCodeLine{38 \{}
+\DoxyCodeLine{40     UNDEFINED,}
+\DoxyCodeLine{42     FLOAT,}
+\DoxyCodeLine{44     UINT8,}
+\DoxyCodeLine{46     INT8,}
+\DoxyCodeLine{48     UINT16,}
+\DoxyCodeLine{50     INT16,}
+\DoxyCodeLine{52     INT32,}
+\DoxyCodeLine{54     INT64,}
+\DoxyCodeLine{56     STRING,}
+\DoxyCodeLine{58     BOOL,}
+\DoxyCodeLine{60     FLOAT16,}
+\DoxyCodeLine{62     DOUBLE,}
+\DoxyCodeLine{64     UINT32,}
+\DoxyCodeLine{66     UINT64,}
+\DoxyCodeLine{68     COMPLEX64,}
+\DoxyCodeLine{70     COMPLEX128,}
+\DoxyCodeLine{72     BFLOAT16}
+\DoxyCodeLine{73 \};}
+\DoxyCodeLine{74 }
+\DoxyCodeLine{75 USTRUCT(BlueprintType, Category = \textcolor{stringliteral}{"{}ONNX Runtime"{}}) }
+\DoxyCodeLine{76 }
+\DoxyCodeLine{77 struct \mbox{\hyperlink{struct_f_onnx_tensor_info}{FOnnxTensorInfo}}}
+\DoxyCodeLine{78 \{}
+\DoxyCodeLine{79     GENERATED\_BODY()}
+\DoxyCodeLine{80 }
+\DoxyCodeLine{81 \textcolor{keyword}{public}:}
+\DoxyCodeLine{83     \mbox{\hyperlink{struct_f_onnx_tensor_info_a127b116f185648a3ac0f7fc2817c9f6d}{FOnnxTensorInfo}}();}
+\DoxyCodeLine{85     \mbox{\hyperlink{struct_f_onnx_tensor_info_a1b1b82a29f9079f5e215b200129e88c3}{FOnnxTensorInfo}}(\textcolor{keyword}{const} std::string\& in\_name, \textcolor{keyword}{const} std::vector<int64>\& in\_shape, \textcolor{keyword}{const} ONNXTensorElementDataType in\_dataType);}
+\DoxyCodeLine{87     \textcolor{keywordtype}{int} \mbox{\hyperlink{struct_f_onnx_tensor_info_aad46a3466bbb17caeced878c88952fb4}{getElementSize}}(ONNXTensorElementDataType elemTypes);}
+\DoxyCodeLine{88 }
+\DoxyCodeLine{89     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = \textcolor{stringliteral}{"{}ONNX Runtime"{}})}
+\DoxyCodeLine{91     FString name;}
+\DoxyCodeLine{92     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "{}ONNX Runtime"{})}
+\DoxyCodeLine{94     int64 sizeInBytes = 0;}
+\DoxyCodeLine{95     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "{}ONNX Runtime"{})}
+\DoxyCodeLine{97     TArray<int64> shape;}
+\DoxyCodeLine{98     UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "{}ONNX Runtime"{})}
+\DoxyCodeLine{100     EOnnxTensorDataType dataType = EOnnxTensorDataType::FLOAT;}
+\DoxyCodeLine{101     \textcolor{comment}{//ONNXTensorElementDataType dataTypeOrinal = ONNXTensorElementDataType::ONNX\_TENSOR\_ELEMENT\_DATA\_TYPE\_FLOAT;}}
+\DoxyCodeLine{102 \};}
+\DoxyCodeLine{103 }
+\DoxyCodeLine{104 UCLASS(Category = "{}ONNX Runtime"{})}
+\DoxyCodeLine{106 class ONNXRUNTIME\_API \mbox{\hyperlink{class_u_onnx_utility_library}{UOnnxUtilityLibrary}} : public UBlueprintFunctionLibrary}
+\DoxyCodeLine{107 \{}
+\DoxyCodeLine{108     GENERATED\_BODY()}
+\DoxyCodeLine{109     }
+\DoxyCodeLine{110 \textcolor{keyword}{public}:}
+\DoxyCodeLine{111     UFUNCTION(BlueprintCallable, Category = \textcolor{stringliteral}{"{}ONNX Runtime"{}}) }
+\DoxyCodeLine{112     }
+\DoxyCodeLine{113     static TArray<EOnnxProvider> getAvailableProviders();}
+\DoxyCodeLine{114 }
+\DoxyCodeLine{115     UFUNCTION(BlueprintPure, Category = "{}ONNX Runtime"{})}
+\DoxyCodeLine{117     static FString getPluginPath(const FString\& pluginName);}
+\DoxyCodeLine{118 \};}
+
+\end{DoxyCode}
