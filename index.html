@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 <li>Visit our store page for details.</li>
 <li><a href="https://www.unrealengine.com/">Unreal Engine 4</a> で <a href="https://onnx.ai/">ONNX</a> モデルを動かすためのプラグインです。</li>
 <li>ブループリントとC++から機械学習推論を簡単・高速実行できる機能を提供します。内部では<a href="https://onnxruntime.ai/">ONNX Runtime</a>ネイティブライブラリを使用しています。</li>
-<li>人物姿勢推定と表情のキャプチャのサンプルプロジェクトはこちら。</li>
+<li>人物姿勢推定と表情のキャプチャのサンプルプロジェクトも提供されています。</li>
 <li>詳細はストアページをご覧ください。</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md0"></a>
@@ -147,7 +147,7 @@ C++</h3>
 <ol type="1">
 <li>Get "inputTensorsInfo" member to confirm the order of the input tensors as well as their types and sizes.</li>
 <li>Add variables of array whose size in bytes match the previous result.</li>
-<li>Call "OnnxModel::bindInput" to specify the pre-allocated memory from which the ONNX model reads the input data.</li>
+<li>Call "bindInput" to specify the pre-allocated memory from which the ONNX model reads the input data.</li>
 </ol>
 <h2><a class="anchor" id="autotoc_md8"></a>
 Set output of the model</h2>
