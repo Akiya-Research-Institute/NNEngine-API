@@ -26,10 +26,26 @@ var NAVTREE =
 [
   [ "NNEngine", "index.html", [
     [ "NNEngine overview", "index.html", [
-      [ "Tips", "index.html#autotoc_md0", [
-        [ "Build without CUDA and TensorRT", "index.html#autotoc_md1", null ]
+      [ "How to use", "index.html#autotoc_md0", [
+        [ "Get ONNX model", "index.html#autotoc_md1", null ],
+        [ "Load ONNX model", "index.html#autotoc_md2", [
+          [ "BP", "index.html#autotoc_md3", null ],
+          [ "C++", "index.html#autotoc_md4", null ]
+        ] ],
+        [ "Set input of the model", "index.html#autotoc_md5", [
+          [ "BP", "index.html#autotoc_md6", null ],
+          [ "C++", "index.html#autotoc_md7", null ]
+        ] ],
+        [ "Set output of the model", "index.html#autotoc_md8", [
+          [ "BP", "index.html#autotoc_md9", null ],
+          [ "C++", "index.html#autotoc_md10", null ]
+        ] ],
+        [ "Run", "index.html#autotoc_md11", null ]
       ] ],
-      [ "Changelog", "index.html#autotoc_md2", null ]
+      [ "Tips", "index.html#autotoc_md12", [
+        [ "Build without CUDA and TensorRT", "index.html#autotoc_md13", null ]
+      ] ],
+      [ "Changelog", "index.html#autotoc_md14", null ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
