@@ -4,14 +4,14 @@ set doxypath=".."
 rd /s /q  %doxypath%\Plugins
 
 mkdir %doxypath%\Plugins
-mkdir %doxypath%\Plugins\OnnxRuntime
-mkdir %doxypath%\Plugins\OnnxRuntime\Source
-mkdir %doxypath%\Plugins\OnnxRuntime\Source\OnnxRuntime
-mkdir %doxypath%\Plugins\OnnxRuntime\Source\OnnxRuntime\Public
-mkdir %doxypath%\Plugins\TextureProcessing
-mkdir %doxypath%\Plugins\TextureProcessing\Source
-mkdir %doxypath%\Plugins\TextureProcessing\Source\TextureProcessing
-mkdir %doxypath%\Plugins\TextureProcessing\Source\TextureProcessing\Public
+mkdir %doxypath%\Plugins\NNEngine
+mkdir %doxypath%\Plugins\NNEngine\Source
+mkdir %doxypath%\Plugins\NNEngine\Source\OnnxRuntime
+mkdir %doxypath%\Plugins\NNEngine\Source\OnnxRuntime\Public
+mkdir %doxypath%\Plugins\NNEngine
+mkdir %doxypath%\Plugins\NNEngine\Source
+mkdir %doxypath%\Plugins\NNEngine\Source\TextureProcessing
+mkdir %doxypath%\Plugins\NNEngine\Source\TextureProcessing\Public
 rem mkdir %doxypath%\Plugins\WebcamFacialCapture
 rem mkdir %doxypath%\Plugins\WebcamFacialCapture\Source
 rem mkdir %doxypath%\Plugins\WebcamFacialCapture\Source\WebcamFacialCapture
@@ -21,13 +21,13 @@ rem mkdir %doxypath%\Plugins\WebcamMotionCapture\Source
 rem mkdir %doxypath%\Plugins\WebcamMotionCapture\Source\WebcamMotionCapture
 rem mkdir %doxypath%\Plugins\WebcamMotionCapture\Source\WebcamMotionCapture\Public
 
-xcopy /Y %frompath%\Plugins\OnnxRuntime\Source\OnnxRuntime\Public                 %doxypath%\Plugins\OnnxRuntime\Source\OnnxRuntime\Public
-xcopy /Y %frompath%\Plugins\TextureProcessing\Source\TextureProcessing\Public     %doxypath%\Plugins\TextureProcessing\Source\TextureProcessing\Public
+xcopy /Y %frompath%\Plugins\NNEngine\Source\OnnxRuntime\Public                   %doxypath%\Plugins\NNEngine\Source\OnnxRuntime\Public
+xcopy /Y %frompath%\Plugins\NNEngine\Source\TextureProcessing\Public             %doxypath%\Plugins\NNEngine\Source\TextureProcessing\Public
 rem xcopy /Y %frompath%\Plugins\WebcamFacialCapture\Source\WebcamFacialCapture\Public %doxypath%\Plugins\WebcamFacialCapture\Source\WebcamFacialCapture\Public
 rem xcopy /Y %frompath%\Plugins\WebcamMotionCapture\Source\WebcamMotionCapture\Public %doxypath%\Plugins\WebcamMotionCapture\Source\WebcamMotionCapture\Public
 
-del %doxypath%\Plugins\OnnxRuntime\Source\OnnxRuntime\Public\OnnxRuntime.h
-del %doxypath%\Plugins\TextureProcessing\Source\TextureProcessing\Public\TextureProcessing.h
+del %doxypath%\Plugins\NNEngine\Source\OnnxRuntime\Public\OnnxRuntime.h
+del %doxypath%\Plugins\NNEngine\Source\TextureProcessing\Public\TextureProcessing.h
 rem del %doxypath%\Plugins\WebcamFacialCapture\Source\WebcamFacialCapture\Public\WebcamFacialCapture.h
 rem del %doxypath%\Plugins\WebcamMotionCapture\Source\WebcamMotionCapture\Public\WebcamMotionCapture.h
 

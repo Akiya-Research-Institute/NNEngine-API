@@ -25,6 +25,12 @@
 var NAVTREE =
 [
   [ "NNEngine", "index.html", [
+    [ "NNEngine overview", "index.html", [
+      [ "Tips", "index.html#autotoc_md0", [
+        [ "Build without CUDA and TensorRT", "index.html#autotoc_md1", null ]
+      ] ],
+      [ "Changelog", "index.html#autotoc_md2", null ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
