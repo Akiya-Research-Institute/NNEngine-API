@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NNEngine: NNEngine overview</title>
+<title>NNEngine: Main Page</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -81,133 +81,10 @@ $(document).ready(function(){initNavTree('index.html',''); initResizable(); });
 </iframe>
 </div>
 
-<div><div class="header">
-  <div class="headertitle"><div class="title">NNEngine overview </div></div>
+<div class="header">
+  <div class="headertitle"><div class="title">NNEngine Documentation</div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p ><a class="anchor" id="mainpage"></a></p><ul>
-<li>A code plugin for <a href="https://www.unrealengine.com/">Unreal Engine 4</a> to use <a href="https://onnx.ai/">ONNX</a> model.</li>
-<li>Provides functions for easy and accelerated ML inference callable from BP and C++ using <a href="https://onnxruntime.ai/">ONNX Runtime</a> native library.</li>
-<li>Example project of human pose estimation and facial capture using a single RGB camera are available.</li>
-<li>Visit our store page for details.</li>
-<li><a href="https://www.unrealengine.com/">Unreal Engine 4</a> で <a href="https://onnx.ai/">ONNX</a> モデルを動かすためのプラグインです。</li>
-<li>ブループリントとC++から機械学習推論を簡単・高速実行できる機能を提供します。内部では<a href="https://onnxruntime.ai/">ONNX Runtime</a>ネイティブライブラリを使用しています。</li>
-<li>人物姿勢推定と表情のキャプチャのサンプルプロジェクトも提供されています。</li>
-<li>詳細はストアページをご覧ください。</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md0"></a>
-How to use</h1>
-<h2><a class="anchor" id="autotoc_md1"></a>
-Get ONNX model</h2>
-<p >You need an ONNX model to use this plugin. If you do not have one,</p>
-<ul>
-<li>Visit <a href="https://github.com/onnx/models">ONNX model zoo</a>, a collection of pre-trained, state-of-the-art models.</li>
-<li><a href="https://github.com/onnx/tutorials#converting-to-onnx-format">Convert your model</a> from other frameworks.</li>
-<li>I also recommend to visit <a href="https://github.com/PINTO0309/PINTO_model_zoo#pinto_model_zoo">PINTO_model_zoo</a>, which has a lot of useful ONNX model.</li>
-</ul>
-<h2><a class="anchor" id="autotoc_md2"></a>
-Load ONNX model</h2>
-<h3><a class="anchor" id="autotoc_md3"></a>
-BP</h3>
-<ol type="1">
-<li>Create a Blueprint and add a variable of <a class="el" href="class_u_onnx_model_wrapper.html">UOnnxModelWrapper</a>.</li>
-<li>Construct <a class="el" href="class_u_onnx_model_wrapper.html">UOnnxModelWrapper</a> and call "Init".<ul>
-<li>Specify the path to the ONNX model</li>
-<li>Specify whether to use CPU or GPU, and which GPU to use.<ul>
-<li>To get available GPUs on the system, call "Get Gpu Info"</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h3><a class="anchor" id="autotoc_md4"></a>
-C++</h3>
-<ol type="1">
-<li>Create a Blueprint and add a variable of <a class="el" href="class_onnx_model.html" title="Manages a ONNX model">OnnxModel</a>.</li>
-<li>Call the constructor of <a class="el" href="class_onnx_model.html" title="Manages a ONNX model">OnnxModel</a>.<ul>
-<li>Specify the path to the ONNX model</li>
-<li>Specify whether to use CPU or GPU, and which GPU to use.<ul>
-<li>To get available GPUs on the system, call "UDirectXUtilityLibrary::GetGpuInfo()"</li>
-</ul>
-</li>
-</ul>
-</li>
-</ol>
-<h2><a class="anchor" id="autotoc_md5"></a>
-Set input of the model</h2>
-<h3><a class="anchor" id="autotoc_md6"></a>
-BP</h3>
-<ol type="1">
-<li>Call "Get Input Tensor Info" to confirm the order of the input tensors as well as their types and sizes.</li>
-<li>Add variables of byte, integer, integer64, or float array whose type and size match the previous result.</li>
-<li>Call "Bind Input xxx Array" to specify the pre-allocated memory from which the ONNX model reads the input data.</li>
-</ol>
-<h3><a class="anchor" id="autotoc_md7"></a>
-C++</h3>
-<ol type="1">
-<li>Get "inputTensorsInfo" member to confirm the order of the input tensors as well as their types and sizes.</li>
-<li>Add variables of array whose size in bytes match the previous result.</li>
-<li>Call "bindInput" to specify the pre-allocated memory from which the ONNX model reads the input data.</li>
-</ol>
-<h2><a class="anchor" id="autotoc_md8"></a>
-Set output of the model</h2>
-<h3><a class="anchor" id="autotoc_md9"></a>
-BP</h3>
-<ol type="1">
-<li>Call "Get Output Tensor Info" to confirm the order of the output tensors as well as their types and sizes.</li>
-<li>Add variables of byte, integer, integer64, or float array whose type and size match the previous result.</li>
-<li>Call "Bind Output xxx Array" to specify the pre-allocated memory to which the ONNX model writes the output data.</li>
-</ol>
-<h3><a class="anchor" id="autotoc_md10"></a>
-C++</h3>
-<ol type="1">
-<li>Get "outputTensorsInfo" member to confirm the order of the output tensors as well as their types and sizes.</li>
-<li>Add variables of array whose size in bytes match the previous result.</li>
-<li>Call "bindOutput" to specify the pre-allocated memory to which the ONNX model writes the output data.</li>
-</ol>
-<h2><a class="anchor" id="autotoc_md11"></a>
-Run</h2>
-<ol type="1">
-<li>Set data to the pre-allocated arrays of input.</li>
-<li>Call "Run".</li>
-<li>Get data from the pre-allocated arrays of output.</li>
-</ol>
-<h1><a class="anchor" id="autotoc_md12"></a>
-Tips</h1>
-<h2><a class="anchor" id="autotoc_md13"></a>
-Build without CUDA and TensorRT</h2>
-<p >This plugin contains a large (162MB) DLL, "onnxruntime_providers_cuda.dll". You may want to exclude it to reduce packaged game size. <br  />
- To do that, you need to disable CUDA and TensorRT <a href="https://onnxruntime.ai/docs/execution-providers/">execution providers</a> by following the steps below:</p>
-<ul>
-<li>Open "(Your installation path of UE4)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs"</li>
-<li><p class="startli">Change line 20 and 21 as follows:</p>
-<p class="startli">Before </p><pre class="fragment">  bool doUseCuda = true;
-  bool doUseTensorRT = true;
-</pre><p> After </p><pre class="fragment">  bool doUseCuda = false;
-  bool doUseTensorRT = false;
-</pre></li>
-<li>Build the project.</li>
-</ul>
-<p >このプラグインには、大きなサイズ（162MB）のDLL「onnxruntime_providers_cuda.dll」が含まれています。パッケージ化したゲームのサイズを小さくするために、これを除外したくなるかもしれません。 その場合、下記手順にしたがって、CUDA および TensorRT の <a href="https://onnxruntime.ai/docs/execution-providers/">execution provider</a> を無効にする必要があります。</p>
-<ul>
-<li>"(UE4インストールパス)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs"を開きます。</li>
-<li><p class="startli">20行目と21行目を下記の通り変更します。</p>
-<p class="startli">変更前 </p><pre class="fragment">  bool doUseCuda = true;
-  bool doUseTensorRT = true;
-</pre><p> 変更後 </p><pre class="fragment">  bool doUseCuda = false;
-  bool doUseTensorRT = false;
-</pre></li>
-<li>プロジェクトをビルドします。</li>
-</ul>
-<h1><a class="anchor" id="autotoc_md14"></a>
-Changelog</h1>
-<ul>
-<li>v1.0 (2021-11-dd)<ul>
-<li>First release. </li>
-</ul>
-</li>
-</ul>
-</div></div><!-- PageDoc -->
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

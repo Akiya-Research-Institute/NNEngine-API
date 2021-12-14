@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['shape_0',['shape',['../struct_f_onnx_tensor_info.html#ad2f003394fd484349ff654106964be00',1,'FOnnxTensorInfo']]],
-  ['showimagewith2dpoints_1',['showImageWith2dPoints',['../class_u_texture_process_function_library.html#a6644a473f81e2e5b0e790d470771fe07',1,'UTextureProcessFunctionLibrary']]],
-  ['showimagewith3dpoints_2',['showImageWith3dPoints',['../class_u_texture_process_function_library.html#aad99072ad474d0e52f072ec888645938',1,'UTextureProcessFunctionLibrary']]],
-  ['sizeinbytes_3',['sizeInBytes',['../struct_f_onnx_tensor_info.html#aaada34aecf1c24c49d99e6ed33297c91',1,'FOnnxTensorInfo']]]
+  ['renderaffinetransformedframe_0',['renderAffineTransformedFrame',['../class_u_texture_process_component.html#a005393743c52fafd56f51c27f8e26c4a',1,'UTextureProcessComponent']]],
+  ['resize_1',['resize',['../class_u_texture_process_component.html#a04a028218773fff1b6a2857678282f5f',1,'UTextureProcessComponent']]],
+  ['run_2',['run',['../class_onnx_model.html#a3a2e9b1616ee1967d9238716a2d2383b',1,'OnnxModel::run()'],['../class_u_onnx_model_wrapper.html#a07eeeea962e22e743d7e22c9067637f3',1,'UOnnxModelWrapper::run()']]]
 ];
