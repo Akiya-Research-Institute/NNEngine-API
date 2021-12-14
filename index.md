@@ -1,6 +1,6 @@
-# Manual / マニュアル
+# Manual / マニュアル {#mainpage}
 
-## Overview / 概要 {#mainpage}
+## Overview / 概要
 
 - A code plugin for [Unreal Engine 4](https://www.unrealengine.com/) to use [ONNX](https://onnx.ai/) model.
 - Provides functions for easy and accelerated ML inference callable from BP and C++ using [ONNX Runtime](https://onnxruntime.ai/) native library.
@@ -108,16 +108,15 @@ NNEngineは、下記の4つのモジュールで構成されています。
 
 ## How to use OnnxRuntime module / OnnxRuntimeモジュールの使い方
 
-(See [ONNX Introduction](./md_html__onnx_introduction.html) for the overview of ONNX itself)  
-(See [the official documentation](https://onnxruntime.ai/docs/) for how to use ONNX Runtime itself)  
 This module wraps the ONNX Runtime's C++ API and makes it easy to call from Unreal Engine's Blueprints and C++.  
 An example of use from BP can be found in "Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset".  
+(See [ONNX Introduction](./md_html__onnx_introduction.html) for the overview of ONNX itself)  
+(See [the official documentation](https://onnxruntime.ai/docs/) for how to use ONNX Runtime itself)  
 
-
+このモジュールは、ONNX RuntimeのC++ APIをラップし、Unreal EngineのブループリントおよびC++から簡単に呼び出せるようにしたものです。  
+BPからの使用例は、「Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset」にあります。  
 （ONNX自体の概要は、[ONNXの初心者向けガイド](./md_html__onnx_introduction.html)をご覧ください）  
 （ONNX Runtime自体の使い方は、[公式ドキュメント](https://onnxruntime.ai/docs/)をご覧ください）  
-このモジュールは、ONNX RuntimeのC++ APIをラップし、Unreal EngineのブループリントおよびC++から簡単に呼び出せるようにしたものです。  
-BPからの使用例は、「Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset」にあります。
 
 ### Load ONNX model / ONNXモデルのロード
 

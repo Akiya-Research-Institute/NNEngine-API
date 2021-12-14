@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.9.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>NNEngine: ONNXの初心者向けガイド</title>
+<title>NNEngine: Intorduction to ONNX / ONNXの初心者向けガイド</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -82,41 +82,59 @@ $(document).ready(function(){initNavTree('md_html__onnx_introduction.html',''); 
 </div>
 
 <div><div class="header">
-  <div class="headertitle"><div class="title">ONNXの初心者向けガイド </div></div>
+  <div class="headertitle"><div class="title">Intorduction to ONNX / ONNXの初心者向けガイド </div></div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p >ONNX形式でAIを扱ったことがない人向けに、ONNXについて簡単に概要を説明します。 <br  />
+<div class="textblock"><p >For those who have never used AI in ONNX format, here is a brief overview of ONNX. <br  />
+ If you know the basics of ONNX, you don't need to read this. <br  />
+</p>
+<p >ONNX形式でAIを扱ったことがない人向けに、ONNXについて簡単に概要を説明します。 <br  />
  ONNXについて基本的なことをご存じの方は、読む必要はありません。</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md48"></a>
-ONNXとは？</h1>
-<p >ONNX = Open Neural Network eXchange = オープンなニューラルネットの相互変換フォーマット、というような意味</p>
+What's ONNX? / ONNXとは？</h1>
+<p >ONNX <br  />
+ = Open Neural Network eXchange <br  />
+ = オープンなニューラルネットの相互変換フォーマット、というような意味</p>
 <ul>
-<li>AIを様々な環境で使うためのファイル形式</li>
+<li>A format to use AI in various environment.</li>
+<li><a href="https://github.com/onnx/tutorials#converting-to-onnx-format">You can create files in this format from various machine learning frameworks</a>, <a href="https://onnxruntime.ai/docs/execution-providers/#contents">you can run AI on various platforms with this format.</a></li>
+<li></li>
+<li>AIを様々な環境で使うためのファイル形式。</li>
 <li><a href="https://github.com/onnx/tutorials#converting-to-onnx-format">様々な機械学習フレームワークからこの形式のファイルを作成でき</a>、この形式にしておけば<a href="https://onnxruntime.ai/docs/execution-providers/#contents">様々なプラットフォームでAIを実行できる</a></li>
 </ul>
+<p ><img src="images/ONNX_Runtime_EP1.png" alt="" class="inline"/> <br  />
+ (<a href="https://onnxruntime.ai/docs/execution-providers/">https://onnxruntime.ai/docs/execution-providers/</a> より引用)</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md50"></a>
-ONNXの入手方法</h1>
+How to get ONNX file / ONNXファイルの入手方法</h1>
+<p >You can make it yourself from PyTorch, TensorFlow, etc. Also there are kind people who publish ONNX format AI for free. -(Example 1) <a href="https://github.com/onnx/models">ONNX Model Zoo</a>: ONNX official <br  />
+ -(Example 2) <a href="https://github.com/PINTO0309/PINTO_model_zoo">PINTO model zoo</a>: A repository where PINTO shares the results of optimization of various models. Various formats are provided, including ONNX. <br  />
+ Check the license carefully before using them.</p>
 <p >PyTorchやTensorFlowなどから自分で作ってもいいですが、ONNX形式のAIを無料で公開してくれている親切な人が世の中にはいます。</p><ul>
 <li>(例1) <a href="https://github.com/onnx/models">ONNX Model Zoo</a> : ONNX公式</li>
-<li>(例2) <a href="https://github.com/PINTO0309/PINTO_model_zoo">PINTO model zoo</a> : PINTO氏が様々なモデルを最適化した結果を共有しているリポジトリ。ONNXを含む様々な形式が提供されている。 ライセンスをよく確認した上で、ありがたく使わせていただきましょう。</li>
+<li>(例2) <a href="https://github.com/PINTO0309/PINTO_model_zoo">PINTO model zoo</a> : PINTO氏が様々なモデルを最適化した結果を共有しているリポジトリ。ONNXを含む様々な形式が提供されている。 <br  />
+ ライセンスをよく確認した上で、ありがたく使わせていただきましょう。</li>
 </ul>
 <hr  />
 <h1><a class="anchor" id="autotoc_md52"></a>
-ONNXの使用方法</h1>
-<p >大まかには、下記の4ステップです。</p>
+How to use ONNX / ONNXの使用方法</h1>
+<p >Roughly there are 4 steps below. <br  />
+ 大まかには、下記の4ステップです。</p>
 <ol type="1">
-<li>ONNXファイルをロードする</li>
-<li>データ入力元を指定する</li>
-<li>データ出力先を指定する</li>
-<li>処理を実行する</li>
+<li>Load the ONNX file. ONNXファイルをロードする</li>
+<li>Specify the input data source. データ入力元を指定する</li>
+<li>Specify the output data destination. データ出力先を指定する</li>
+<li>Run. 処理を実行する</li>
 </ol>
+<p >The type and shape of input and output data depends on the model used. <br  />
+ See the Official Documentation (<a href="https://onnxruntime.ai/docs/">https://onnxruntime.ai/docs/</a>) for the details. <br  />
+</p>
 <p >なお、どんなデータを入力し、どんなデータが出力されるかは、使用するモデル次第です。 <br  />
  より詳細は、<a href="https://onnxruntime.ai/docs/">公式ドキュメント</a>を参照してください。</p>
 <hr  />
 <h1><a class="anchor" id="autotoc_md54"></a>
-（付録）ONNXの改造方法</h1>
+(Appendix) Editing ONNX file / （付録）ONNXファイルの編集</h1>
 <p >Model Zooなどから入手したONNX形式のファイルを、ちょっとだけ編集したいことがしばしばあります。 <br  />
  （入出力の仕様を変えたい、二つのモデルをくっつけたい、等） <br  />
  そんなときに便利なテクニックとして、ONNXをテキスト形式に変換し、テキストエディタで編集してから元の形式に戻すというものがあります。 <br  />
