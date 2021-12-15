@@ -110,12 +110,12 @@ NNEngineは、下記の4つのモジュールで構成されています。
 
 This module wraps the ONNX Runtime's C++ API and makes it easy to call from Unreal Engine's Blueprints and C++.  
 An example of use from BP can be found in "Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset".  
-(See [ONNX Introduction](./md_html__onnx_introduction.html) for the overview of ONNX itself)  
+(See [Overview of ONNX](./md_html__onnx_introduction.html) for the overview of ONNX itself)  
 (See [the official documentation](https://onnxruntime.ai/docs/) for how to use ONNX Runtime itself)  
 
 このモジュールは、ONNX RuntimeのC++ APIをラップし、Unreal EngineのブループリントおよびC++から簡単に呼び出せるようにしたものです。  
 BPからの使用例は、「Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset」にあります。  
-（ONNX自体の概要は、[ONNXの初心者向けガイド](./md_html__onnx_introduction.html)をご覧ください）  
+（ONNX自体の概要は、[ONNXの概要](./md_html__onnx_introduction.html)をご覧ください）  
 （ONNX Runtime自体の使い方は、[公式ドキュメント](https://onnxruntime.ai/docs/)をご覧ください）  
 
 ### Load ONNX model / ONNXモデルのロード
