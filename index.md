@@ -12,8 +12,6 @@
 - また、UTextureをリサイズ、トリミング、回転したうえでint8配列へ変換する機能等を提供します。
 - 人物姿勢推定と表情のキャプチャのサンプルプロジェクトも提供されています。
 
-![](images/systemOverview.png)
-
 --
 
 ## System Requirements / 動作環境
@@ -250,7 +248,7 @@ public:
 	}
 ```
 
-### 実行
+### Run / 実行
 
 1. Set data to the array specified as the data input source for the ONNX model.
 2. Call "Run".
@@ -260,8 +258,11 @@ public:
 2. 「Run」を実行します。
 3. ONNXモデルからのデータ出力先として指定した配列から、結果を取得します。
 
+#### BP
+
 ![](images/OnnxRuntime_run.png)
 
+#### C++
 ```
 		onnxModel->run();
 ```

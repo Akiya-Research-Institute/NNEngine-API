@@ -12,6 +12,5 @@ var hierarchy =
     ] ],
     [ "UObject", null, [
       [ "UOnnxModelWrapper", "class_u_onnx_model_wrapper.html", null ]
-    ] ],
-    [ "UOnnxModelMinimumExample", "class_u_onnx_model_minimum_example.html", null ]
+    ] ]
 ];

@@ -28,14 +28,18 @@ ONNX
 ## How to get ONNX file / ONNXファイルの入手方法
 
 You can make it yourself from PyTorch, TensorFlow, etc. Also there are kind people who publish ONNX format AI for free.
+
 - (Example 1) [ONNX Model Zoo] (https://github.com/onnx/models): ONNX official  
 - (Example 2) [PINTO model zoo] (https://github.com/PINTO0309/PINTO_model_zoo): A repository where PINTO shares the results of optimization of various models. Various formats are provided, including ONNX.  
+
 Check the license carefully before using them.🙏  
 
 
 PyTorchやTensorFlowなどから自分で作ってもいいですが、ONNX形式のAIを無料で公開してくれている親切な人が世の中にはいます。
+
 - (例1) [ONNX Model Zoo](https://github.com/onnx/models) : ONNX公式
 - (例2) [PINTO model zoo](https://github.com/PINTO0309/PINTO_model_zoo) : PINTO氏が様々なモデルを最適化した結果を共有しているリポジトリ。ONNXを含む様々な形式が提供されている。  
+
 ライセンスをよく確認した上で、ありがたく使わせていただきましょう。🙏
 
 --
@@ -49,7 +53,7 @@ Roughly there are 4 steps.
 3. Specify the output data destination.
 4. Run.
 
-See the Official Documentation (https://onnxruntime.ai/docs/get-started/) for the details.  
+See [the Official Documentation](https://onnxruntime.ai/docs/get-started/) for the details.  
 NNEngine provides convenient functions to execute 1 to 4 above.  
 
 
