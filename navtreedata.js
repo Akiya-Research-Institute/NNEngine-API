@@ -75,7 +75,7 @@ var NAVTREE =
       [ "Changelog / 更新履歴", "index.html#autotoc_md45", null ]
     ] ],
     [ "Demo_Overview", "md_html__demo__overview.html", null ],
-    [ "Intorduction to ONNX / ONNXの初心者向けガイド", "md_html__onnx_introduction.html", [
+    [ "Overview of ONNX / ONNXの概要", "md_html__onnx_introduction.html", [
       [ "What's ONNX? / ONNXとは？", "md_html__onnx_introduction.html#autotoc_md48", null ],
       [ "How to get ONNX file / ONNXファイルの入手方法", "md_html__onnx_introduction.html#autotoc_md50", null ],
       [ "How to use ONNX / ONNXの使用方法", "md_html__onnx_introduction.html#autotoc_md52", null ],
