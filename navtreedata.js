@@ -81,8 +81,8 @@ var NAVTREE =
       [ "Environment / 環境", "md_html__demo_project_overview.html#autotoc_md1", null ],
       [ "Download / ダウンロード", "md_html__demo_project_overview.html#autotoc_md2", null ],
       [ "Run the demo / デモの実行", "md_html__demo_project_overview.html#autotoc_md3", null ],
-      [ "Classes in demo / デモのクラス構成", "md_html__demo_project_overview.html#autotoc_md4", null ],
-      [ "Important classes / 実装の説明", "md_html__demo_project_overview.html#autotoc_md5", null ]
+      [ "Classes in the demo / デモのクラス構成", "md_html__demo_project_overview.html#autotoc_md4", null ],
+      [ "Implementation of the demo / 実装の説明", "md_html__demo_project_overview.html#autotoc_md5", null ]
     ] ],
     [ "Overview of ONNX / ONNXの概要", "md_html__onnx_introduction.html", [
       [ "What's ONNX? / ONNXとは？", "md_html__onnx_introduction.html#autotoc_md56", null ],
