@@ -394,10 +394,10 @@ An example can be found in "Content\NNEngineDemo\Common\WidgetToChangeCpuGpu.uas
 
 ## How to use CustomizedOpenCV module / CustomizedOpenCVモジュールの使い方
 
-Based on OpenCV 4.4.0 (OpenCV 4.5.4 for Android), some functions are disabled so that it can be built with Unreal Engine.  
+Based on OpenCV 4.4.0, some functions are disabled so that it can be built with Unreal Engine.  
 It can be used in C++ by including the OpenCV header as shown below.  
 
-OpenCV 4.4.0 (Android向けにはOpenCV 4.5.4) をベースに、Unreal Engineでビルドできるよう一部の関数を無効にしたものです。  
+OpenCV 4.4.0をベースに、Unreal Engineでビルドできるよう一部の関数を無効にしたものです。  
 C++で、下記のようにOpenCVのヘッダをインクルードすることで利用できます。
 
 ```
