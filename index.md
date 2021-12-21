@@ -40,7 +40,7 @@ If you are using RTX2080Ti, you might need to use cuDNN v8.0.5. Please try vario
 
 ## Installation / インストール
 
-### From BOOTH
+<!-- ### From BOOTH
 
 1. Purchase at https://akiya-souken.booth.pm/items/3494484 and download "NNEngine_vX.Y.Z.zip" (X.Y.Z is the version number).
 2. Extract the downloaded zip file.
@@ -50,7 +50,7 @@ If you are using RTX2080Ti, you might need to use cuDNN v8.0.5. Please try vario
 1. https://akiya-souken.booth.pm/items/3494484 で購入し、「NNEngine_vX.Y.Z.zip」(X.Y.Zはバージョン番号)をダウンロードします。
 2. ダウンロードしたZipファイルを展開します。
 3. Unreal Engineのプロジェクトを作成します。
-4. 作成したプロジェクトの.uprojectファイルのあるフォルダに、Zipファイルを展開してできた「NNEngine_vX.Y.Z\Plugins」をコピーします。
+4. 作成したプロジェクトの.uprojectファイルのあるフォルダに、Zipファイルを展開してできた「NNEngine_vX.Y.Z\Plugins」をコピーします。 -->
 
 ### From UE Marketplace
 

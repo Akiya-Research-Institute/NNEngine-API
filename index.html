@@ -131,20 +131,6 @@ CUDA, cuDNN, TensorRT versions</h3>
 <h1><a class="anchor" id="autotoc_md11"></a>
 Installation / インストール</h1>
 <h2><a class="anchor" id="autotoc_md12"></a>
-From BOOTH</h2>
-<ol type="1">
-<li>Purchase at <a href="https://akiya-souken.booth.pm/items/3494484">https://akiya-souken.booth.pm/items/3494484</a> and download "NNEngine_vX.Y.Z.zip" (X.Y.Z is the version number).</li>
-<li>Extract the downloaded zip file.</li>
-<li>Create an Unreal Engine project.</li>
-<li>Copy the "NNEngine_vX.Y.Z\Plugins" created by extracting the zip file to the folder containing the .uproject file of the created project.</li>
-</ol>
-<ol type="1">
-<li><a href="https://akiya-souken.booth.pm/items/3494484">https://akiya-souken.booth.pm/items/3494484</a> で購入し、「NNEngine_vX.Y.Z.zip」(X.Y.Zはバージョン番号)をダウンロードします。</li>
-<li>ダウンロードしたZipファイルを展開します。</li>
-<li>Unreal Engineのプロジェクトを作成します。</li>
-<li>作成したプロジェクトの.uprojectファイルのあるフォルダに、Zipファイルを展開してできた「NNEngine_vX.Y.Z\Plugins」をコピーします。</li>
-</ol>
-<h2><a class="anchor" id="autotoc_md13"></a>
 From UE Marketplace</h2>
 <ol type="1">
 <li>Purchase at <a href="https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade">https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade</a> and install it.</li>
@@ -157,7 +143,7 @@ From UE Marketplace</h2>
 <li>プロジェクトを開き、エディタのメニュー上で「編集 &gt; プラグイン」を開き、「NNEngine」を有効にし、プロジェクトを再起動します。</li>
 </ol>
 <hr  />
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Modules / モジュール構成</h1>
 <p >NNEngine consists of the following four modules.</p>
 <ol type="1">
@@ -201,7 +187,7 @@ Modules / モジュール構成</h1>
  <img src="images/systemOverview.png" alt="" class="inline"/> <br  />
 </p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md16"></a>
 How to use OnnxRuntime module / OnnxRuntimeモジュールの使い方</h1>
 <p >This module wraps the ONNX Runtime's C++ API and makes it easy to call from Unreal Engine's Blueprints and C++. <br  />
  An example of use from BP can be found in "Plugins\NNEngine\Content\MinimalExample\MinimalExampleOfOnnxModelWrapper.uasset". <br  />
@@ -213,14 +199,14 @@ How to use OnnxRuntime module / OnnxRuntimeモジュールの使い方</h1>
  （ONNX自体の概要は、<a href="./md_html__onnx_introduction.html">ONNXの概要</a>をご覧ください） <br  />
  （ONNX Runtime自体の使い方は、<a href="https://onnxruntime.ai/docs/">公式ドキュメント</a>をご覧ください） <br  />
 </p>
-<h2><a class="anchor" id="autotoc_md18"></a>
+<h2><a class="anchor" id="autotoc_md17"></a>
 Load ONNX model / ONNXモデルのロード</h2>
 <p >Load the AI ​​model saved in ONNX format. <br  />
  NNEngine reads the .onnx file by specifying the path at runtime. <br  />
 </p>
 <p >ONNX形式で保存されたAIモデルを読み込みます。 <br  />
  NNEngineでは、実行時に.onnxファイルのパスを指定して読み込みを行います。</p>
-<h3><a class="anchor" id="autotoc_md19"></a>
+<h3><a class="anchor" id="autotoc_md18"></a>
 BP</h3>
 <ol type="1">
 <li>Create a Blueprint class and add a variable of <a class="el" href="class_u_onnx_model_wrapper.html">UOnnxModelWrapper</a>.</li>
@@ -245,7 +231,7 @@ BP</h3>
 </li>
 </ol>
 <p ><img src="images/OnnxRuntime_load.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md20"></a>
+<h3><a class="anchor" id="autotoc_md19"></a>
 C++</h3>
 <ol type="1">
 <li>Create a C++ class and add a variable of <a class="el" href="class_onnx_model.html" title="Manages a ONNX model">OnnxModel</a>.</li>
@@ -287,9 +273,9 @@ C++</h3>
 <div class="line">        onnxModel = new OnnxModel(&quot;Full-path-to-your-AI.onnx&quot;, EOnnxProvider::GPU_DirectML, 0);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md20"></a>
 Specify input source / データ入力元の指定</h2>
-<h3><a class="anchor" id="autotoc_md22"></a>
+<h3><a class="anchor" id="autotoc_md21"></a>
 BP</h3>
 <ol type="1">
 <li>Call "Get Input Tensor Info" to confirm the order of the input tensors as well as their types and sizes.</li>
@@ -302,7 +288,7 @@ BP</h3>
 <li>入力テンソルの数だけ「Bind Input xxx Array」を呼び出して、作成した配列をONNXモデルへのデータ入力元として指定します。</li>
 </ol>
 <p ><img src="images/OnnxRuntime_bindInput.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md23"></a>
+<h3><a class="anchor" id="autotoc_md22"></a>
 C++</h3>
 <ol type="1">
 <li>Get "inputTensorsInfo" member to confirm the order of the input tensors as well as their types and sizes.</li>
@@ -323,9 +309,9 @@ C++</h3>
 <div class="line">    onnxModel-&gt;bindInput(onnxModel-&gt;inputTensorsInfo[0], inputDataBuffer0.GetData());</div>
 <div class="line">    onnxModel-&gt;bindInput(onnxModel-&gt;inputTensorsInfo[1], inputDataBuffer1.GetData());</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md24"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md23"></a>
 Specify output destination / データ出力先の指定</h2>
-<h3><a class="anchor" id="autotoc_md25"></a>
+<h3><a class="anchor" id="autotoc_md24"></a>
 BP</h3>
 <ol type="1">
 <li>Call "Get Output Tensor Info" to confirm the order of the output tensors as well as their types and sizes.</li>
@@ -338,7 +324,7 @@ BP</h3>
 <li>出力テンソルの数だけ「Bind Output xxx Array」を呼び出して、作成した配列をONNXモデルからのデータ出力先として指定します。</li>
 </ol>
 <p ><img src="images/OnnxRuntime_bindOutput.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md26"></a>
+<h3><a class="anchor" id="autotoc_md25"></a>
 C++</h3>
 <ol type="1">
 <li>Get "outputTensorsInfo" member to confirm the order of the output tensors as well as their types and sizes.</li>
@@ -359,7 +345,7 @@ C++</h3>
 <div class="line">    onnxModel-&gt;bindOutput(onnxModel-&gt;outputTensorsInfo[0], outputDataBuffer0.GetData());</div>
 <div class="line">    onnxModel-&gt;bindOutput(onnxModel-&gt;outputTensorsInfo[1], outputDataBuffer1.GetData());</div>
 <div class="line">}</div>
-</div><!-- fragment --><h2><a class="anchor" id="autotoc_md27"></a>
+</div><!-- fragment --><h2><a class="anchor" id="autotoc_md26"></a>
 Run / 実行</h2>
 <ol type="1">
 <li>Set data to the array specified as the data input source for the ONNX model.</li>
@@ -371,14 +357,14 @@ Run / 実行</h2>
 <li>「Run」を実行します。</li>
 <li>ONNXモデルからのデータ出力先として指定した配列から、結果を取得します。</li>
 </ol>
-<h3><a class="anchor" id="autotoc_md28"></a>
+<h3><a class="anchor" id="autotoc_md27"></a>
 BP</h3>
 <p ><img src="images/OnnxRuntime_run.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md29"></a>
+<h3><a class="anchor" id="autotoc_md28"></a>
 C++</h3>
 <div class="fragment"><div class="line">onnxModel-&gt;run();</div>
 </div><!-- fragment --> <hr  />
-<h1><a class="anchor" id="autotoc_md31"></a>
+<h1><a class="anchor" id="autotoc_md30"></a>
 How to use TextureProcessing / TextureProcessingモジュールの使い方</h1>
 <p >Use BP_TextureProcessComponent to precess images. <br  />
  BP_TextureProcessComponent is a component for converting a UTexture image into a byte array of a specified size, as well as scaling, cropping, and rotating the image. <br  />
@@ -386,7 +372,7 @@ How to use TextureProcessing / TextureProcessingモジュールの使い方</h1>
 <p >BP_TextureProcessComponentを使って、画像処理を行います。 <br  />
  BP_TextureProcessComponentは、UTextureの画像を指定したサイズのバイト配列に変換するためのコンポーネントです。また、その際、画像の拡縮・切り取り・回転を行うことができます。 <br  />
  得られたバイト配列は、OnnxRuntimeモジュールでAIへの入力データとして利用できます。 デモプロジェクトの「Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset」に使用例があります。</p>
-<h2><a class="anchor" id="autotoc_md32"></a>
+<h2><a class="anchor" id="autotoc_md31"></a>
 Create component / Componentの作成</h2>
 <ol type="1">
 <li>Create a Blueprint class and add BP_TextureProcessComponent.</li>
@@ -399,19 +385,19 @@ Create component / Componentの作成</h2>
  これにより、このBP_TextureProcessComponentでは、（Destination Height × Destination Width × 3）のサイズのバイト配列に結果が出力されるようになります。</li>
 </ol>
 <p ><img src="images/TextureProcessing_add.png" alt="" class="inline"/></p>
-<h2><a class="anchor" id="autotoc_md33"></a>
+<h2><a class="anchor" id="autotoc_md32"></a>
 Simple Scaling / 単純な拡縮</h2>
 <p >You can scale an image to the size specified at initialization by calling the "Resize" node of BP_TextureProcessComponent. <br  />
  BP_TextureProcessComponentの「Resize」ノードを呼び出すことで、初期化時に指定したサイズに画像を拡大または縮小することができます。</p>
 <p ><img src="images/TextureProcessing_resize.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md34"></a>
+<h3><a class="anchor" id="autotoc_md33"></a>
 Input / 入力</h3>
 <ul>
 <li>Input texture: Original image. 任意のUTextureを指定します</li>
 <li>Do Flip Image: Whether to flip the image during resizing. 画像を左右反転するかどうかを指定します。</li>
 <li>Do Rotate Image: Whether to rotate the image during resizing. 画像を90度、180度、270度回転するかどうかを指定します。</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md35"></a>
+<h3><a class="anchor" id="autotoc_md34"></a>
 Output / 出力</h3>
 <ul>
 <li>outputHxWxBGR: <br  />
@@ -421,14 +407,14 @@ Output / 出力</h3>
  The ratio of the aspect ratios of input and output images. By multiplying the UV coordinates in the output image by this value, you can get the UV coordinates in the input image. For example, if the input image is 16:9 and the output image is square, the uvScalingFactor will be (1, 1.777…). <br  />
  入力画像と出力画像のアスペクト比の比です。出力画像でのUV座標にこの値を掛けることで、入力画像でのUV座標を得ることができます。例えば、入力画像が16:9で出力画像が正方形だった場合、uvScalingFactorは (1, 1.777…) となります。</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md35"></a>
 Affine transform / アフィン変換</h2>
 <p >By calling the "Affine Transform" node of BP_TextureProcessComponent, you can transform the input image and then scale it to the size specified at initialization. <br  />
  See a linear algebra textbook for affine transformation itself.</p>
 <p >BP_TextureProcessComponentの「Affine Transform」ノードを呼び出すことで、入力画像をAffine変換した上で、初期化時に指定したサイズに画像を拡大または縮小することができます。 <br  />
  Affine変換自体については、適当な線形代数の教科書を参照してください。</p>
 <p ><img src="images/TextureProcessing_affine.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md37"></a>
+<h3><a class="anchor" id="autotoc_md36"></a>
 Input / 入力</h3>
 <ul>
 <li>Input texture: Original image. 任意のUTextureを指定します</li>
@@ -438,19 +424,19 @@ Input / 入力</h3>
 <li>Do Flip Image: Whether to flip the image during resizing. 画像を左右反転するかどうかを指定します。</li>
 <li>Do Rotate Image: Whether to rotate the image during resizing. 画像を90度、180度、270度回転するかどうかを指定します。</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md38"></a>
+<h3><a class="anchor" id="autotoc_md37"></a>
 Output / 出力</h3>
 <ul>
 <li>outputHxWxBGR: <br  />
  An array of BGR values of each pixel of the image after transformation and resizing to (Destination Height x Destination Width). <br  />
  Affine変換後の画像を（Destination Height × Destination Width）のサイズに拡大または縮小し、各ピクセルのBGR値を並べた（Destination Height × Destination Width × 3）のサイズのバイト配列です。</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md39"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Function to find the Affine transformation matrix 1 / Affine変換行列を求める関数1</h2>
 <p >By calling the "Get Inverse Affine Mat" node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area. <br  />
  「Get Inverse Affine Mat」ノードを呼び出すことで、画像を任意の正方形の領域にトリミングするアフィン変換を表す行列の逆行列を取得することができます。</p>
 <p ><img src="images/TextureProcessing_getAffine1.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md40"></a>
+<h3><a class="anchor" id="autotoc_md39"></a>
 Input / 入力</h3>
 <ul>
 <li>Center: The center of the square area in the coordinate of the input image. 切り出す正方形領域の中心を、入力画像の座標系で表した値</li>
@@ -458,17 +444,17 @@ Input / 入力</h3>
  切り出す正方形領域のY軸の向きを、入力画像の座標系で表した値。例えば、回転なしの場合は(0, 1)、時計回りに90度回転する場合は(-1, 0)とする。</li>
 <li>Size: The length of the side of the square area in the coordinate of the input image. 切り出す正方形領域の辺の長さを、入力画像の座標系で表した値</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md41"></a>
+<h3><a class="anchor" id="autotoc_md40"></a>
 Output / 出力</h3>
 <ul>
 <li>Out Inverse Affine Mat: Inverse matrix of the matrix representing the obtained affine transformation 求めたAffine変換を表す行列の逆行列</li>
 </ul>
-<h2><a class="anchor" id="autotoc_md42"></a>
+<h2><a class="anchor" id="autotoc_md41"></a>
 Function to find the Affine transformation matrix 2 / Affine変換行列を求める関数2</h2>
 <p >By calling the "Get Inverse Affine Mat From 2 Points" node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area. <br  />
  「Get Inverse Affine Mat」ノードを呼び出すことで、画像を任意の正方形の領域にトリミングするアフィン変換を表す行列の逆行列を取得することができます。</p>
 <p ><img src="images/TextureProcessing_getAffine2.png" alt="" class="inline"/></p>
-<h3><a class="anchor" id="autotoc_md43"></a>
+<h3><a class="anchor" id="autotoc_md42"></a>
 Input / 入力</h3>
 <ul>
 <li>Center: The center of the square area in the coordinate of the input image. 切り出す正方形領域の中心を、入力画像の座標系で表した値</li>
@@ -477,13 +463,13 @@ Input / 入力</h3>
  Parameter for adjusting the size of the square area. The side of the square area will be (The distance between Center and Top Center * 2 * this value). <br  />
  切り出す正方形領域の大きさ調整のパラメータ。(CenterとTop Centerの距離 × 2 × この値)が正方形領域の辺の長さとなる。</li>
 </ul>
-<h3><a class="anchor" id="autotoc_md44"></a>
+<h3><a class="anchor" id="autotoc_md43"></a>
 Output / 出力</h3>
 <ul>
 <li>Out Inverse Affine Mat: Inverse matrix of the matrix representing the obtained affine transformation 求めたAffine変換を表す行列の逆行列</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md46"></a>
+<h1><a class="anchor" id="autotoc_md45"></a>
 How to use DirectXUtility module / DirectXUtilityモジュールの使い方</h1>
 <p >An example can be found in "Content\NNEngineDemo\Common\WidgetToChangeCpuGpu.uasset" of the demo project. <br  />
  デモプロジェクトの「Content\NNEngineDemo\Common\WidgetToChangeCpuGpu.uasset」に例があります。</p>
@@ -499,7 +485,7 @@ How to use DirectXUtility module / DirectXUtilityモジュールの使い方</h1
 </ol>
 <p ><img src="images/GetGpuInfo.png" alt="Get GPU Info" class="inline"/></p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md48"></a>
+<h1><a class="anchor" id="autotoc_md47"></a>
 How to use CustomizedOpenCV module / CustomizedOpenCVモジュールの使い方</h1>
 <p >Based on OpenCV 4.4.0 (OpenCV 4.5.4 for Android), some functions are disabled so that it can be built with Unreal Engine. <br  />
  It can be used in C++ by including the OpenCV header as shown below. <br  />
@@ -514,9 +500,9 @@ How to use CustomizedOpenCV module / CustomizedOpenCVモジュールの使い方
 <p >なお、あくまでTextureProcessingモジュールからの利用のために作成されたモジュールであり、OpenCVの全ての機能が利用可能なわけではありません。 <br  />
  OpenCV自体の使い方は、<a href="https://opencv.org/">公式ドキュメント</a>をご覧ください。</p>
 <hr  />
-<h1><a class="anchor" id="autotoc_md50"></a>
+<h1><a class="anchor" id="autotoc_md49"></a>
 Build / ビルド</h1>
-<h2><a class="anchor" id="autotoc_md51"></a>
+<h2><a class="anchor" id="autotoc_md50"></a>
 Build without CUDA and TensorRT / CUDAとTensorRTを除外してビルドする</h2>
 <p >This plugin contains a large (162MB) DLL, "onnxruntime_providers_cuda.dll". You may want to exclude it to reduce packaged game size. <br  />
  To do that, you need to disable CUDA and TensorRT <a href="https://onnxruntime.ai/docs/execution-providers/">execution providers</a> by following the steps below:</p>
@@ -542,7 +528,7 @@ Build without CUDA and TensorRT / CUDAとTensorRTを除外してビルドする<
 <li>プロジェクトをビルドします。</li>
 </ul>
 <hr  />
-<h1><a class="anchor" id="autotoc_md53"></a>
+<h1><a class="anchor" id="autotoc_md52"></a>
 Changelog / 更新履歴</h1>
 <ul>
 <li>v1.0 (2021-12-24)<ul>
