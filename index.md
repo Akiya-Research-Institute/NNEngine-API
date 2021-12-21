@@ -134,13 +134,13 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 2. Construct UOnnxModelWrapper and call "Init".
    - Specify the path to the ONNX model
    - Specify whether to use CPU or GPU, and which GPU to use.
-     - To get available GPUs on the system, [call "Get Gpu Info".](#autotoc_md29)
+     - To get available GPUs on the system, [call "Get Gpu Info".](#autotoc_md47)
      
 1. ブループリントクラスを新規作成し、UOnnxModelWrapperの変数を追加します。
 2. UOnnxModelWrapperのコンストラクタを呼び出し、次に「Init」ノードを呼び出します。
    - このとき、ONNXモデルのパスを指定します。
    - また、CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。
-     - システムで利用可能なGPUの一覧を取得するには、[「Get Gpu Info」を呼び出します。](#autotoc_md29)
+     - システムで利用可能なGPUの一覧を取得するには、[「Get Gpu Info」を呼び出します。](#autotoc_md47)
 
 ![](images/OnnxRuntime_load.png)
 
