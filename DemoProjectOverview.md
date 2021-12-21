@@ -6,7 +6,8 @@ Demo project shows examples of human pose estimation and facial capture using a 
 ## Environment / 環境
 
 - Windows 10
-- Unreal Engine 4.26 or 4.27
+- Unreal Engine 4.26
+- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade)
 - Visual Studio is required to be installed. See [the official documentation](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/) for how to install.  
    [公式ドキュメント](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/)の通りに、Visual Studioをインストールしておく必要があります。
 
