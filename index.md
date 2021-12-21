@@ -457,5 +457,5 @@ To do that, you need to disable CUDA and TensorRT [execution providers](https://
 
 ## Changelog / 更新履歴
 
-- v1.0 (2021-12-24)
+- v1.0 (2021-12-21)
   - First release.
