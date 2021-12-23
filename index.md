@@ -3,14 +3,14 @@
 ## Overview / 概要
 
 - A code plugin for [Unreal Engine 4](https://www.unrealengine.com/) to use [ONNX](https://onnx.ai/) model.
-- Provides functions for easy and accelerated ML inference callable from BP and C++ using [ONNX Runtime](https://onnxruntime.ai/) native library.
+- Provides easy-to-use functions for accelerated machine learning inference callable from BP and C++ using [ONNX Runtime](https://onnxruntime.ai/) native library.
 - Also, provides utility functions such as resizing, cropping, rotating UTexture and converting it to int8 array.
-- [Demo project](./md_html__demo_project_overview.html) of human pose estimation and facial capture using a single RGB camera are available.
+- [Demo project](./md_html__demo_project_overview.html) of human pose estimation and facial capture using a single RGB camera is available on GitHub.
 - 
 - [Unreal Engine 4](https://www.unrealengine.com/) で [ONNX](https://onnx.ai/) モデルを動かすためのプラグインです。
 - ブループリントとC++から機械学習推論を簡単・高速実行できる機能を提供します。内部では[ONNX Runtime](https://onnxruntime.ai/)ネイティブライブラリを使用しています。
 - また、UTextureをリサイズ、トリミング、回転したうえでint8配列へ変換する機能等を提供します。
-- 人物姿勢推定と表情のキャプチャを行う[デモプロジェクト](./md_html__demo_project_overview.html)も提供されています。
+- 人物姿勢推定と表情のキャプチャを行う[デモプロジェクト](./md_html__demo_project_overview.html)も公開しています。
 
 --
 
