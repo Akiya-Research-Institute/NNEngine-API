@@ -27,7 +27,9 @@ var NAVTREE =
   [ "NNEngine", "index.html", [
     [ "Manual / マニュアル", "index.html", [
       [ "Overview / 概要", "index.html#autotoc_md6", null ],
-      [ "System Requirements / 動作環境", "index.html#autotoc_md8", null ],
+      [ "System Requirements / 動作環境", "index.html#autotoc_md8", [
+        [ "CUDA, cuDNN, TensorRT versions", "index.html#autotoc_md9", null ]
+      ] ],
       [ "Installation / インストール", "index.html#autotoc_md11", [
         [ "From UE Marketplace", "index.html#autotoc_md12", null ]
       ] ],

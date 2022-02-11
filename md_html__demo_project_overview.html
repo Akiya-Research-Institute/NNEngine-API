@@ -90,11 +90,20 @@ $(document).ready(function(){initNavTree('md_html__demo_project_overview.html','
 <h1><a class="anchor" id="autotoc_md1"></a>
 Environment / 環境</h1>
 <ul>
-<li>Windows 10</li>
+<li>Windows 10 64bit, Linux x64 (Ubuntu 18.04.6)</li>
 <li>Unreal Engine 4.26</li>
 <li><a href="https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade">NNEngine plugin</a></li>
+<li>For Windows<ul>
 <li>Visual Studio is required to be installed. See <a href="https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/">the official documentation</a> for how to install. <br  />
  <a href="https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/">公式ドキュメント</a>の通りに、Visual Studioをインストールしておく必要があります。</li>
+</ul>
+</li>
+<li>For Linux<ul>
+<li>Visual Studio Code is recommended for IDE. See <a href="https://zenn.dev/akiya_souken/articles/use-ue4-on-linux-with-vscode_en">this guide</a> for how to install. <br  />
+ Visual Studio Codeの使用をおすすめします。<a href="https://zenn.dev/akiya_souken/articles/use-ue4-on-linux-with-vscode">こちらのガイド</a>にインストール手順を記載しています。 <br  />
+</li>
+</ul>
+</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md2"></a>
 Download / ダウンロード</h1>
@@ -105,13 +114,29 @@ Download / ダウンロード</h1>
 </p>
 <h1><a class="anchor" id="autotoc_md3"></a>
 Run the demo / デモの実行</h1>
-<ol type="1">
-<li>Extract the downloaded zip file and double-click NNEngineDemo.uproject. The first time you start it, you need to build the C++ source.</li>
-<li>After launching, click "Play" on the editor to start the demo that performs AI estimation for the pre-recorded video.</li>
-<li>To run on your webcam, follow the instructions in "Content\NNEngineDemo\Tutorial.uasset" and specify the webcam you want to use in WebcamMediaPlayer's Video.</li>
+<p >For Windows</p><ol type="1">
+<li>Extract the downloaded zip file and double-click <code>NNEngineDemo.uproject</code>. The first time you start it, you need to build the C++ source.</li>
+<li>After launching, click <code>Play</code> on the editor to start the demo that performs AI estimation for the pre-recorded video.</li>
+<li>To run on your webcam, follow the instructions in <code>Content\NNEngineDemo\Tutorial.uasset</code> and specify the webcam you want to use in WebcamMediaPlayer's Video.</li>
 </ol>
 <ol type="1">
 <li>ダウンロードしたzipファイルを展開し、NNEngineDemo.uprojectをダブルクリックします。初回起動時は、C++ソースのビルドが必要です。</li>
+<li>起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。 <br  />
+</li>
+<li>自分のウェブカメラで実行するには、「Content\NNEngineDemo\Tutorial.uasset」の指示に従って、WebcamMediaPlayerのVideoに使用したいウェブカメラを指定します。 <br  />
+</li>
+</ol>
+<p >For Linux</p><ol type="1">
+<li>Extract the downloaded zip file and double-click <code>NNEngineDemo.uproject</code>. The first time you start it, you need to build the C++ source.</li>
+<li>The build will fail. Double-click <code>NNEngineDemo.code-workspace</code> and open VS Code.</li>
+<li>Build and run from VS Code.</li>
+<li>After launching, click <code>Play</code> on the editor to start the demo that performs AI estimation for the pre-recorded video.</li>
+<li>To run on your webcam, follow the instructions in <code>Content\NNEngineDemo\Tutorial.uasset</code> and specify the webcam you want to use in WebcamMediaPlayer's Video.</li>
+</ol>
+<ol type="1">
+<li>ダウンロードしたzipファイルを展開し、NNEngineDemo.uprojectをダブルクリックします。初回起動時は、C++ソースのビルドが必要です。</li>
+<li>ビルドが失敗します。<code>NNEngineDemo.code-workspace</code>をダブルクリックし、VS Codeを起動します。</li>
+<li>VS Codeでビルドし実行します。</li>
 <li>起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。 <br  />
 </li>
 <li>自分のウェブカメラで実行するには、「Content\NNEngineDemo\Tutorial.uasset」の指示に従って、WebcamMediaPlayerのVideoに使用したいウェブカメラを指定します。 <br  />

@@ -125,6 +125,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6644a473f81e2e5b0e790d470771fe07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad99072ad474d0e52f072ec888645938"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#aad99072ad474d0e52f072ec888645938">showImageWith3dPoints</a> (const TArray&lt; uint8 &gt; &amp;rawDataHxWxBGR, const TArray&lt; FVector &gt; &amp;overlayPoints, const int imageWidth, const int imageHeight, const int windowSize=700, const FString windowTitle=&quot;Debug&quot;, const bool denormalizePoints=true)</td></tr>
 <tr class="separator:aad99072ad474d0e52f072ec888645938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad06fee097f93efea26e2e496f6b24407"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#ad06fee097f93efea26e2e496f6b24407">convertToIntImage</a> (UPARAM(ref) TArray&lt; uint8 &gt; &amp;in_rawDataHxWxBGR, TArray&lt; int &gt; &amp;out_rawDataHxWxBGR, const int imageWidth, const int imageHeight)</td></tr>
+<tr class="separator:ad06fee097f93efea26e2e496f6b24407"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae67b71fc41cc516ca65299928182df89" name="ae67b71fc41cc516ca65299928182df89"></a>
@@ -215,6 +217,63 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">in_points</td><td>Points to be transformed </td></tr>
     <tr><td class="paramname">out_points</td><td>Transformed points </td></tr>
     <tr><td class="paramname">affineMat</td><td>Input matrix which represents affine transform </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ad06fee097f93efea26e2e496f6b24407" name="ad06fee097f93efea26e2e496f6b24407"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad06fee097f93efea26e2e496f6b24407">&#9670;&nbsp;</a></span>convertToIntImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::convertToIntImage </td>
+          <td>(</td>
+          <td class="paramtype">UPARAM(ref) TArray&lt; uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_rawDataHxWxBGR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out_rawDataHxWxBGR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageHeight</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Convert image from byte array to integer array </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_rawDataHxWxBGR</td><td>Input image as an array of bytes whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
+    <tr><td class="paramname">out_rawDataHxWxBGR</td><td>Output image as an array of 32-bit integers whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
+    <tr><td class="paramname">imageWidth</td><td>The width of the image </td></tr>
+    <tr><td class="paramname">imageHeight</td><td>The height of the image </td></tr>
   </table>
   </dd>
 </dl>
