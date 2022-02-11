@@ -1,0 +1,107 @@
+site_name: NNEngine Manual
+site_url: https://Akiya-Research-Institute.github.io/NNEngine-API/
+site_author: Kenji Asaba
+site_description: ONNX形式のAIによる機械学習推論をUnreal EngineのブループリントまたはC++から簡単・高速実行するプラグインであるNNEngineの公式ドキュメント。
+copyright: Copyright &copy; 2022 Akiya Research Institute, Inc. All Rights Reserved
+
+site_dir: ../docs/ja
+
+extra_css:
+  - stylesheets/extra.css
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - scheme: slate 
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)" 
+      scheme: default
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)" 
+      scheme: slate
+      toggle:
+        icon: material/weather-night
+        name: Switch to light mode
+  font:
+    text: M PLUS 1
+    code: M PLUS 1 Code
+  language: ja
+  favicon: images/favicon.png
+  logo: images/logo.png
+  features:
+    - navigation.instant
+    - navigation.tracking    
+    # - navigation.tabs
+    - navigation.sections
+    # - navigation.expand
+    # - navigation.indexes
+    - toc.integrate
+    - search.suggest
+    - search.highlight
+    - search.share
+    - header.autohide
+    
+extra:
+  alternate:
+    - name: English
+      link: /NNEngine-API/en/ 
+      lang: en
+    - name: 日本語
+      link: /NNEngine-API/ja/
+      lang: ja
+  analytics:
+    provider: google
+    property: UA-2709176-10
+  social:
+    - icon: fontawesome/solid/home
+      link: https://vrlab.akiya-souken.co.jp/
+    - icon: fontawesome/brands/youtube 
+      link: https://www.youtube.com/channel/UC7t4amWNvquSy_ODcGZ4R0g
+    - icon: fontawesome/brands/twitter 
+      link: https://twitter.com/Akiya_Souken_VR
+    - icon: fontawesome/brands/github 
+      link: https://github.com/Akiya-Research-Institute
+    - icon: fontawesome/solid/store-alt
+      link: https://www.unrealengine.com/marketplace/ja/product/74892c770dc149b1b5c4e872804e6ade
+  # generator: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true 
+  - pymdownx.details
+
+nav:
+  - プラグイン:
+    - index.md
+    - system-requirement.md
+    - install.md
+    - modules.md
+    - 使い方:
+      - OnnxRuntimeモジュール: how-to-use-onnxruntime-module.md
+      - TextureProcessingモジュール: how-to-use-texture-processing-module.md
+      - DirectXUtilityモジュール: how-to-use-directx-utility-module.md
+      - CustomizedOpenCVモジュール: how-to-use-customized-opencv-module.md
+    - Tips:
+      - tips-build.md
+      - tips-edit-onnx.md
+    - changelog.md
+    - APIリファレンス: https://akiya-research-institute.github.io/NNEngine-API/annotated.html
+  - デモプロジェクト:
+    - demo-project-overview.md
+  - ONNX:
+    - onnx-introduction.md
