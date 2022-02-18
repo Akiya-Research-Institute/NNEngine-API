@@ -2,6 +2,8 @@
 
 Example project of depth estimation using a single RGB camera.  
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/glq34Wdi_3w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Environment
 
 - OS: Windows 10 64bit

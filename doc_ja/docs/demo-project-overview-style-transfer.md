@@ -2,6 +2,8 @@
 
 アートスタイルを表現する任意の画像と、コンテンツを表現する任意の画像を組み合わせて、新しい画像を生成するサンプルです。  
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_v0ZNogoK6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 環境
 
 - Windows 10 64bit

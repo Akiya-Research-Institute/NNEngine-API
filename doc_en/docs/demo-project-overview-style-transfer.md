@@ -2,6 +2,8 @@
 
 Example project of artistic style transfer, where a new image is created based on two inputs, one representing the artistic style and one representing the content.
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_v0ZNogoK6w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## Environment
 
 - OS: Windows 10 64bit
