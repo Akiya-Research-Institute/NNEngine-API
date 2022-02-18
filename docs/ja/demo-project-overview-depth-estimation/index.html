@@ -645,6 +645,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#large" class="md-nav__link">
+    Largeモデル
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
     プレビューメッシュへのカメラ画像の表示
   </a>
@@ -756,7 +763,7 @@
 <ul>
 <li>Windows 10 64bit</li>
 <li>Unreal Engine 4.26.2</li>
-<li><a href="https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade">NNEngine plugin</a></li>
+<li><a href="https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade">NNEngine plugin</a> v1.2 or above</li>
 </ul>
 <h2 id="_3">ダウンロード</h2>
 <p><a href="https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4">GitHub</a>で公開しています。<br />
@@ -767,6 +774,8 @@
 <li>起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。  </li>
 <li>自分のウェブカメラで実行するには、/Content/Common/MediaPlayer_webcam.uassetのVideoに使用したいウェブカメラを指定します。  </li>
 </ol>
+<h2 id="large">Largeモデル</h2>
+<p>Largeモデル(入力画像サイズが384x384ピクセル)を使用するには、<a href="https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.1/midas_1x384x384xBGRxByte.onnx">こちら(GitHub Release page)</a>または<a href="https://drive.google.com/file/d/1ml45494AGppnSZ3ivhw-HPi9CE8hxY2J/view?usp=sharing">こちら(Google Drive)</a>からダウンロードし、<code>Source\ThirdParty\Models</code>の下に配置してください。</p>
 <h2 id="_5">プレビューメッシュへのカメラ画像の表示</h2>
 <p>/Content/DepthEstimation/Grayscale_WPO.uassetのBase Colorを切り替えることで、カメラ画像をプレビューメッシュに表示できます。</p>
 <h2 id="_6">モデル詳細</h2>
