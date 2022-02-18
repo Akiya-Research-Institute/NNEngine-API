@@ -6,7 +6,7 @@
 
 - Windows 10 64bit
 - Unreal Engine 4.26.2
-- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade)
+- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) v1.2 or above
 
 ## ダウンロード
 
@@ -18,6 +18,10 @@
 1. ダウンロードしたzipファイルを展開し、MonoDepthEstimation.uprojectをダブルクリックします。
 2. 起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。  
 3. 自分のウェブカメラで実行するには、/Content/Common/MediaPlayer_webcam.uassetのVideoに使用したいウェブカメラを指定します。  
+
+## Largeモデル
+
+Largeモデル(入力画像サイズが384x384ピクセル)を使用するには、[こちら(GitHub Release page)](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.1/midas_1x384x384xBGRxByte.onnx)または[こちら(Google Drive)](https://drive.google.com/file/d/1ml45494AGppnSZ3ivhw-HPi9CE8hxY2J/view?usp=sharing)からダウンロードし、`Source\ThirdParty\Models`の下に配置してください。
 
 ## プレビューメッシュへのカメラ画像の表示
 
