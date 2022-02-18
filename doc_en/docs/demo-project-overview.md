@@ -1,6 +1,6 @@
-# Demo project overview
+# Human pose estimation
 
-Demo project shows examples of human pose estimation and facial capture using a single RGB camera.  
+Example project of human pose estimation, facial capture and eye tracking using a single RGB camera.  
 
 ## Environment
 

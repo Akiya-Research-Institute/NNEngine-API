@@ -1,6 +1,6 @@
-# デモプロジェクトの概要
+# 人物姿勢推定サンプル
 
-デモプロジェクトは、単一のRGBカメラを用いた人物姿勢推定、表情キャプチャ、アイトラッキングのサンプルです。
+単一のRGBカメラを用いた人物姿勢推定、表情キャプチャ、アイトラッキングのサンプルプロジェクトです。
 
 ## 環境
 
@@ -50,3 +50,11 @@
 下記のチュートリアルで、実装を説明しています。
 
 - Content\NNEngineDemo\MotionCapture_Bp\Details_PoseEstimation.uasset
+
+## モデル詳細
+
+このサンプルで使用しているモデルの詳細は下記をご覧ください。  
+
+- [MediaPipe Pose](https://google.github.io/mediapipe/solutions/pose)
+- [MediaPipe Face Mesh](https://google.github.io/mediapipe/solutions/face_mesh)
+- [MediaPipe Iris](https://google.github.io/mediapipe/solutions/iris)

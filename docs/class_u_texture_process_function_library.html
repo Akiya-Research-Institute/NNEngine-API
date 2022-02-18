@@ -111,6 +111,8 @@ Collaboration diagram for UTextureProcessFunctionLibrary:</div>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0bb764699d2d0d0a719327a64798b17e"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a0bb764699d2d0d0a719327a64798b17e">getImageSize</a> (UTexture *inputTexture, FVector2D &amp;dimensions)</td></tr>
 <tr class="separator:a0bb764699d2d0d0a719327a64798b17e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4dff662e5d9385e8c7eb4aa982f227b"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#ad4dff662e5d9385e8c7eb4aa982f227b">isExternal</a> (UTexture *texture)</td></tr>
+<tr class="separator:ad4dff662e5d9385e8c7eb4aa982f227b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab5b0e53dcf82e3e4c222df0d5acd8f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a2ab5b0e53dcf82e3e4c222df0d5acd8f">getInverseAffineMatFrom2Points</a> (const FVector2D &amp;center, const FVector2D &amp;topCenter, const float &amp;scalingFactor, <a class="el" href="struct_f_affine_mat2_d.html">FAffineMat2D</a> &amp;out_inverseAffineMat)</td></tr>
 <tr class="separator:a2ab5b0e53dcf82e3e4c222df0d5acd8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d8f02132f0e27963372ee18b8cd68a1"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a9d8f02132f0e27963372ee18b8cd68a1">getInverseAffineMat</a> (const FVector2D &amp;center, const FVector2D &amp;orientation, const float &amp;size, <a class="el" href="struct_f_affine_mat2_d.html">FAffineMat2D</a> &amp;out_inverseAffineMat)</td></tr>
@@ -125,10 +127,36 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a6644a473f81e2e5b0e790d470771fe07"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad99072ad474d0e52f072ec888645938"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#aad99072ad474d0e52f072ec888645938">showImageWith3dPoints</a> (const TArray&lt; uint8 &gt; &amp;rawDataHxWxBGR, const TArray&lt; FVector &gt; &amp;overlayPoints, const int imageWidth, const int imageHeight, const int windowSize=700, const FString windowTitle=&quot;Debug&quot;, const bool denormalizePoints=true)</td></tr>
 <tr class="separator:aad99072ad474d0e52f072ec888645938"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a42a87f8d84d289210e3dec00e6058a9b"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a42a87f8d84d289210e3dec00e6058a9b">showImage</a> (const TArray&lt; uint8 &gt; &amp;rawDataHxWxBGR, const int imageWidth, const int imageHeight, const int windowSize=700, const FString windowTitle=&quot;Debug&quot;)</td></tr>
+<tr class="separator:a42a87f8d84d289210e3dec00e6058a9b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf178c8bb8d48b28ed48f0b15e96c338"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#aaf178c8bb8d48b28ed48f0b15e96c338">showImageFloat</a> (const TArray&lt; float &gt; &amp;rawDataHxWxBGR, const int imageWidth, const int imageHeight, const int windowSize=700, const FString windowTitle=&quot;Debug&quot;)</td></tr>
+<tr class="separator:aaf178c8bb8d48b28ed48f0b15e96c338"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad06fee097f93efea26e2e496f6b24407"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#ad06fee097f93efea26e2e496f6b24407">convertToIntImage</a> (UPARAM(ref) TArray&lt; uint8 &gt; &amp;in_rawDataHxWxBGR, TArray&lt; int &gt; &amp;out_rawDataHxWxBGR, const int imageWidth, const int imageHeight)</td></tr>
 <tr class="separator:ad06fee097f93efea26e2e496f6b24407"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a16877bfef84c81d0666e716e11076c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a0a16877bfef84c81d0666e716e11076c">normalizeFloatArray</a> (UPARAM(ref) TArray&lt; float &gt; &amp;in_data, TArray&lt; float &gt; &amp;out_data, const float bias=0.0f, const float scalingFactor=1.0f)</td></tr>
+<tr class="separator:a0a16877bfef84c81d0666e716e11076c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a45f9e4c08e6a9e4cd4f27d86c2f9cb76"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a45f9e4c08e6a9e4cd4f27d86c2f9cb76">normalizeFloatArrayWith3Channels</a> (UPARAM(ref) TArray&lt; float &gt; &amp;in_data, TArray&lt; float &gt; &amp;out_data, const FVector bias=FVector::ZeroVector, const FVector scalingFactor=FVector(1.0f, 1.0f, 1.0f), const bool isCHW=true)</td></tr>
+<tr class="separator:a45f9e4c08e6a9e4cd4f27d86c2f9cb76"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9db07db246f6c9f67535b2f73648a1e7"><td class="memItemLeft" align="right" valign="top">static UTexture2D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a9db07db246f6c9f67535b2f73648a1e7">CreateTexture2d_Gray_Byte</a> (const int32 width, const int32 height)</td></tr>
+<tr class="separator:a9db07db246f6c9f67535b2f73648a1e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5a935860ab325dd2597eaa011a4d083c"><td class="memItemLeft" align="right" valign="top">static UTexture2D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a5a935860ab325dd2597eaa011a4d083c">CreateTexture2d_Gray_Float</a> (const int32 width, const int32 height)</td></tr>
+<tr class="separator:a5a935860ab325dd2597eaa011a4d083c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52f28f5fc25fccf0a95afdd4620149a6"><td class="memItemLeft" align="right" valign="top">static UTexture2D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a52f28f5fc25fccf0a95afdd4620149a6">CreateTexture2d_BGRA_Byte</a> (const int32 width, const int32 height)</td></tr>
+<tr class="separator:a52f28f5fc25fccf0a95afdd4620149a6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a218e85dc48d87f005ab3606fa351a256"><td class="memItemLeft" align="right" valign="top">static UTexture2D *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a218e85dc48d87f005ab3606fa351a256">CreateTexture2d_RGBA_Float</a> (const int32 width, const int32 height)</td></tr>
+<tr class="separator:a218e85dc48d87f005ab3606fa351a256"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad42c78e3fd0b23498cba729ffba750cb"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#ad42c78e3fd0b23498cba729ffba750cb">CopyByteArrayToTexture2D</a> (const TArray&lt; uint8 &gt; &amp;source_data, UPARAM(ref) UTexture2D *destination_texture2D, const bool useMultiThread=true)</td></tr>
+<tr class="separator:ad42c78e3fd0b23498cba729ffba750cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa37a01c187e81c015bd00a4ce3515e72"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#aa37a01c187e81c015bd00a4ce3515e72">CopyFloatArrayToTexture2D</a> (const TArray&lt; float &gt; &amp;source_data, UPARAM(ref) UTexture2D *destination_texture2D, const bool useMultiThread=true)</td></tr>
+<tr class="separator:aa37a01c187e81c015bd00a4ce3515e72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04360ba46d672a961146d31cc559ef2d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a04360ba46d672a961146d31cc559ef2d">CopyByteArrayToTexture2D_RGB_To_BGRA</a> (const TArray&lt; uint8 &gt; &amp;source_data, UPARAM(ref) UTexture2D *destination_texture2D, const bool useMultiThread=true, const bool CHW_to_HWC=true)</td></tr>
+<tr class="separator:a04360ba46d672a961146d31cc559ef2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6068fe575b8e35ac6415c67ed8e39d81"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_texture_process_function_library.html#a6068fe575b8e35ac6415c67ed8e39d81">CopyFloatArrayToTexture2D_RGB_To_RGBA</a> (const TArray&lt; float &gt; &amp;source_data, UPARAM(ref) UTexture2D *destination_texture2D, const bool useMultiThread=true, const bool CHW_to_HWC=true)</td></tr>
+<tr class="separator:a6068fe575b8e35ac6415c67ed8e39d81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p >Blueprint-callable static function library for image processing </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae67b71fc41cc516ca65299928182df89" name="ae67b71fc41cc516ca65299928182df89"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae67b71fc41cc516ca65299928182df89">&#9670;&nbsp;</a></span>affineTransformPoint()</h2>
 
@@ -280,6 +308,220 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad42c78e3fd0b23498cba729ffba750cb" name="ad42c78e3fd0b23498cba729ffba750cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad42c78e3fd0b23498cba729ffba750cb">&#9670;&nbsp;</a></span>CopyByteArrayToTexture2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::CopyByteArrayToTexture2D </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPARAM(ref) UTexture2D *&#160;</td>
+          <td class="paramname"><em>destination_texture2D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useMultiThread</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Fill Texture2D data by byte array. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_data</td><td>Input data copied to texture </td></tr>
+    <tr><td class="paramname">destination_texture2D</td><td>Texture to be filled </td></tr>
+    <tr><td class="paramname">useMultiThread</td><td>Whether to use multithread to copy the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a04360ba46d672a961146d31cc559ef2d" name="a04360ba46d672a961146d31cc559ef2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04360ba46d672a961146d31cc559ef2d">&#9670;&nbsp;</a></span>CopyByteArrayToTexture2D_RGB_To_BGRA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::CopyByteArrayToTexture2D_RGB_To_BGRA </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPARAM(ref) UTexture2D *&#160;</td>
+          <td class="paramname"><em>destination_texture2D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useMultiThread</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>CHW_to_HWC</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Fill Texture2D data by byte array while converting CHW-RGB format to HWC-BGRA format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_data</td><td>Input data copied to texture. (Channel x Height x Width), RGB format. </td></tr>
+    <tr><td class="paramname">destination_texture2D</td><td>Texture to be filled. (Width x Height x Channel), BGRA format. </td></tr>
+    <tr><td class="paramname">useMultiThread</td><td>Whether to use multithread to copy the data </td></tr>
+    <tr><td class="paramname">CHW_to_HWC</td><td>Whether to convert the image from (Channel x Height x Width) to (Width x Height x Channel) format. If false, the input data is assumed to be in (Width x Height x Channel) format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aa37a01c187e81c015bd00a4ce3515e72" name="aa37a01c187e81c015bd00a4ce3515e72"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa37a01c187e81c015bd00a4ce3515e72">&#9670;&nbsp;</a></span>CopyFloatArrayToTexture2D()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::CopyFloatArrayToTexture2D </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPARAM(ref) UTexture2D *&#160;</td>
+          <td class="paramname"><em>destination_texture2D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useMultiThread</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Fill Texture2D data by float array. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_data</td><td>Input data copied to texture </td></tr>
+    <tr><td class="paramname">destination_texture2D</td><td>Texture to be filled </td></tr>
+    <tr><td class="paramname">useMultiThread</td><td>Whether to use multithread to copy the data </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a6068fe575b8e35ac6415c67ed8e39d81" name="a6068fe575b8e35ac6415c67ed8e39d81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6068fe575b8e35ac6415c67ed8e39d81">&#9670;&nbsp;</a></span>CopyFloatArrayToTexture2D_RGB_To_RGBA()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::CopyFloatArrayToTexture2D_RGB_To_RGBA </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>source_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">UPARAM(ref) UTexture2D *&#160;</td>
+          <td class="paramname"><em>destination_texture2D</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>useMultiThread</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>CHW_to_HWC</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Fill Texture2D data by float array while converting RGB format to BGRA format. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">source_data</td><td>Input data copied to texture. (Channel x Height x Width), RGB format. </td></tr>
+    <tr><td class="paramname">destination_texture2D</td><td>Texture to be filled. (Width x Height x Channel), RGBA format. </td></tr>
+    <tr><td class="paramname">useMultiThread</td><td>Whether to use multithread to copy the data </td></tr>
+    <tr><td class="paramname">CHW_to_HWC</td><td>Whether to convert the image from (Channel x Height x Width) to (Width x Height x Channel) format. If false, the input data is assumed to be in (Width x Height x Channel) format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="ad682284e8f4cbe974051a0f592c9a011" name="ad682284e8f4cbe974051a0f592c9a011"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad682284e8f4cbe974051a0f592c9a011">&#9670;&nbsp;</a></span>correctAspectRatio()</h2>
 
@@ -324,6 +566,178 @@ Static Public Member Functions</h2></td></tr>
     <tr><td class="paramname">uvScalingFactor</td><td>The scaling factor of the UV of the image to keep the aspect ratio of the image. X = 1 and Y &gt; 1 for a landscape image. X &gt; 1 and Y = 1 for a portrait image. </td></tr>
     <tr><td class="paramname">affineMat</td><td>Input matrix </td></tr>
     <tr><td class="paramname">correctedAffineMat</td><td>Output matrix </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a52f28f5fc25fccf0a95afdd4620149a6" name="a52f28f5fc25fccf0a95afdd4620149a6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a52f28f5fc25fccf0a95afdd4620149a6">&#9670;&nbsp;</a></span>CreateTexture2d_BGRA_Byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UTexture2D * UTextureProcessFunctionLibrary::CreateTexture2d_BGRA_Byte </td>
+          <td>(</td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Create Texture2D with 4(BGRA) color channel of byte </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Texture width </td></tr>
+    <tr><td class="paramname">height</td><td>Texture height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a9db07db246f6c9f67535b2f73648a1e7" name="a9db07db246f6c9f67535b2f73648a1e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9db07db246f6c9f67535b2f73648a1e7">&#9670;&nbsp;</a></span>CreateTexture2d_Gray_Byte()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UTexture2D * UTextureProcessFunctionLibrary::CreateTexture2d_Gray_Byte </td>
+          <td>(</td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Create Texture2D with one color channel of byte </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Texture width </td></tr>
+    <tr><td class="paramname">height</td><td>Texture height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5a935860ab325dd2597eaa011a4d083c" name="a5a935860ab325dd2597eaa011a4d083c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a935860ab325dd2597eaa011a4d083c">&#9670;&nbsp;</a></span>CreateTexture2d_Gray_Float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UTexture2D * UTextureProcessFunctionLibrary::CreateTexture2d_Gray_Float </td>
+          <td>(</td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Create Texture2D with one color channel of float32 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Texture width </td></tr>
+    <tr><td class="paramname">height</td><td>Texture height </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a218e85dc48d87f005ab3606fa351a256" name="a218e85dc48d87f005ab3606fa351a256"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a218e85dc48d87f005ab3606fa351a256">&#9670;&nbsp;</a></span>CreateTexture2d_RGBA_Float()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static UTexture2D * UTextureProcessFunctionLibrary::CreateTexture2d_RGBA_Float </td>
+          <td>(</td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int32&#160;</td>
+          <td class="paramname"><em>height</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Create Texture2D with 4(ABGR) color channel of float32 </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">width</td><td>Texture width </td></tr>
+    <tr><td class="paramname">height</td><td>Texture height </td></tr>
   </table>
   </dd>
 </dl>
@@ -487,6 +901,288 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ad4dff662e5d9385e8c7eb4aa982f227b" name="ad4dff662e5d9385e8c7eb4aa982f227b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4dff662e5d9385e8c7eb4aa982f227b">&#9670;&nbsp;</a></span>isExternal()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool UTextureProcessFunctionLibrary::isExternal </td>
+          <td>(</td>
+          <td class="paramtype">UTexture *&#160;</td>
+          <td class="paramname"><em>texture</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Check if the sampler type of the texture is "External" </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Texture</td><td>Input texture </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Whether the sampler type of the texture is "External" </dd></dl>
+
+</div>
+</div>
+<a id="a0a16877bfef84c81d0666e716e11076c" name="a0a16877bfef84c81d0666e716e11076c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a16877bfef84c81d0666e716e11076c">&#9670;&nbsp;</a></span>normalizeFloatArray()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::normalizeFloatArray </td>
+          <td>(</td>
+          <td class="paramtype">UPARAM(ref) TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>bias</em> = <code>0.0f</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const float&#160;</td>
+          <td class="paramname"><em>scalingFactor</em> = <code>1.0f</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Add and multiply values to float array. <code>out_data = scalingFactor * (in_data + bias)</code> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_data</td><td>Input float array. </td></tr>
+    <tr><td class="paramname">out_data</td><td>Output float array. </td></tr>
+    <tr><td class="paramname">bias</td><td>The value added to each array element. For example, if this value is -0.5, data in [0.0, 1.0] is converted to [-0.5, 0.5]. This addition is performed before the multiplication of the scalingFactor. </td></tr>
+    <tr><td class="paramname">scalingFactor</td><td>The value multiplied to each array element. For example, if this value is 2.0, data in [0, 1.0] is converted to [0.0, 2.0]. This multiplication is performed after the addition of the bias. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a45f9e4c08e6a9e4cd4f27d86c2f9cb76" name="a45f9e4c08e6a9e4cd4f27d86c2f9cb76"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a45f9e4c08e6a9e4cd4f27d86c2f9cb76">&#9670;&nbsp;</a></span>normalizeFloatArrayWith3Channels()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::normalizeFloatArrayWith3Channels </td>
+          <td>(</td>
+          <td class="paramtype">UPARAM(ref) TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>in_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>out_data</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector&#160;</td>
+          <td class="paramname"><em>bias</em> = <code>FVector::ZeroVector</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FVector&#160;</td>
+          <td class="paramname"><em>scalingFactor</em> = <code>FVector(1.0f,&#160;1.0f,&#160;1.0f)</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const bool&#160;</td>
+          <td class="paramname"><em>isCHW</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Add and multiply values to float array. The data is assumed to have 3 channels in (Channel x Height x Width) format or (Width x Height x Channel) format. <code>out_data = scalingFactor * (in_data + bias)</code> </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">in_data</td><td>Input float array. </td></tr>
+    <tr><td class="paramname">out_data</td><td>Output float array. </td></tr>
+    <tr><td class="paramname">bias</td><td>The value added to each array element. XYZ corresponds to 3 channels of the data. </td></tr>
+    <tr><td class="paramname">scalingFactor</td><td>The value multiplied to each array element. XYZ corresponds to 3 channels of the data. </td></tr>
+    <tr><td class="paramname">isCHW</td><td>Whether the input data is in (Channel x Height x Width) format or (Width x Height x Channel) format. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a42a87f8d84d289210e3dec00e6058a9b" name="a42a87f8d84d289210e3dec00e6058a9b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42a87f8d84d289210e3dec00e6058a9b">&#9670;&nbsp;</a></span>showImage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::showImage </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; uint8 &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rawDataHxWxBGR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>windowSize</em> = <code>700</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FString&#160;</td>
+          <td class="paramname"><em>windowTitle</em> = <code>&quot;Debug&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Visualize the image. Works only on Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rawDataHxWxBGR</td><td>Input image as an array of byte whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
+    <tr><td class="paramname">imageWidth</td><td>The width of the input image </td></tr>
+    <tr><td class="paramname">imageHeight</td><td>The height of the input image </td></tr>
+    <tr><td class="paramname">windowSize</td><td>The size of the output window </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>The title of the output window </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aaf178c8bb8d48b28ed48f0b15e96c338" name="aaf178c8bb8d48b28ed48f0b15e96c338"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaf178c8bb8d48b28ed48f0b15e96c338">&#9670;&nbsp;</a></span>showImageFloat()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void UTextureProcessFunctionLibrary::showImageFloat </td>
+          <td>(</td>
+          <td class="paramtype">const TArray&lt; float &gt; &amp;&#160;</td>
+          <td class="paramname"><em>rawDataHxWxBGR</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageWidth</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>imageHeight</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>windowSize</em> = <code>700</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const FString&#160;</td>
+          <td class="paramname"><em>windowTitle</em> = <code>&quot;Debug&quot;</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p >Visualize the image. Works only on Windows. </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">rawDataHxWxBGR</td><td>Input image as an array of float whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
+    <tr><td class="paramname">imageWidth</td><td>The width of the input image </td></tr>
+    <tr><td class="paramname">imageHeight</td><td>The height of the input image </td></tr>
+    <tr><td class="paramname">windowSize</td><td>The size of the output window </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>The title of the output window </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a6644a473f81e2e5b0e790d470771fe07" name="a6644a473f81e2e5b0e790d470771fe07"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6644a473f81e2e5b0e790d470771fe07">&#9670;&nbsp;</a></span>showImageWith2dPoints()</h2>
 
@@ -550,12 +1246,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Visualize the image while overlaying points </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Visualize the image while overlaying points. Works only on Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rawDataHxWxBGR</td><td>Input image as an array of bytes whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
     <tr><td class="paramname">overlayPoints</td><td>Points to be drawn on the input image </td></tr>
     <tr><td class="paramname">imageWidth</td><td>The width of the input image </td></tr>
     <tr><td class="paramname">imageHeight</td><td>The height of the input image </td></tr>
+    <tr><td class="paramname">windowSize</td><td>The size of the output window </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>The title of the output window </td></tr>
+    <tr><td class="paramname">denormalizePoints</td><td>Whether to multiply the image width and height to the point coordinates </td></tr>
   </table>
   </dd>
 </dl>
@@ -625,12 +1324,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p >Visualize the image while overlaying points </p><dl class="params"><dt>Parameters</dt><dd>
+<p >Visualize the image while overlaying points. Works only on Windows. </p><dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">rawDataHxWxBGR</td><td>Input image as an array of bytes whose length is (imageHeight x imageWidth x 3(BGR)). </td></tr>
     <tr><td class="paramname">overlayPoints</td><td>Points to be drawn on the input image </td></tr>
     <tr><td class="paramname">imageWidth</td><td>The width of the input image </td></tr>
     <tr><td class="paramname">imageHeight</td><td>The height of the input image </td></tr>
+    <tr><td class="paramname">windowSize</td><td>The size of the output window </td></tr>
+    <tr><td class="paramname">windowTitle</td><td>The title of the output window </td></tr>
+    <tr><td class="paramname">denormalizePoints</td><td>Whether to multiply the image width and height to the point coordinates </td></tr>
   </table>
   </dd>
 </dl>

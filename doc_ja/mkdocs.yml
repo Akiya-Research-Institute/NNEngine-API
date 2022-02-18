@@ -103,5 +103,7 @@ nav:
     - APIリファレンス: https://akiya-research-institute.github.io/NNEngine-API/annotated.html
   - デモプロジェクト:
     - demo-project-overview.md
+    - demo-project-overview-depth-estimation.md
+    - demo-project-overview-style-transfer.md
   - ONNX:
     - onnx-introduction.md

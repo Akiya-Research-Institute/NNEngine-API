@@ -1,21 +1,24 @@
 # TextureProcessingモジュールの使い方
 
-BP_TextureProcessComponentを使って、画像処理を行います。  
-BP_TextureProcessComponentは、UTextureの画像を指定したサイズのバイト配列に変換するためのコンポーネントです。また、その際、画像の拡縮・切り取り・回転を行うことができます。  
+TextureProcessComponentを使って、画像処理を行います。  
+TextureProcessComponentは、UTextureの画像を指定したサイズのバイト配列に変換するためのコンポーネントです。また、その際、画像の拡縮・切り取り・回転を行うことができます。  
 得られたバイト配列は、OnnxRuntimeモジュールでAIへの入力データとして利用できます。
 デモプロジェクトの「Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset」に使用例があります。
 
 ## Componentの作成
 
-1. ブループリントクラスを新規作成し、BP_TextureProcessComponentを追加します。
+1. ブループリントクラスを新規作成し、TextureProcessComponentを追加します。
 2. Destination Width、Destination Heightの初期値に、画像処理後の画像サイズを指定します。  
-   これにより、このBP_TextureProcessComponentでは、（Destination Height × Destination Width × 3）のサイズのバイト配列に結果が出力されるようになります。
+   これにより、このTextureProcessComponentでは、（Destination Height × Destination Width × 3）のサイズのバイト配列に結果が出力されるようになります。
+
+!!! Info "float配列を使う"
+    **`TextureProcessFloatComponent`**を使うと、結果がfloatの配列で出力されます。
 
 ![](images/TextureProcessing_add.png){ loading=lazy }
 
 ## 単純な拡縮
 
-BP_TextureProcessComponentの「Resize」ノードを呼び出すことで、初期化時に指定したサイズに画像を拡大または縮小することができます。
+TextureProcessComponentの「Resize」ノードを呼び出すことで、初期化時に指定したサイズに画像を拡大または縮小することができます。
 
 ![](images/TextureProcessing_resize.png){ loading=lazy }
 
@@ -34,7 +37,7 @@ BP_TextureProcessComponentの「Resize」ノードを呼び出すことで、初
 
 ## アフィン変換
 
-BP_TextureProcessComponentの「Affine Transform」ノードを呼び出すことで、入力画像をAffine変換した上で、初期化時に指定したサイズに画像を拡大または縮小することができます。  
+TextureProcessComponentの「Affine Transform」ノードを呼び出すことで、入力画像をAffine変換した上で、初期化時に指定したサイズに画像を拡大または縮小することができます。  
 Affine変換自体については、適当な線形代数の教科書を参照してください。
 
 ![](images/TextureProcessing_affine.png){ loading=lazy }
@@ -85,3 +88,30 @@ Affine変換自体については、適当な線形代数の教科書を参照�
 ### 出力
 
 - Out Inverse Affine Mat: 求めたAffine変換を表す行列の逆行列
+
+## Byteまたはfloatの配列からのTexture作成方法
+
+### Texture2Dオブジェクトを作成する
+
+CreateTexture2d_xxx_yyyノードを呼び出し、Texture2Dオブジェクトを作成します。
+
+![](images/TextureProcessing_createTexture2d.png){ loading=lazy }
+
+- `CreateTexture2d_Gray_Byte`: 1色分のチャンネルを持つTexture2Dを作成します。各ピクセルは1つのuint8値を持ちます。
+- `CreateTexture2d_Gray_Float`: 1色分のチャンネルを持つTexture2Dを作成します。各ピクセルは1つのfloat32値を持ちます。
+- `CreateTexture2d_BGRA_Byte`: 4色分のチャンネルを持つTexture2Dを作成します。各ピクセルは4つのuint8値を持ちます。
+- `CreateTexture2d_RGBA_Float`: 4色分のチャンネルを持つTexture2Dを作成します。各ピクセルは4つのfloat32値を持ちます。
+
+### Copy data from an array to Texture2D objects
+
+CopyByteArrayToTexture2D_zzzノードを呼び出し、配列からTexture2Dにデータをコピーします。
+
+!!! Warning
+    入力配列のサイズは、出力テクスチャの画素数と等しい必要があります。
+
+![](images/TextureProcessing_copyToTexture2d.png){ loading=lazy }
+
+- `CopyByteArrayToTexture2D`: byte配列のデータをTexture2Dオブジェクトにコピーします。
+- `CopyFloatArrayToTexture2D`: float配列のデータをTexture2Dオブジェクトにコピーします。
+- `CopyByteArrayToTexture2D_RGB_To_BGRA`: RGB形式からBGRA形式に変換しながら、byte配列のデータをTexture2Dオブジェクトにコピーします。
+- `CopyFloatArrayToTexture2D_RGB_To_RGBA`: RGB形式からRGBA形式に変換しながら、float配列のデータをTexture2Dオブジェクトにコピーします。

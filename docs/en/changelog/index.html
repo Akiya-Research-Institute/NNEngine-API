@@ -546,15 +546,22 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#v11-2022-02-11" class="md-nav__link">
-    v1.1 (2022-02-11)
+  <a href="#v12-feb-18-2022" class="md-nav__link">
+    v1.2 (Feb 18, 2022)
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#v10-2021-12-21" class="md-nav__link">
-    v1.0 (2021-12-21)
+  <a href="#v11-feb-11-2022" class="md-nav__link">
+    v1.1 (Feb 11, 2022)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#v10-dec-21-2021" class="md-nav__link">
+    v1.0 (Dec 21, 2021)
   </a>
   
 </li>
@@ -625,7 +632,35 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview/" class="md-nav__link">
-        Demo project overview
+        Human pose estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
+        Monocular Depth estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
+        Artistic Style Transfer
       </a>
     </li>
   
@@ -702,7 +737,28 @@
                 
                 
                 <h1 id="changelog">Changelog</h1>
-<h2 id="v11-2022-02-11">v1.1 (2022-02-11)</h2>
+<h2 id="v12-feb-18-2022">v1.2 (Feb 18, 2022)</h2>
+<ul>
+<li>Updated TextureProcessing module<ul>
+<li>Added a component to <strong>convert UTexture to float array</strong>. (<code>TextureProcessFloatComponent</code>)</li>
+<li>Added functions to <strong>create UTexture from arrays of byte or float</strong>.</li>
+<li>Fixed a bug that some UTexture cannot be processed by <code>TextureProcessComponent</code>.<ul>
+<li>Now <code>BP_TextureProcessComponent</code> is deprecated. Use <code>TextureProcessComponent</code> instead.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Updated CustomizedOpenCV module<ul>
+<li>Removed OpenCV's <code>check</code> function to avoid conflict with UE4's <code>check</code> macro.</li>
+</ul>
+</li>
+<li>Added example projects<ul>
+<li>Added an example for <a href="https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4"><strong>depth estimation using a monocular RGB camera</strong></a>.</li>
+<li>Added an example for <a href="https://github.com/Akiya-Research-Institute/Artistic-Style-Transfer-on-UE4"><strong>arbitrary artistic style transfer</strong></a>.</li>
+</ul>
+</li>
+</ul>
+<h2 id="v11-feb-11-2022">v1.1 (Feb 11, 2022)</h2>
 <ul>
 <li>Added support for Ubuntu 18.04.6 Desktop 64bit<ul>
 <li>GPU accelerations by CUDA and TensorRT supported.<ul>
@@ -747,7 +803,7 @@
 </ul>
 </li>
 </ul>
-<h2 id="v10-2021-12-21">v1.0 (2021-12-21)</h2>
+<h2 id="v10-dec-21-2021">v1.0 (Dec 21, 2021)</h2>
 <ul>
 <li>First release.</li>
 </ul>
@@ -786,13 +842,13 @@
       
       
         
-        <a href="../demo-project-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Demo project overview" rel="next">
+        <a href="../demo-project-overview/" class="md-footer__link md-footer__link--next" aria-label="Next: Human pose estimation" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Demo project overview
+              Human pose estimation
             </div>
           </div>
           <div class="md-footer__button md-icon">

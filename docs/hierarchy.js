@@ -4,7 +4,7 @@ var hierarchy =
     [ "FOnnxTensorInfo", "struct_f_onnx_tensor_info.html", null ],
     [ "OnnxModel", "class_onnx_model.html", null ],
     [ "UActorComponent", null, [
-      [ "UTextureProcessComponent", "class_u_texture_process_component.html", null ]
+      [ "UTextureProcessComponentBase", "class_u_texture_process_component_base.html", null ]
     ] ],
     [ "UBlueprintFunctionLibrary", null, [
       [ "UOnnxUtilityLibrary", "class_u_onnx_utility_library.html", null ],

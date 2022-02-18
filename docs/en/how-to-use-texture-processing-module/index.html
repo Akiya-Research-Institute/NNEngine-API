@@ -552,6 +552,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#create-texture-from-an-array-of-bytes-or-floats" class="md-nav__link">
+    Create Texture from an array of bytes or floats
+  </a>
+  
+    <nav class="md-nav" aria-label="Create Texture from an array of bytes or floats">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-texture2d-objects" class="md-nav__link">
+    Create Texture2D objects
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-data-from-an-array-to-texture2d-objects" class="md-nav__link">
+    Copy data from an array to Texture2D objects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -728,7 +755,35 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview/" class="md-nav__link">
-        Demo project overview
+        Human pose estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
+        Monocular Depth estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
+        Artistic Style Transfer
       </a>
     </li>
   
@@ -805,81 +860,108 @@
                 
                 
                 <h1 id="how-to-use-textureprocessing-module">How to use TextureProcessing module</h1>
-<p>Use BP_TextureProcessComponent to precess images.<br />
-BP_TextureProcessComponent is a component for converting a UTexture image into a byte array of a specified size, as well as  scaling, cropping, and rotating the image.<br />
+<p>Use <code>TextureProcessComponent</code> to precess images.<br />
+<code>TextureProcessComponent</code> is a component for converting a UTexture image into a byte array of a specified size, as well as  scaling, cropping, and rotating the image.<br />
 The resulting byte array can be used as input data to AI.
-An example can be found in "Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset" of the demo project.</p>
+An example can be found in <code>Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset</code> of the demo project.</p>
 <h2 id="create-component">Create component</h2>
 <ol>
-<li>Create a Blueprint class and add BP_TextureProcessComponent.</li>
+<li>Create a Blueprint class and add <code>TextureProcessComponent</code>.</li>
 <li>Specify the image size after image processing as the initial values ​​of Destination Width and Destination Height.<br />
-   This BP_TextureProcessComponent will output the result to a byte array with a size of (Destination Height x Destination Width x 3).</li>
+   This <code>TextureProcessComponent</code> will output the result to a byte array with a size of (Destination Height x Destination Width x 3).</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">To use float array</p>
+<p>Use <strong><code>TextureProcessFloatComponent</code></strong> which outputs results into a float array.</p>
+</div>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_add.png" /></p>
 <h2 id="simple-scaling">Simple Scaling</h2>
-<p>You can scale an image to the size specified at initialization by calling the "Resize" node of BP_TextureProcessComponent.  </p>
+<p>You can scale an image to the size specified at initialization by calling the <code>Resize</code> node of <code>TextureProcessComponent</code>.  </p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_resize.png" /></p>
 <h3 id="input">Input</h3>
 <ul>
-<li>Input texture: Original image.</li>
-<li>Do Flip Image: Whether to flip the image during resizing.</li>
-<li>Do Rotate Image: Whether to rotate the image during resizing.</li>
+<li><code>Input texture</code>: Original image.</li>
+<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
+<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
 </ul>
 <h3 id="output">Output</h3>
 <ul>
 <li>
-<p>outputHxWxBGR:<br />
+<p><code>outputHxWxBGR</code>:<br />
   An array of BGR values of each pixel of the image resized to (Destination Height x Destination Width), while keeping the aspect ratio. If the input and output images have different aspect ratios, part of the output array will be filled with some values.  </p>
 </li>
 <li>
-<p>uvScalingFactor:<br />
+<p><code>uvScalingFactor</code>:<br />
   The ratio of the aspect ratios of input and output images. By multiplying the UV coordinates in the output image by this value, you can get the UV coordinates in the input image. For example, if the input image is 16:9 and the output image is square, the uvScalingFactor will be (1, 1.777…).  </p>
 </li>
 </ul>
 <h2 id="affine-transform">Affine transform</h2>
-<p>By calling the "Affine Transform" node of BP_TextureProcessComponent, you can transform the input image and then scale it to the size specified at initialization.<br />
+<p>By calling the <code>Affine Transform</code> node of <code>TextureProcessComponent</code>, you can transform the input image and then scale it to the size specified at initialization.<br />
 See a linear algebra textbook for affine transformation itself.</p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_affine.png" /></p>
 <h3 id="input_1">Input</h3>
 <ul>
-<li>Input texture: Original image.</li>
-<li>Inverse Normalized Affine Mat:<br />
+<li><code>Input texture</code>: Original image.</li>
+<li><code>Inverse Normalized Affine Mat</code>:<br />
   Specifies the inverse of the matrix which represents the affine transformation when the input / output image size is (1, 1). This is equal to the matrix which represents the affine transformation in UV coordinates.  </li>
-<li>Do Flip Image: Whether to flip the image during resizing.</li>
-<li>Do Rotate Image: Whether to rotate the image during resizing.</li>
+<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
+<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
 </ul>
 <h3 id="output_1">Output</h3>
 <ul>
-<li>outputHxWxBGR:<br />
+<li><code>outputHxWxBGR</code>:<br />
   An array of BGR values of each pixel of the image after transformation and resizing to (Destination Height x Destination Width).  </li>
 </ul>
 <h2 id="function-to-find-the-affine-transformation-matrix-1">Function to find the Affine transformation matrix 1</h2>
-<p>By calling the "Get Inverse Affine Mat" node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
+<p>By calling the <code>Get Inverse Affine Mat</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine1.png" /></p>
 <h3 id="input_2">Input</h3>
 <ul>
-<li>Center: The center of the square area in the coordinate of the input image. </li>
-<li>Orientation: 
+<li><code>Center</code>: The center of the square area in the coordinate of the input image. </li>
+<li><code>Orientation</code>: 
   The orientation of the Y-axis of the square area in the coordinate of the input image. For example, (0, 1) when there is no rotation, and (-1, 0) when rotating 90 degrees clockwise.  </li>
-<li>Size: The length of the side of the square area in the coordinate of the input image.</li>
+<li><code>Size</code>: The length of the side of the square area in the coordinate of the input image.</li>
 </ul>
 <h3 id="output_2">Output</h3>
 <ul>
-<li>Out Inverse Affine Mat: Inverse matrix of the matrix representing the obtained affine transformation</li>
+<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation</li>
 </ul>
 <h2 id="function-to-find-the-affine-transformation-matrix-2">Function to find the Affine transformation matrix 2</h2>
-<p>By calling the "Get Inverse Affine Mat From 2 Points" node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
+<p>By calling the <code>Get Inverse Affine Mat From 2 Points</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine2.png" /></p>
 <h3 id="input_3">Input</h3>
 <ul>
-<li>Center: The center of the square area in the coordinate of the input image.</li>
-<li>Top Center: The center of the top edge of the square area in the coordinate of the input image.</li>
-<li>Scaling Factor:<br />
+<li><code>Center</code>: The center of the square area in the coordinate of the input image.</li>
+<li><code>Top Center</code>: The center of the top edge of the square area in the coordinate of the input image.</li>
+<li><code>Scaling Factor</code>:<br />
   Parameter for adjusting the size of the square area. The side of the square area will be (The distance between Center and Top Center * 2 * this value).  </li>
 </ul>
 <h3 id="output_3">Output</h3>
 <ul>
-<li>Out Inverse Affine Mat: Inverse matrix of the matrix representing the obtained affine transformation </li>
+<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation </li>
+</ul>
+<h2 id="create-texture-from-an-array-of-bytes-or-floats">Create Texture from an array of bytes or floats</h2>
+<h3 id="create-texture2d-objects">Create Texture2D objects</h3>
+<p>Call <code>CreateTexture2d_xxx_yyy</code> nodes to create Texture2D objects.</p>
+<p><img alt="" loading="lazy" src="../images/TextureProcessing_createTexture2d.png" /></p>
+<ul>
+<li><code>CreateTexture2d_Gray_Byte</code>: Create Texture2D with one color channel. Each pixel has a uint8 value.</li>
+<li><code>CreateTexture2d_Gray_Float</code>: Create Texture2D with one color channel. Each pixel has a float32 value.</li>
+<li><code>CreateTexture2d_BGRA_Byte</code>: Create Texture2D with 4(BGRA) color channel. Each pixel has 4 uint8 values.</li>
+<li><code>CreateTexture2d_RGBA_Float</code>: Create Texture2D with 4(RGBA) color channel. Each pixel has 4 float32 values.</li>
+</ul>
+<h3 id="copy-data-from-an-array-to-texture2d-objects">Copy data from an array to Texture2D objects</h3>
+<p>Call <code>CopyByteArrayToTexture2D_zzz</code> nodes to copy data from the array to Texture2D.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>The size of the input array must be equal to the number of the pixel of output texture.</p>
+</div>
+<p><img alt="" loading="lazy" src="../images/TextureProcessing_copyToTexture2d.png" /></p>
+<ul>
+<li><code>CopyByteArrayToTexture2D</code>: Copy the data of a byte array to a Texture2D object.</li>
+<li><code>CopyFloatArrayToTexture2D</code>: Copy the data of a float array to a Texture2D object.</li>
+<li><code>CopyByteArrayToTexture2D_RGB_To_BGRA</code>: Copy the data of a byte array to a Texture2D object while converting RGB format to BGRA format.</li>
+<li><code>CopyFloatArrayToTexture2D_RGB_To_RGBA</code>: Copy the data of a float array to a Texture2D object while converting RGB format to RGBA format.</li>
 </ul>
                 
               

@@ -1,6 +1,19 @@
 # Changelog
 
-## v1.1 (2022-02-11)
+## v1.2 (Feb 18, 2022)
+- Updated TextureProcessing module
+    - Added a component to **convert UTexture to float array**. (`TextureProcessFloatComponent`)
+    - Added functions to **create UTexture from arrays of byte or float**.
+    - Fixed a bug that some UTexture cannot be processed by `TextureProcessComponent`.
+        - Now `BP_TextureProcessComponent` is deprecated. Use `TextureProcessComponent` instead.
+- Updated CustomizedOpenCV module
+    - Removed OpenCV's `check` function to avoid conflict with UE4's `check` macro.
+- Added example projects
+    - Added an example for [**depth estimation using a monocular RGB camera**](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4).
+    - Added an example for [**arbitrary artistic style transfer**](https://github.com/Akiya-Research-Institute/Artistic-Style-Transfer-on-UE4).
+
+
+## v1.1 (Feb 11, 2022)
 - Added support for Ubuntu 18.04.6 Desktop 64bit
     - GPU accelerations by CUDA and TensorRT supported.
         - You need an NVIDIA GPU which supports CUDA, cuDNN, and TensorRT.
@@ -30,5 +43,5 @@
         - NNEngine uses ONNX Runtime Mobile ver 1.8.1 on Android.
     - GPU acceleration by NNAPI is not tested yet.
     
-## v1.0 (2021-12-21)
+## v1.0 (Dec 21, 2021)
 - First release.

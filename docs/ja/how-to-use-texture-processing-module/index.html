@@ -552,6 +552,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#bytefloattexture" class="md-nav__link">
+    Byteまたはfloatの配列からのTexture作成方法
+  </a>
+  
+    <nav class="md-nav" aria-label="Byteまたはfloatの配列からのTexture作成方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#texture2d" class="md-nav__link">
+    Texture2Dオブジェクトを作成する
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#copy-data-from-an-array-to-texture2d-objects" class="md-nav__link">
+    Copy data from an array to Texture2D objects
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -664,7 +691,7 @@
   
     <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
-        更新履歴
+        変更履歴
       </a>
     </li>
   
@@ -728,7 +755,35 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview/" class="md-nav__link">
-        デモプロジェクトの概要
+        人物姿勢推定サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
+        単眼深度推定サンプル
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
+        アートスタイル転送サンプル
       </a>
     </li>
   
@@ -805,19 +860,23 @@
                 
                 
                 <h1 id="textureprocessing">TextureProcessingモジュールの使い方</h1>
-<p>BP_TextureProcessComponentを使って、画像処理を行います。<br />
-BP_TextureProcessComponentは、UTextureの画像を指定したサイズのバイト配列に変換するためのコンポーネントです。また、その際、画像の拡縮・切り取り・回転を行うことができます。<br />
+<p>TextureProcessComponentを使って、画像処理を行います。<br />
+TextureProcessComponentは、UTextureの画像を指定したサイズのバイト配列に変換するためのコンポーネントです。また、その際、画像の拡縮・切り取り・回転を行うことができます。<br />
 得られたバイト配列は、OnnxRuntimeモジュールでAIへの入力データとして利用できます。
 デモプロジェクトの「Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset」に使用例があります。</p>
 <h2 id="component">Componentの作成</h2>
 <ol>
-<li>ブループリントクラスを新規作成し、BP_TextureProcessComponentを追加します。</li>
+<li>ブループリントクラスを新規作成し、TextureProcessComponentを追加します。</li>
 <li>Destination Width、Destination Heightの初期値に、画像処理後の画像サイズを指定します。<br />
-   これにより、このBP_TextureProcessComponentでは、（Destination Height × Destination Width × 3）のサイズのバイト配列に結果が出力されるようになります。</li>
+   これにより、このTextureProcessComponentでは、（Destination Height × Destination Width × 3）のサイズのバイト配列に結果が出力されるようになります。</li>
 </ol>
+<div class="admonition info">
+<p class="admonition-title">float配列を使う</p>
+<p><strong><code>TextureProcessFloatComponent</code></strong>を使うと、結果がfloatの配列で出力されます。</p>
+</div>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_add.png" /></p>
 <h2 id="_1">単純な拡縮</h2>
-<p>BP_TextureProcessComponentの「Resize」ノードを呼び出すことで、初期化時に指定したサイズに画像を拡大または縮小することができます。</p>
+<p>TextureProcessComponentの「Resize」ノードを呼び出すことで、初期化時に指定したサイズに画像を拡大または縮小することができます。</p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_resize.png" /></p>
 <h3 id="_2">入力</h3>
 <ul>
@@ -833,7 +892,7 @@ BP_TextureProcessComponentは、UTextureの画像を指定したサイズのバ�
   入力画像と出力画像のアスペクト比の比です。出力画像でのUV座標にこの値を掛けることで、入力画像でのUV座標を得ることができます。例えば、入力画像が16:9で出力画像が正方形だった場合、uvScalingFactorは (1, 1.777…) となります。</li>
 </ul>
 <h2 id="_4">アフィン変換</h2>
-<p>BP_TextureProcessComponentの「Affine Transform」ノードを呼び出すことで、入力画像をAffine変換した上で、初期化時に指定したサイズに画像を拡大または縮小することができます。<br />
+<p>TextureProcessComponentの「Affine Transform」ノードを呼び出すことで、入力画像をAffine変換した上で、初期化時に指定したサイズに画像を拡大または縮小することができます。<br />
 Affine変換自体については、適当な線形代数の教科書を参照してください。</p>
 <p><img alt="" loading="lazy" src="../images/TextureProcessing_affine.png" /></p>
 <h3 id="_5">入力</h3>
@@ -876,6 +935,29 @@ Affine変換自体については、適当な線形代数の教科書を参照�
 <h3 id="_10">出力</h3>
 <ul>
 <li>Out Inverse Affine Mat: 求めたAffine変換を表す行列の逆行列</li>
+</ul>
+<h2 id="bytefloattexture">Byteまたはfloatの配列からのTexture作成方法</h2>
+<h3 id="texture2d">Texture2Dオブジェクトを作成する</h3>
+<p>CreateTexture2d_xxx_yyyノードを呼び出し、Texture2Dオブジェクトを作成します。</p>
+<p><img alt="" loading="lazy" src="../images/TextureProcessing_createTexture2d.png" /></p>
+<ul>
+<li><code>CreateTexture2d_Gray_Byte</code>: 1色分のチャンネルを持つTexture2Dを作成します。各ピクセルは1つのuint8値を持ちます。</li>
+<li><code>CreateTexture2d_Gray_Float</code>: 1色分のチャンネルを持つTexture2Dを作成します。各ピクセルは1つのfloat32値を持ちます。</li>
+<li><code>CreateTexture2d_BGRA_Byte</code>: 4色分のチャンネルを持つTexture2Dを作成します。各ピクセルは4つのuint8値を持ちます。</li>
+<li><code>CreateTexture2d_RGBA_Float</code>: 4色分のチャンネルを持つTexture2Dを作成します。各ピクセルは4つのfloat32値を持ちます。</li>
+</ul>
+<h3 id="copy-data-from-an-array-to-texture2d-objects">Copy data from an array to Texture2D objects</h3>
+<p>CopyByteArrayToTexture2D_zzzノードを呼び出し、配列からTexture2Dにデータをコピーします。</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>入力配列のサイズは、出力テクスチャの画素数と等しい必要があります。</p>
+</div>
+<p><img alt="" loading="lazy" src="../images/TextureProcessing_copyToTexture2d.png" /></p>
+<ul>
+<li><code>CopyByteArrayToTexture2D</code>: byte配列のデータをTexture2Dオブジェクトにコピーします。</li>
+<li><code>CopyFloatArrayToTexture2D</code>: float配列のデータをTexture2Dオブジェクトにコピーします。</li>
+<li><code>CopyByteArrayToTexture2D_RGB_To_BGRA</code>: RGB形式からBGRA形式に変換しながら、byte配列のデータをTexture2Dオブジェクトにコピーします。</li>
+<li><code>CopyFloatArrayToTexture2D_RGB_To_RGBA</code>: RGB形式からRGBA形式に変換しながら、float配列のデータをTexture2Dオブジェクトにコピーします。</li>
 </ul>
                 
               
