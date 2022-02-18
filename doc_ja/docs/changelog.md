@@ -1,6 +1,6 @@
 # 変更履歴
 
-## v1.2 (2022-02-xx)
+## v1.2 (2022-02-18)
 - TextureProcessingモジュールを更新しました。
     - **UTextureをfloat配列に変換**するコンポーネントを追加しました。(`TextureProcessFloatComponent`)
     - **byteまたはfloatの配列からUTextureを生成**する機能を追加しました。
