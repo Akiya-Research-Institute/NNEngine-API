@@ -105,5 +105,6 @@ nav:
     - demo-project-overview.md
     - demo-project-overview-depth-estimation.md
     - demo-project-overview-style-transfer.md
+    - demo-project-overview-u2net-portrait.md
   - ONNX:
     - onnx-introduction.md
