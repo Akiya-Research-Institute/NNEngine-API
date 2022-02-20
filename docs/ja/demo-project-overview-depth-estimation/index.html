@@ -645,23 +645,63 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    追加モデル
+  </a>
+  
+    <nav class="md-nav" aria-label="追加モデル">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#large" class="md-nav__link">
     Largeモデル
   </a>
   
 </li>
+        
+          <li class="md-nav__item">
+  <a href="#dpt" class="md-nav__link">
+    DPTモデル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     プレビューメッシュへのカメラ画像の表示
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_6" class="md-nav__link">
+  <a href="#_7" class="md-nav__link">
     モデル詳細
   </a>
+  
+    <nav class="md-nav" aria-label="モデル詳細">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#large_1" class="md-nav__link">
+    通常およびLargeモデル
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dpt_1" class="md-nav__link">
+    DPTモデル
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -790,15 +830,28 @@
 <li>起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。  </li>
 <li>自分のウェブカメラで実行するには、/Content/Common/MediaPlayer_webcam.uassetのVideoに使用したいウェブカメラを指定します。  </li>
 </ol>
-<h2 id="large">Largeモデル</h2>
+<h2 id="_5">追加モデル</h2>
+<h3 id="large">Largeモデル</h3>
 <p>Largeモデル(入力画像サイズが384x384ピクセル)を使用するには、<a href="https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.1/midas_1x384x384xBGRxByte.onnx">こちら(GitHub Release page)</a>または<a href="https://drive.google.com/file/d/1ml45494AGppnSZ3ivhw-HPi9CE8hxY2J/view?usp=sharing">こちら(Google Drive)</a>からダウンロードし、<code>Source\ThirdParty\Models</code>の下に配置してください。</p>
-<h2 id="_5">プレビューメッシュへのカメラ画像の表示</h2>
+<h3 id="dpt">DPTモデル</h3>
+<p>DPTモデルを使用するには、<a href="https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.3/dpt_hybrid_256x320.onnx">こちら(GitHub Release page)</a>または<a href="https://drive.google.com/file/d/12mLc0usb0qLb5LlKhE1EEQhP7Kyp1qiH/view?usp=sharing">こちら(Google Drive)</a>からダウンロードし、<code>Source\ThirdParty\Models</code>の下に配置します。次に、<code>/Content/DepthEstimation/DPT/test_DPT.map</code>を開き、「Play」をクリックします。</p>
+<h2 id="_6">プレビューメッシュへのカメラ画像の表示</h2>
 <p>/Content/DepthEstimation/Grayscale_WPO.uassetのBase Colorを切り替えることで、カメラ画像をプレビューメッシュに表示できます。</p>
-<h2 id="_6">モデル詳細</h2>
+<h2 id="_7">モデル詳細</h2>
 <p>このサンプルで使用しているモデルの詳細は下記をご覧ください。  </p>
+<h3 id="large_1">通常およびLargeモデル</h3>
 <ul>
 <li><a href="https://arxiv.org/abs/1907.01341">Towards Robust Monocular Depth Estimation: Mixing Datasets for Zero-shot Cross-dataset Transfer</a></li>
 <li><a href="https://github.com/isl-org/MiDaS">GitHub</a></li>
+</ul>
+<h3 id="dpt_1">DPTモデル</h3>
+<ul>
+<li><a href="https://arxiv.org/abs/2103.13413">Vision Transformers for Dense Prediction</a></li>
+<li><a href="https://github.com/isl-org/DPT">GitHub</a></li>
+</ul>
+<p>ONNXへの変換は、下記を利用させていただきました。</p>
+<ul>
+<li><a href="https://github.com/PINTO0309/PINTO_model_zoo">PINTO_model_zoo</a></li>
 </ul>
                 
               
