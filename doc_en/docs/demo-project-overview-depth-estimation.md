@@ -1,4 +1,4 @@
-# Monocular Depth estimation
+# Monocular Depth Estimation
 
 Example project of depth estimation using a single RGB camera.  
 
@@ -20,6 +20,10 @@ Please download from the [release](https://github.com/Akiya-Research-Institute/M
 1. Extract the downloaded zip file and double-click `MonoDepthEstimation.uproject`.  
 2. After launching, click `Play` on the editor to start the demo that performs AI estimation for the pre-recorded video.
 3. To run on your webcam, specify the webcam you want to use in `/Content/Common/MediaPlayer_webcam.uasset`.
+
+## Step-by-step guide to implementation
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSlhYOePDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Additional models
 

@@ -21,6 +21,10 @@
 2. 起動後、エディタ上で「Play」をクリックすると、事前に撮影された動画に対してAIでの推定を実行するデモが開始されます。  
 3. 自分のウェブカメラで実行するには、/Content/Common/MediaPlayer_webcam.uassetのVideoに使用したいウェブカメラを指定します。  
 
+## 実装の詳細チュートリアル
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSlhYOePDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 ## 追加モデル
 
 ### Largeモデル

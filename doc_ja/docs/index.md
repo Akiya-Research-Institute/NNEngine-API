@@ -6,3 +6,5 @@
 - 人物姿勢推定と表情のキャプチャを行う[デモプロジェクト](./demo-project-overview)も公開しています。
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6mTJ3ZceVrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSlhYOePDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

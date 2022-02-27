@@ -6,3 +6,5 @@
 - [Demo project](./demo-project-overview) of human pose estimation and facial capture using a single RGB camera is available on GitHub.  
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/6mTJ3ZceVrs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sTSlhYOePDE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
