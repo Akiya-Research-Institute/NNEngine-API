@@ -96,9 +96,10 @@ nav:
       - TextureProcessing module: how-to-use-texture-processing-module.md
       - DirectXUtility module: how-to-use-directx-utility-module.md
       - CustomizedOpenCV module: how-to-use-customized-opencv-module.md
-    - Tips:
+    - Advanced usage:
       - tips-build.md
       - tips-edit-onnx.md
+      - tips-dynamic-shape.md
     - changelog.md
     - API Reference: https://akiya-research-institute.github.io/NNEngine-API/annotated.html
   - Demo Project:
