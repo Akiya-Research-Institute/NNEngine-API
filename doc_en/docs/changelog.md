@@ -1,5 +1,5 @@
 # Changelog
-## v1.3 (2022-03-04)
+## v1.3 (Mar 04, 2022)
 - Updated OnnxRuntime module
     - Add a Blueprint callable function `Construct Onnx Tensor Info`. Use this function to [dynamically specify the shape of input/output tensors](../tips-dynamic-shape).
 
