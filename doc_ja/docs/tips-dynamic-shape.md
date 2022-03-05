@@ -6,7 +6,7 @@ ONNXモデルには、例えば、`-1 x 3 x 384 x 384`のように、その入�
 ## 動的な入出力形状を持つモデルの使い方
 
 === "BP"
-	`Onnx Tensor Info`ノードを呼び出し、適当な値をShapeに指定します。  
+	`Construct Onnx Tensor Info`ノードを呼び出し、適当な値をShapeに指定します。  
 	得られた`Onnx Tensor Info`を、ONNXモデルの`Bind Input/Output xxx Array`に指定します。  
 	例えば、ここでは1次元目に10を指定します。  
 
@@ -30,7 +30,7 @@ ONNXモデルには、例えば、`-1 x 3 x 384 x 384`のように、その入�
 
 ## 実装例
 
-下記は、`-1 x 384 x 384 x 3`の形状を持つ入力1つと、`-1 x 17 x 2`と`-1 x 17`の形状の出力2つを持つモデルの実装例です。 
+下記は、`-1 x 384 x 384 x 3`の形状の1つの入力と、`-1 x 17 x 2`と`-1 x 17`の形状の2つの出力を持つモデルの実装例です。 
 (入出力の最初の次元は、いわゆる`Batch size`です)  
 
 ![](images/tips_dynamic_example.png){ loading=lazy }

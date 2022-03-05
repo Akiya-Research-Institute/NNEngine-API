@@ -766,7 +766,7 @@
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">BP</label><label for="__tabbed_1_2">C++</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<p><code>Onnx Tensor Info</code>ノードを呼び出し、適当な値をShapeに指定します。<br />
+<p><code>Construct Onnx Tensor Info</code>ノードを呼び出し、適当な値をShapeに指定します。<br />
 得られた<code>Onnx Tensor Info</code>を、ONNXモデルの<code>Bind Input/Output xxx Array</code>に指定します。<br />
 例えば、ここでは1次元目に10を指定します。  </p>
 <p><img alt="" loading="lazy" src="../images/tips_constructOnnxTensorInfo.png" /></p>
@@ -788,7 +788,7 @@ onnxModel-&gt;bindOutput(dynamicShapeTensorInfo, outputDataBuffer);
 </div>
 </div>
 <h2 id="_3">実装例</h2>
-<p>下記は、<code>-1 x 384 x 384 x 3</code>の形状を持つ入力1つと、<code>-1 x 17 x 2</code>と<code>-1 x 17</code>の形状の出力2つを持つモデルの実装例です。 
+<p>下記は、<code>-1 x 384 x 384 x 3</code>の形状の1つの入力と、<code>-1 x 17 x 2</code>と<code>-1 x 17</code>の形状の2つの出力を持つモデルの実装例です。 
 (入出力の最初の次元は、いわゆる<code>Batch size</code>です)  </p>
 <p><img alt="" loading="lazy" src="../images/tips_dynamic_example.png" /></p>
                 
