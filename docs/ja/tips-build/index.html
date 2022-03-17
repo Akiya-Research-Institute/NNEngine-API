@@ -20,7 +20,7 @@
     
     
       
-        <title>CUDAとTensorRTを除外してビルドする - NNEngine Manual</title>
+        <title>大きなライブラリを除外してビルドする - NNEngine Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cudatensorrt" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CUDAとTensorRTを除外してビルドする
+              大きなライブラリを除外してビルドする
             
           </span>
         </div>
@@ -487,9 +487,48 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          大きなライブラリを除外してビルドする
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        CUDAとTensorRTを除外してビルドする
+        大きなライブラリを除外してビルドする
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cudatensorrt" class="md-nav__link">
+    CUDAとTensorRTの無効化
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#opencv" class="md-nav__link">
+    OpenCVの無効化
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -720,23 +759,52 @@
               
                 
                 
-                <h1 id="cudatensorrt">CUDAとTensorRTを除外してビルドする</h1>
-<p>このプラグインには、大きなサイズ（162MB）のDLL「onnxruntime_providers_cuda.dll」が含まれています。パッケージ化したゲームのサイズを小さくするために、これを除外したくなるかもしれません。
-その場合、下記手順にしたがって、CUDA および TensorRT の <a href="https://onnxruntime.ai/docs/execution-providers/">execution provider</a> を無効にする必要があります。</p>
-<ul>
-<li>"(UE4インストールパス)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs"を開きます。</li>
-<li>20行目と21行目を下記の通り変更します。</li>
-</ul>
+                <h1 id="_1">大きなライブラリを除外してビルドする</h1>
+<h2 id="cudatensorrt">CUDAとTensorRTの無効化</h2>
+<p>このプラグインには、大きなサイズ（162MB）のDLL「<code>onnxruntime_providers_cuda.dll</code>」が含まれています。パッケージ化したゲームのサイズを小さくするために、これを除外したくなるかもしれません。<br />
+その場合、下記手順にしたがって、CUDA および TensorRT の <a href="https://onnxruntime.ai/docs/execution-providers/">execution provider</a> を無効にすることできます。</p>
+<ol>
+<li><code>(UE4インストールパス)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs</code>を開きます。</li>
+<li>
+<p>ファイルの20行目と21行目を下記の通り変更します。</p>
 <p>変更前</p>
-<pre><code>    bool doUseCuda = true;
-    bool doUseTensorRT = true;
+<pre><code>bool doUseCuda = true;
+bool doUseTensorRT = true;
 </code></pre>
 <p>変更後</p>
-<pre><code>    bool doUseCuda = false;
-    bool doUseTensorRT = false;
+<pre><code>bool doUseCuda = false;
+bool doUseTensorRT = false;
 </code></pre>
+</li>
+<li>
+<p>プロジェクトをビルドします。</p>
+</li>
+</ol>
+<h2 id="opencv">OpenCVの無効化</h2>
+<p>このプラグインには、大きなサイズ（50MB）のDLL「<code>opencv_world440.dll</code>」が含まれています。パッケージ化したゲームのサイズを小さくするために、これを除外したくなるかもしれません。あるいは、他のライブラリとの競合を避けるために、OpenCV自体を使いたくない場合があるかもしれません。<br />
+その場合、下記手順にしたがって、OpenCVに依存しないモードに切り替えることができます。</p>
+<ol>
+<li><code>(UE4インストールパス)/Engine/Plugins/Marketplace/NNEngine/Source/CustomizedOpenCV/CustomizedOpenCV.Build.cs</code>を開きます。</li>
+<li>
+<p>ファイルの20行目を下記の通り変更します。</p>
+<p>変更前</p>
+<pre><code>bool doUseCustomizedOpenCv = true;
+</code></pre>
+<p>変更後</p>
+<pre><code>bool doUseCustomizedOpenCv = false;
+</code></pre>
+</li>
+<li>
+<p>プロジェクトをビルドします。</p>
+</li>
+</ol>
+<p>なお、OpenCVに依存しないモードに切り替えると、<code>UTextureProcessFunctionLibrary</code>で定義されている下記の関数は呼び出しても何も起こらなくなることに注意してください。</p>
 <ul>
-<li>プロジェクトをビルドします。</li>
+<li>showImage</li>
+<li>showImageFloat</li>
+<li>showImageWith2dPoints</li>
+<li>showImageWith3dPoints</li>
+<li>convertToIntImage</li>
 </ul>
                 
               

@@ -1,7 +1,11 @@
 # Changelog
+## v1.4 (Mar 18, 2022)
+- Updated OnnxRuntime module
+    - Added an option to [disable dependency to OpenCV](../tips-build/#disable-opencv).
+
 ## v1.3 (Mar 04, 2022)
 - Updated OnnxRuntime module
-    - Add a Blueprint callable function `Construct Onnx Tensor Info`. Use this function to [dynamically specify the shape of input/output tensors](../tips-dynamic-shape).
+    - Added a Blueprint callable function `Construct Onnx Tensor Info`. Use this function to [dynamically specify the shape of input/output tensors](../tips-dynamic-shape).
 
 ## v1.2 (Feb 18, 2022)
 - Updated TextureProcessing module

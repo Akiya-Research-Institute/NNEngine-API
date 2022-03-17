@@ -1,4 +1,8 @@
 # 変更履歴
+## v1.4 (2022-03-18)
+- OnnxRuntimeモジュールを更新しました。
+    - [OpenCVに依存しないモード](../tips-build/#opencv)へ切り替えるオプションを追加しました。
+
 ## v1.3 (2022-03-04)
 - OnnxRuntimeモジュールを更新しました。
     - ブループリント呼び出し可能な関数`Construct Onnx Tensor Info`を追加しました。[入出力テンソルの形状を動的に指定するために使用します。](../tips-dynamic-shape)

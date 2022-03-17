@@ -20,7 +20,7 @@
     
     
       
-        <title>Build without CUDA and TensorRT - NNEngine Manual</title>
+        <title>Build without large libraries - NNEngine Manual</title>
       
     
     
@@ -84,7 +84,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#build-without-cuda-and-tensorrt" class="md-skip">
+        <a href="#build-without-large-libraries" class="md-skip">
           Skip to content
         </a>
       
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Build without CUDA and TensorRT
+              Build without large libraries
             
           </span>
         </div>
@@ -487,9 +487,48 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Build without large libraries
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
-        Build without CUDA and TensorRT
+        Build without large libraries
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#disalbe-cuda-and-tensorrt" class="md-nav__link">
+    Disalbe CUDA and TensorRT
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disable-opencv" class="md-nav__link">
+    Disable OpenCV
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -720,23 +759,52 @@
               
                 
                 
-                <h1 id="build-without-cuda-and-tensorrt">Build without CUDA and TensorRT</h1>
-<p>This plugin contains a large (162MB) DLL, "onnxruntime_providers_cuda.dll". You may want to exclude it to reduce packaged game size.<br />
-To do that, you need to disable CUDA and TensorRT <a href="https://onnxruntime.ai/docs/execution-providers/">execution providers</a> by following the steps below:</p>
-<ul>
-<li>Open "(Your installation path of UE4)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs"</li>
-<li>Change line 20 and 21 as follows:</li>
-</ul>
+                <h1 id="build-without-large-libraries">Build without large libraries</h1>
+<h2 id="disalbe-cuda-and-tensorrt">Disalbe CUDA and TensorRT</h2>
+<p>This plugin contains a large (162MB) DLL, <code>onnxruntime_providers_cuda.dll</code>. You may want to exclude it to reduce packaged game size.<br />
+To do that, you can disable CUDA and TensorRT <a href="https://onnxruntime.ai/docs/execution-providers/">execution providers</a> by following the steps below:</p>
+<ol>
+<li>Open <code>(Your installation path of UE4)/Engine/Plugins/Marketplace/NNEngine/Source/OnnxRuntime/OnnxRuntime.Build.cs</code></li>
+<li>
+<p>Change line 20 and 21 as follows:</p>
 <p>Before</p>
-<pre><code>    bool doUseCuda = true;
-    bool doUseTensorRT = true;
+<pre><code>bool doUseCuda = true;
+bool doUseTensorRT = true;
 </code></pre>
 <p>After</p>
-<pre><code>    bool doUseCuda = false;
-    bool doUseTensorRT = false;
+<pre><code>bool doUseCuda = false;
+bool doUseTensorRT = false;
 </code></pre>
+</li>
+<li>
+<p>Build the project.</p>
+</li>
+</ol>
+<h2 id="disable-opencv">Disable OpenCV</h2>
+<p>This plugin contains a large (50MB) DLL, <code>opencv_world440.dll</code>. You may want to exclude it to reduce packaged game size, or you may want to exclude OpenCV itself in order to avoid confilicts with other library you use.<br />
+To do that, you can disable dependency on OpenCV by following the steps below:</p>
+<ol>
+<li>Open <code>(Your installation path of UE4)/Engine/Plugins/Marketplace/NNEngine/Source/CustomizedOpenCV/CustomizedOpenCV.Build.cs</code></li>
+<li>
+<p>Change line 21 as follows:</p>
+<p>Before</p>
+<pre><code>bool doUseCustomizedOpenCv = true;
+</code></pre>
+<p>After</p>
+<pre><code>bool doUseCustomizedOpenCv = false;
+</code></pre>
+</li>
+<li>
+<p>Build the project.</p>
+</li>
+</ol>
+<p>Note that if you disable dependency on OpenCV, the following functions defined in the <code>UTextureProcessFunctionLibrary</code> will not cause anything when called:</p>
 <ul>
-<li>Build the project.</li>
+<li>showImage</li>
+<li>showImageFloat</li>
+<li>showImageWith2dPoints</li>
+<li>showImageWith3dPoints</li>
+<li>convertToIntImage</li>
 </ul>
                 
               
