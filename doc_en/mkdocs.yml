@@ -100,6 +100,7 @@ nav:
       - tips-build.md
       - tips-edit-onnx.md
       - tips-dynamic-shape.md
+    - ue5-float-bp.md
     - changelog.md
     - API Reference: https://akiya-research-institute.github.io/NNEngine-API/annotated.html
   - Demo Project:

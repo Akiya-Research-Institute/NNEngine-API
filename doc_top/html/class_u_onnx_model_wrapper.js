@@ -12,6 +12,6 @@ var class_u_onnx_model_wrapper =
     [ "clearBoundOutputs", "class_u_onnx_model_wrapper.html#a4346680518426c2f3efd79057d498c42", null ],
     [ "getInputTensorsInfo", "class_u_onnx_model_wrapper.html#a931644a8f8d0352a00a0faeab3f4ca13", null ],
     [ "getOutputTensorsInfo", "class_u_onnx_model_wrapper.html#a9b824227fc1b174238030a869b1a6332", null ],
-    [ "init", "class_u_onnx_model_wrapper.html#a89b68daf2e43a065d3c21e1ea20fcefe", null ],
+    [ "init", "class_u_onnx_model_wrapper.html#a18c5ea6372d49031b1da63e8161e71b7", null ],
     [ "run", "class_u_onnx_model_wrapper.html#a07eeeea962e22e743d7e22c9067637f3", null ]
 ];

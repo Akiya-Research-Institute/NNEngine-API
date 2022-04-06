@@ -111,8 +111,8 @@ Collaboration diagram for UOnnxModelWrapper:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a89b68daf2e43a065d3c21e1ea20fcefe"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_onnx_model_wrapper.html#a89b68daf2e43a065d3c21e1ea20fcefe">init</a> (const FString &amp;onnxFilePath, const EOnnxProvider onnxProvider, const int gpuDeviceId)</td></tr>
-<tr class="separator:a89b68daf2e43a065d3c21e1ea20fcefe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a18c5ea6372d49031b1da63e8161e71b7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_onnx_model_wrapper.html#a18c5ea6372d49031b1da63e8161e71b7">init</a> (const FString &amp;onnxFilePath, const EOnnxProvider onnxProvider, const int gpuDeviceId, const EOnnxGraphOptimizationLevel optimizationLevel=EOnnxGraphOptimizationLevel::Extended)</td></tr>
+<tr class="separator:a18c5ea6372d49031b1da63e8161e71b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a931644a8f8d0352a00a0faeab3f4ca13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_onnx_model_wrapper.html#a931644a8f8d0352a00a0faeab3f4ca13">getInputTensorsInfo</a> (TArray&lt; <a class="el" href="struct_f_onnx_tensor_info.html">FOnnxTensorInfo</a> &gt; &amp;inputTensorsInfo)</td></tr>
 <tr class="separator:a931644a8f8d0352a00a0faeab3f4ca13"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9b824227fc1b174238030a869b1a6332"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_u_onnx_model_wrapper.html#a9b824227fc1b174238030a869b1a6332">getOutputTensorsInfo</a> (TArray&lt; <a class="el" href="struct_f_onnx_tensor_info.html">FOnnxTensorInfo</a> &gt; &amp;outputTensorsInfo)</td></tr>
@@ -513,8 +513,8 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a89b68daf2e43a065d3c21e1ea20fcefe" name="a89b68daf2e43a065d3c21e1ea20fcefe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a89b68daf2e43a065d3c21e1ea20fcefe">&#9670;&nbsp;</a></span>init()</h2>
+<a id="a18c5ea6372d49031b1da63e8161e71b7" name="a18c5ea6372d49031b1da63e8161e71b7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a18c5ea6372d49031b1da63e8161e71b7">&#9670;&nbsp;</a></span>init()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -535,7 +535,13 @@ Public Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>gpuDeviceId</em>&#160;</td>
+          <td class="paramname"><em>gpuDeviceId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const EOnnxGraphOptimizationLevel&#160;</td>
+          <td class="paramname"><em>optimizationLevel</em> = <code>EOnnxGraphOptimizationLevel::Extended</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

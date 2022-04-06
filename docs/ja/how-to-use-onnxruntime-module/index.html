@@ -590,6 +590,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ue5-float-bp/" class="md-nav__link">
+        UE5での注意点
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
         変更履歴
       </a>
@@ -839,7 +853,8 @@ public:
 <div class="tabbed-block">
 <ol>
 <li>「Get Input Tensor Info」を呼び出して、入力テンソルの順番、型、サイズを確認します。</li>
-<li>上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。</li>
+<li>上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。<br />
+    UE5で、入力にfloat配列を使用する場合は、<em>単精度</em>のfloat配列を作成する必要があります。<a href="../ue5-float-bp">このページ</a>を確認してください。</li>
 <li>入力テンソルの数だけ「Bind Input xxx Array」を呼び出して、作成した配列をONNXモデルへのデータ入力元として指定します。</li>
 </ol>
 <p><img alt="" loading="lazy" src="../images/OnnxRuntime_bindInput.png" /></p>
@@ -869,7 +884,8 @@ public:
 <div class="tabbed-block">
 <ol>
 <li>「Get Output Tensor Info」を呼び出して、出力テンソルの順番、型、サイズを確認します。</li>
-<li>上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。</li>
+<li>上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。
+    UE5で、出力にfloat配列を使用する場合は、<em>単精度</em>のfloat配列を作成する必要があります。<a href="../ue5-float-bp">このページ</a>を確認してください。</li>
 <li>出力テンソルの数だけ「Bind Output xxx Array」を呼び出して、作成した配列をONNXモデルからのデータ出力先として指定します。</li>
 </ol>
 <p><img alt="" loading="lazy" src="../images/OnnxRuntime_bindOutput.png" /></p>

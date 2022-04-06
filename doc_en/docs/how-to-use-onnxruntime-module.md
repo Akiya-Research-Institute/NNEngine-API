@@ -56,7 +56,8 @@ NNEngine reads the .onnx file by specifying the path at runtime.
 === "BP"
 
 	1. Call "Get Input Tensor Info" to confirm the order of the input tensors as well as their types and sizes.
-	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.
+	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.  
+		If you are using UE5 and float arrays for input. You need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
 	3. Call "Bind Input xxx Array" for each input tensor and specify the created array as the data input sources to the ONNX model.
 
 	![](images/OnnxRuntime_bindInput.png){ loading=lazy }
@@ -84,7 +85,8 @@ NNEngine reads the .onnx file by specifying the path at runtime.
 === "BP"
 
 	1. Call "Get Output Tensor Info" to confirm the order of the output tensors as well as their types and sizes.
-	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.
+	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.  
+		If you are using UE5 and float arrays for output. You need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
 	3. Call "Bind Output xxx Array" for each output tensor and specify the created array as the data output destination from the ONNX model.
 
 	![](images/OnnxRuntime_bindOutput.png){ loading=lazy }

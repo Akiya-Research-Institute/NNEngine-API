@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['showimage_0',['showImage',['../class_u_texture_process_function_library.html#a42a87f8d84d289210e3dec00e6058a9b',1,'UTextureProcessFunctionLibrary']]],
-  ['showimagefloat_1',['showImageFloat',['../class_u_texture_process_function_library.html#aaf178c8bb8d48b28ed48f0b15e96c338',1,'UTextureProcessFunctionLibrary']]],
-  ['showimagewith2dpoints_2',['showImageWith2dPoints',['../class_u_texture_process_function_library.html#a6644a473f81e2e5b0e790d470771fe07',1,'UTextureProcessFunctionLibrary']]],
-  ['showimagewith3dpoints_3',['showImageWith3dPoints',['../class_u_texture_process_function_library.html#aad99072ad474d0e52f072ec888645938',1,'UTextureProcessFunctionLibrary']]]
+  ['renderaffinetransformedframe_0',['renderAffineTransformedFrame',['../class_u_texture_process_component_base.html#a0a96914e8da47b81ddd9a86ef5c648ab',1,'UTextureProcessComponentBase']]],
+  ['resize_1',['resize',['../class_u_texture_process_component_base.html#a818ceadab85cb88c9ed1ac7af2b2292e',1,'UTextureProcessComponentBase']]],
+  ['run_2',['run',['../class_onnx_model.html#a3a2e9b1616ee1967d9238716a2d2383b',1,'OnnxModel::run()'],['../class_u_onnx_model_wrapper.html#a07eeeea962e22e743d7e22c9067637f3',1,'UOnnxModelWrapper::run()']]]
 ];

@@ -590,6 +590,20 @@
   
   
     <li class="md-nav__item">
+      <a href="../ue5-float-bp/" class="md-nav__link">
+        How to use with UE5
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
         Changelog
       </a>
@@ -839,7 +853,8 @@ public:
 <div class="tabbed-block">
 <ol>
 <li>Call "Get Input Tensor Info" to confirm the order of the input tensors as well as their types and sizes.</li>
-<li>Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.</li>
+<li>Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.<br />
+    If you are using UE5 and float arrays for input. You need to create <em>single-precision</em> float arrays. See <a href="../ue5-float-bp">this page</a>.</li>
 <li>Call "Bind Input xxx Array" for each input tensor and specify the created array as the data input sources to the ONNX model.</li>
 </ol>
 <p><img alt="" loading="lazy" src="../images/OnnxRuntime_bindInput.png" /></p>
@@ -869,7 +884,8 @@ public:
 <div class="tabbed-block">
 <ol>
 <li>Call "Get Output Tensor Info" to confirm the order of the output tensors as well as their types and sizes.</li>
-<li>Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.</li>
+<li>Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.<br />
+    If you are using UE5 and float arrays for output. You need to create <em>single-precision</em> float arrays. See <a href="../ue5-float-bp">this page</a>.</li>
 <li>Call "Bind Output xxx Array" for each output tensor and specify the created array as the data output destination from the ONNX model.</li>
 </ol>
 <p><img alt="" loading="lazy" src="../images/OnnxRuntime_bindOutput.png" /></p>

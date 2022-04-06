@@ -95,9 +95,9 @@ $(document).ready(function(){initNavTree('class_onnx_model.html',''); initResiza
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a2508b98cced724f617049c30644b5c3b"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_onnx_model.html#a2508b98cced724f617049c30644b5c3b">OnnxModel</a> (const FString onnxFilePath, const EOnnxProvider onnxProvider, const int gpuDeviceId=0)</td></tr>
-<tr class="memdesc:a2508b98cced724f617049c30644b5c3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open ONNX model  <a href="class_onnx_model.html#a2508b98cced724f617049c30644b5c3b">More...</a><br /></td></tr>
-<tr class="separator:a2508b98cced724f617049c30644b5c3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afbc08d80735123c170880434910179f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_onnx_model.html#afbc08d80735123c170880434910179f7">OnnxModel</a> (const FString onnxFilePath, const EOnnxProvider onnxProvider, const int gpuDeviceId=0, const EOnnxGraphOptimizationLevel optimizationLevel=EOnnxGraphOptimizationLevel::Extended)</td></tr>
+<tr class="memdesc:afbc08d80735123c170880434910179f7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open ONNX model  <a href="class_onnx_model.html#afbc08d80735123c170880434910179f7">More...</a><br /></td></tr>
+<tr class="separator:afbc08d80735123c170880434910179f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad565f282fd7e7552063d09476e22a9a5"><td class="memItemLeft" align="right" valign="top"><a id="ad565f282fd7e7552063d09476e22a9a5" name="ad565f282fd7e7552063d09476e22a9a5"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>~OnnxModel</b> ()</td></tr>
 <tr class="memdesc:ad565f282fd7e7552063d09476e22a9a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close ONNX model <br /></td></tr>
@@ -135,8 +135,8 @@ TArray&lt; <a class="el" href="struct_f_onnx_tensor_info.html">FOnnxTensorInfo</
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p >Manages a ONNX model </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a2508b98cced724f617049c30644b5c3b" name="a2508b98cced724f617049c30644b5c3b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a2508b98cced724f617049c30644b5c3b">&#9670;&nbsp;</a></span>OnnxModel()</h2>
+<a id="afbc08d80735123c170880434910179f7" name="afbc08d80735123c170880434910179f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afbc08d80735123c170880434910179f7">&#9670;&nbsp;</a></span>OnnxModel()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -157,7 +157,13 @@ TArray&lt; <a class="el" href="struct_f_onnx_tensor_info.html">FOnnxTensorInfo</
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>gpuDeviceId</em> = <code>0</code>&#160;</td>
+          <td class="paramname"><em>gpuDeviceId</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const EOnnxGraphOptimizationLevel&#160;</td>
+          <td class="paramname"><em>optimizationLevel</em> = <code>EOnnxGraphOptimizationLevel::Extended</code>&#160;</td>
         </tr>
         <tr>
           <td></td>

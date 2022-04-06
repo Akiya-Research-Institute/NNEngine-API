@@ -1,6 +1,6 @@
 var class_onnx_model =
 [
-    [ "OnnxModel", "class_onnx_model.html#a2508b98cced724f617049c30644b5c3b", null ],
+    [ "OnnxModel", "class_onnx_model.html#afbc08d80735123c170880434910179f7", null ],
     [ "~OnnxModel", "class_onnx_model.html#ad565f282fd7e7552063d09476e22a9a5", null ],
     [ "bindInput", "class_onnx_model.html#abc4f9b17570cb07d52ea68a01a02d81e", null ],
     [ "bindOutput", "class_onnx_model.html#ab4e00009de2d664ad4141da7165d8a85", null ],

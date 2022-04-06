@@ -1,4 +1,16 @@
 # 変更履歴
+<!-- ## v1.5 (2022-04-07)
+- Unreal Engine 5.0版を公開しました。
+    - UE5で[BlurprintからFloat型の入出力をバインドする]()際には特別な操作が必要です。
+    - UE5で[BlurprintからDouble型の入出力をバインドする]()機能を追加しました。
+- OnnxRuntimeモジュールを更新しました。
+    - Windows版で使用するONNX Runtimeのバージョンを1.10.0に変更しました。
+        - CUDAまたはTensorRTでのGPUアクセラレーションを行うには、CUDA 11.4.4、cuDNN 8.2.2.26、TensorRT 8.2.3.0が必要です。
+        - 設定変更により、引き続き旧来のバージョン（ONNX Runtime v1.8.0）を使うことも可能です。
+    - [モデル最適化のオプションを指定]()できるようになりました。
+- サンプルプロジェクトを更新しました。
+    - [人物姿勢推定サンプル](../demo-project-overview)で表情推定を[アテンション機構を使ったモデル](https://google.github.io/mediapipe/solutions/face_mesh.html#attention-mesh-model)で行うよう変更しました。
+ -->
 ## v1.4 (2022-03-18)
 - OnnxRuntimeモジュールを更新しました。
     - [OpenCVに依存しないモード](../tips-build/#opencv)へ切り替えるオプションを追加しました。
@@ -18,7 +30,6 @@
 - サンプルプロジェクトを追加しました。
     - [**単眼RGBカメラによる深度推定**](https://github.com/KenjiAsaba/Monocular-Depth-Estimation-on-UE4)の例を追加しました。
     - [**任意アートスタイル転送**](https://github.com/KenjiAsaba/Artistic-Style-Transfer-on-UE4)の例を追加しました。
-
 
 ## v1.1 (2022-02-11)
 - **Ubuntu 18.04.6 Desktop 64bitに対応**しました。

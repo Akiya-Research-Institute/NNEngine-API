@@ -59,7 +59,8 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 === "BP"
 
 	1. 「Get Input Tensor Info」を呼び出して、入力テンソルの順番、型、サイズを確認します。
-	2. 上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。
+	2. 上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。  
+		UE5で、入力にfloat配列を使用する場合は、*単精度*のfloat配列を作成する必要があります。[このページ](../ue5-float-bp)を確認してください。
 	3. 入力テンソルの数だけ「Bind Input xxx Array」を呼び出して、作成した配列をONNXモデルへのデータ入力元として指定します。
 
 	![](images/OnnxRuntime_bindInput.png){ loading=lazy }
@@ -88,6 +89,7 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 
 	1. 「Get Output Tensor Info」を呼び出して、出力テンソルの順番、型、サイズを確認します。
 	2. 上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。
+		UE5で、出力にfloat配列を使用する場合は、*単精度*のfloat配列を作成する必要があります。[このページ](../ue5-float-bp)を確認してください。
 	3. 出力テンソルの数だけ「Bind Output xxx Array」を呼び出して、作成した配列をONNXモデルからのデータ出力先として指定します。
 
 	![](images/OnnxRuntime_bindOutput.png){ loading=lazy }
