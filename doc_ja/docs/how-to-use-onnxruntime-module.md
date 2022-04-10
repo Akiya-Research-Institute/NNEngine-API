@@ -19,9 +19,11 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 		
 	1. ブループリントクラスを新規作成し、UOnnxModelWrapperの変数を追加します。
 	2. UOnnxModelWrapperのコンストラクタを呼び出し、次に「Init」ノードを呼び出します。
-	- このとき、ONNXモデルのパスを指定します。
-	- また、CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。
-		- システムで利用可能なGPUの一覧を取得するには、[「Get Gpu Info」を呼び出します。](../how-to-use-directx-utility-module)
+		- このとき、ONNXモデルのパスを指定します。
+		- CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。
+			- システムで利用可能なGPUの一覧を取得するには、[「Get Gpu Info」を呼び出します。](../how-to-use-directx-utility-module)
+		- ONNXモデルのグラフの最適化のオプションを指定します。
+			- 最適化の内容の詳細は、[公式ドキュメント](https://onnxruntime.ai/docs/performance/graph-optimizations.html)をご覧ください
 
 	![](images/OnnxRuntime_load.png){ loading=lazy }
 
@@ -29,9 +31,11 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 		
 	1. C++クラスを作成し、OnnxModelの変数を追加します。
 	2. OnnxModelのコンストラクタを呼び出します。
-	- このとき、ONNXモデルのパスを指定します。
-	- また、CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。
-		- システムで利用可能なGPUの一覧を取得するには、「UDirectXUtilityLibrary::GetGpuInfo()」を呼び出します。
+		- このとき、ONNXモデルのパスを指定します。
+		- CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。
+			- システムで利用可能なGPUの一覧を取得するには、「UDirectXUtilityLibrary::GetGpuInfo()」を呼び出します。
+		- ONNXモデルのグラフの最適化のオプションを指定します。
+			- 最適化の内容の詳細は、[公式ドキュメント](https://onnxruntime.ai/docs/performance/graph-optimizations.html)をご覧ください
 
 	```
 	#pragma once
@@ -49,7 +53,7 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 	public:
 		UOnnxModelMinimumExample()
 		{
-			onnxModel = new OnnxModel("Full-path-to-your-AI.onnx", EOnnxProvider::GPU_DirectML, 0);
+			onnxModel = new OnnxModel("Full-path-to-your-AI.onnx", EOnnxProvider::GPU_DirectML, 0, EOnnxGraphOptimizationLevel::Extended);
 		}
 	};
 	```
@@ -101,12 +105,12 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 	3. 出力テンソルの数だけ「OnnxModel::bindOutput」を呼び出して、作成した配列をONNXモデルからのデータ出力先として指定します。
 
 	```
-		TArray<uint8> outputDataBuffer0;
-		TArray<uint8> outputDataBuffer1;
+		TArray<float> outputDataBuffer0;
+		TArray<float> outputDataBuffer1;
 		void setupOutputs()
 		{
-			outputDataBuffer0.Init(0, 17 * 3);
-			outputDataBuffer1.Init(0, 4 * 4);
+			outputDataBuffer0.Init(0.0f, 17 * 3);
+			outputDataBuffer1.Init(0.0f, 4 * 4);
 			onnxModel->bindOutput(onnxModel->outputTensorsInfo[0], outputDataBuffer0.GetData());
 			onnxModel->bindOutput(onnxModel->outputTensorsInfo[1], outputDataBuffer1.GetData());
 		}

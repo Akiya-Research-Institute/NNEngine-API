@@ -574,6 +574,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#v15-apr-10-2022" class="md-nav__link">
+    v1.5 (Apr 10, 2022)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#v14-mar-18-2022" class="md-nav__link">
     v1.4 (Mar 18, 2022)
   </a>
@@ -793,6 +800,22 @@
                 
                 
                 <h1 id="changelog">Changelog</h1>
+<h2 id="v15-apr-10-2022">v1.5 (Apr 10, 2022)</h2>
+<ul>
+<li>Added support for Unreal Engine 5.0 official release.<ul>
+<li>To bind <em>single-precision</em> float inputs/outputs from Blurprint in UE5, see <a href="../ue5-float-bp">this page</a>.</li>
+<li>In UE5, <code>OnnxRuntime</code> module has been renamed to <code>OnnxRuntimeNNEngine</code> module to avoid conflicts with the engine module. Please take care when migrating existing projects.</li>
+</ul>
+</li>
+<li>Updated OnnxRuntime module<ul>
+<li>Added an <a href="../how-to-use-onnxruntime-module/?h=graph+optimization+level#load-onnx-model">option to specify model optimization level</a>.</li>
+</ul>
+</li>
+<li>Updated demo project<ul>
+<li>The DNN model for facial tracking was changed to <a href="https://google.github.io/mediapipe/solutions/face_mesh.html#attention-mesh-model">one that uses an attention mechanism</a> in <a href="../demo-project-overview">Human pose estimation</a> demo.</li>
+</ul>
+</li>
+</ul>
 <h2 id="v14-mar-18-2022">v1.4 (Mar 18, 2022)</h2>
 <ul>
 <li>Updated OnnxRuntime module<ul>

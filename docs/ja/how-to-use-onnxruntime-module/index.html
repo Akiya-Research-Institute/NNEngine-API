@@ -806,10 +806,16 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 <div class="tabbed-block">
 <ol>
 <li>ブループリントクラスを新規作成し、UOnnxModelWrapperの変数を追加します。</li>
-<li>UOnnxModelWrapperのコンストラクタを呼び出し、次に「Init」ノードを呼び出します。</li>
+<li>UOnnxModelWrapperのコンストラクタを呼び出し、次に「Init」ノードを呼び出します。<ul>
 <li>このとき、ONNXモデルのパスを指定します。</li>
-<li>また、CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。<ul>
+<li>CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。<ul>
 <li>システムで利用可能なGPUの一覧を取得するには、<a href="../how-to-use-directx-utility-module">「Get Gpu Info」を呼び出します。</a></li>
+</ul>
+</li>
+<li>ONNXモデルのグラフの最適化のオプションを指定します。<ul>
+<li>最適化の内容の詳細は、<a href="https://onnxruntime.ai/docs/performance/graph-optimizations.html">公式ドキュメント</a>をご覧ください</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
@@ -818,10 +824,16 @@ NNEngineでは、実行時に.onnxファイルのパスを指定して読み込�
 <div class="tabbed-block">
 <ol>
 <li>C++クラスを作成し、OnnxModelの変数を追加します。</li>
-<li>OnnxModelのコンストラクタを呼び出します。</li>
+<li>OnnxModelのコンストラクタを呼び出します。<ul>
 <li>このとき、ONNXモデルのパスを指定します。</li>
-<li>また、CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。<ul>
+<li>CPUとGPUのどちらを使うか、GPUならどのGPUを使うかを指定します。<ul>
 <li>システムで利用可能なGPUの一覧を取得するには、「UDirectXUtilityLibrary::GetGpuInfo()」を呼び出します。</li>
+</ul>
+</li>
+<li>ONNXモデルのグラフの最適化のオプションを指定します。<ul>
+<li>最適化の内容の詳細は、<a href="https://onnxruntime.ai/docs/performance/graph-optimizations.html">公式ドキュメント</a>をご覧ください</li>
+</ul>
+</li>
 </ul>
 </li>
 </ol>
@@ -840,7 +852,7 @@ protected:
 public:
     UOnnxModelMinimumExample()
     {
-        onnxModel = new OnnxModel(&quot;Full-path-to-your-AI.onnx&quot;, EOnnxProvider::GPU_DirectML, 0);
+        onnxModel = new OnnxModel(&quot;Full-path-to-your-AI.onnx&quot;, EOnnxProvider::GPU_DirectML, 0, EOnnxGraphOptimizationLevel::Extended);
     }
 };
 </code></pre></div>
@@ -896,12 +908,12 @@ public:
 <li>上記の型とサイズにあわせて、byte、integer、integer64、floatのいずれかの配列の変数を作成します。</li>
 <li>出力テンソルの数だけ「OnnxModel::bindOutput」を呼び出して、作成した配列をONNXモデルからのデータ出力先として指定します。</li>
 </ol>
-<div class="highlight"><pre><span></span><code>    TArray&lt;uint8&gt; outputDataBuffer0;
-    TArray&lt;uint8&gt; outputDataBuffer1;
+<div class="highlight"><pre><span></span><code>    TArray&lt;float&gt; outputDataBuffer0;
+    TArray&lt;float&gt; outputDataBuffer1;
     void setupOutputs()
     {
-        outputDataBuffer0.Init(0, 17 * 3);
-        outputDataBuffer1.Init(0, 4 * 4);
+        outputDataBuffer0.Init(0.0f, 17 * 3);
+        outputDataBuffer1.Init(0.0f, 4 * 4);
         onnxModel-&gt;bindOutput(onnxModel-&gt;outputTensorsInfo[0], outputDataBuffer0.GetData());
         onnxModel-&gt;bindOutput(onnxModel-&gt;outputTensorsInfo[1], outputDataBuffer1.GetData());
     }

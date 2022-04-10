@@ -14,7 +14,7 @@
 | Android                    |             | ✅(Experimental) |
 
 !!! Warning "Model format for Android"
-    To use on Android, DNN models need to be converted to ORT format. See [the official document](https://onnxruntime.ai/docs/reference/ort-model-format.html) for the details.
+    To use on Android, DNN models need to be converted to ORT format. See [the official document](https://onnxruntime.ai/docs/reference/ort-format-models.html#convert-onnx-models-to-ort-format) for the details.
 
     !!! Warning "Known issue"
         There are some DNN models which cannot be loaded on Android.

@@ -17,18 +17,20 @@ NNEngine reads the .onnx file by specifying the path at runtime.
 === "BP"
 	1. Create a Blueprint class and add a variable of UOnnxModelWrapper.
 	2. Construct UOnnxModelWrapper and call "Init".
-	- Specify the path to the ONNX model
-	- Specify whether to use CPU or GPU, and which GPU to use.
-		- To get available GPUs on the system, [call "Get Gpu Info".](../how-to-use-directx-utility-module)
+		- Specify the path to the ONNX model
+		- Specify whether to use CPU or GPU, and which GPU to use.
+			- To get available GPUs on the system, [call "Get Gpu Info".](../how-to-use-directx-utility-module)
+		- Specify graph optimization level for the ONNX model. See [the official documentation](https://onnxruntime.ai/docs/performance/graph-optimizations.html) for the details of the optimization.
 		
 	![](images/OnnxRuntime_load.png){ loading=lazy }
 
 === "C++"
 	1. Create a C++ class and add a variable of OnnxModel.
 	2. Call the constructor of OnnxModel.
-	- Specify the path to the ONNX model
-	- Specify whether to use CPU or GPU, and which GPU to use.
-		- To get available GPUs on the system, call `UDirectXUtilityLibrary::GetGpuInfo()`.
+		- Specify the path to the ONNX model
+		- Specify whether to use CPU or GPU, and which GPU to use.
+			- To get available GPUs on the system, call `UDirectXUtilityLibrary::GetGpuInfo()`.
+		- Specify graph optimization level for the ONNX model. See [the official documentation](https://onnxruntime.ai/docs/performance/graph-optimizations.html) for the details of the optimization.
 
 	```
 	#pragma once
@@ -57,7 +59,7 @@ NNEngine reads the .onnx file by specifying the path at runtime.
 
 	1. Call "Get Input Tensor Info" to confirm the order of the input tensors as well as their types and sizes.
 	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.  
-		If you are using UE5 and float arrays for input. You need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
+		If you are using UE5 and float arrays for input, you need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
 	3. Call "Bind Input xxx Array" for each input tensor and specify the created array as the data input sources to the ONNX model.
 
 	![](images/OnnxRuntime_bindInput.png){ loading=lazy }
@@ -86,7 +88,7 @@ NNEngine reads the .onnx file by specifying the path at runtime.
 
 	1. Call "Get Output Tensor Info" to confirm the order of the output tensors as well as their types and sizes.
 	2. Add variables of byte, integer, integer64, or float arrays whose types and sizes match the previous results.  
-		If you are using UE5 and float arrays for output. You need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
+		If you are using UE5 and float arrays for output, you need to create *single-precision* float arrays. See [this page](../ue5-float-bp).
 	3. Call "Bind Output xxx Array" for each output tensor and specify the created array as the data output destination from the ONNX model.
 
 	![](images/OnnxRuntime_bindOutput.png){ loading=lazy }

@@ -14,7 +14,7 @@
 | Android                    |             | ✅(Experimental) |
 
 !!! Warning "Androidでのモデル形式"
-    Androidで実行するにはDNNモデルをORTフォーマットに変換する必要があります。詳細は[公式ドキュメント](https://onnxruntime.ai/docs/reference/ort-model-format.html)をご確認ください。
+    Androidで実行するにはDNNモデルをORTフォーマットに変換する必要があります。詳細は[公式ドキュメント](https://onnxruntime.ai/docs/reference/ort-format-models.html#convert-onnx-models-to-ort-format)をご確認ください。
 
     !!! Warning "既知の問題"
         Androidで読み込めないモデルが存在することがわかっています。

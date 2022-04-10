@@ -1,4 +1,13 @@
 # Changelog
+## v1.5 (Apr 10, 2022)
+- Added support for Unreal Engine 5.0 official release.
+    - To bind *single-precision* float inputs/outputs from Blurprint in UE5, see [this page](../ue5-float-bp).
+    - In UE5, `OnnxRuntime` module has been renamed to `OnnxRuntimeNNEngine` module to avoid conflicts with the engine module. Please take care when migrating existing projects.
+- Updated OnnxRuntime module
+    - Added an [option to specify model optimization level](../how-to-use-onnxruntime-module/?h=graph+optimization+level#load-onnx-model).
+- Updated demo project
+    - The DNN model for facial tracking was changed to [one that uses an attention mechanism](https://google.github.io/mediapipe/solutions/face_mesh.html#attention-mesh-model) in [Human pose estimation](../demo-project-overview) demo.
+
 ## v1.4 (Mar 18, 2022)
 - Updated OnnxRuntime module
     - Added an option to [disable dependency to OpenCV](../tips-build/#disable-opencv).
