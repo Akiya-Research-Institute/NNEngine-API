@@ -7,13 +7,13 @@ Example project of depth estimation using a single RGB camera.
 ## Environment
 
 - OS: Windows 10 64bit
-- Unreal Engine: 4.26.2
+- Unreal Engine: 4.26.2, 5.0.0
 - [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) v1.2 or above
 
 ## Download
 
-Demo project is available on [GitHub](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4).  
-Please download from the [release](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases) page.
+Demo project is available on [GitHub](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE). (To use with UE5, use [UE5 branch](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE/tree/ue5))    
+Please download from the [release](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE/releases) page.
 
 ## Run the demo
 
@@ -29,11 +29,11 @@ Please download from the [release](https://github.com/Akiya-Research-Institute/M
 
 ### Large model
 
-If you want to use the large model (whose input image size is 384x384), download from [here (GitHub Release page)](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.1/midas_1x384x384xBGRxByte.onnx) or [here (Google Drive)](https://drive.google.com/file/d/1ml45494AGppnSZ3ivhw-HPi9CE8hxY2J/view?usp=sharing) and place it under `Source\ThirdParty\Models`.
+If you want to use the large model (whose input image size is 384x384), download from [here (GitHub Release page)](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE/releases/download/v1.1/midas_1x384x384xBGRxByte.onnx) or [here (Google Drive)](https://drive.google.com/file/d/1ml45494AGppnSZ3ivhw-HPi9CE8hxY2J/view?usp=sharing) and place it under `Source\ThirdParty\Models`.
 
 ### DPT model
 
-To use DPT model, download model from [here (GitHub Release page)](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE4/releases/download/v1.3/dpt_hybrid_256x320.onnx) or [here (Google Drive)](https://drive.google.com/file/d/12mLc0usb0qLb5LlKhE1EEQhP7Kyp1qiH/view?usp=sharing) and place it under `Source\ThirdParty\Models`. Then, open `/Content/DepthEstimation/DPT/test_DPT.map` and click `Play`.
+To use DPT model, download model from [here (GitHub Release page)](https://github.com/Akiya-Research-Institute/Monocular-Depth-Estimation-on-UE/releases/download/v1.3/dpt_hybrid_256x320.onnx) or [here (Google Drive)](https://drive.google.com/file/d/12mLc0usb0qLb5LlKhE1EEQhP7Kyp1qiH/view?usp=sharing) and place it under `Source\ThirdParty\Models`. Then, open `/Content/DepthEstimation/DPT/test_DPT.map` and click `Play`.
 
 ## Display camera image to the preview mesh
 

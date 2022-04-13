@@ -5,8 +5,8 @@ Example project of human pose estimation, facial capture and eye tracking using 
 ## Environment
 
 - OS: Windows 10 64bit or Linux x64 (Ubuntu 18.04.6)
-- Unreal Engine: 4.26
-- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade)
+- Unreal Engine: 4.26, 5.0
+- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) v1.5
 
 - For Windows
     - Visual Studio is required to be installed. See [the official documentation](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/) for how to install.  
@@ -15,7 +15,7 @@ Example project of human pose estimation, facial capture and eye tracking using 
 
 ## Download
 
-Demo project is available on [GitHub](https://github.com/Akiya-Research-Institute/NNEngine-Demo).  
+Demo project is available on [GitHub](https://github.com/Akiya-Research-Institute/NNEngine-Demo). (To use with UE5, use [UE5 branch](https://github.com/Akiya-Research-Institute/NNEngine-Demo/tree/ue5.0))  
 Please download from the [release](https://github.com/Akiya-Research-Institute/NNEngine-Demo/releases) page.
 
 ## Run the demo

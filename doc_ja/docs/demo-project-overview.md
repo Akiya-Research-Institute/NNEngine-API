@@ -6,7 +6,7 @@
 
 - Windows 10 64bit, Linux x64 (Ubuntu 18.04.6)
 - Unreal Engine 4.26
-- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade)
+- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) v1.5
 
 - For Windows
     - [公式ドキュメント](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/)の通りに、Visual Studioをインストールしておく必要があります。
@@ -15,7 +15,7 @@
 
 ## ダウンロード
 
-[GitHub](https://github.com/Akiya-Research-Institute/NNEngine-Demo)で公開しています。  
+[GitHub](https://github.com/Akiya-Research-Institute/NNEngine-Demo)で公開しています。(UE5向けには、[UE5ブランチ](https://github.com/Akiya-Research-Institute/NNEngine-Demo/tree/ue5.0)があります)   
 [リリースページ](https://github.com/Akiya-Research-Institute/NNEngine-Demo/releases)からダウンロードしてください。  
 
 ## デモの実行
