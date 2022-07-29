@@ -1,26 +1,26 @@
 
 <!doctype html>
-<html lang="ja" class="no-js">
+<html lang="en" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="ONNX形式のAIによる機械学習推論をUnreal EngineのブループリントまたはC++から簡単・高速実行するプラグインであるNNEngineの公式ドキュメント。">
+        <meta name="description" content="Official documentation of NNEngine, a plugin for Unreal Engine that provides easy-to-use functions for accelerated machine learning inference callable from BP and C++ using ONNX Runtime native library.">
       
       
       
         <meta name="author" content="Kenji Asaba">
       
       
-        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/demo-project-overview-u2net-portrait/">
+        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/faq/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-7.3.6">
     
     
       
-        <title>ポートレート風画像生成サンプル - NNEngine Manual</title>
+        <title>FAQ - NNEngine Manual</title>
       
     
     
@@ -84,8 +84,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
-          コンテンツにスキップ
+        <a href="#faq" class="md-skip">
+          Skip to content
         </a>
       
     </div>
@@ -96,7 +96,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
+  <nav class="md-header__inner md-grid" aria-label="Header">
     <a href=".." title="NNEngine Manual" class="md-header__button md-logo" aria-label="NNEngine Manual" data-md-component="logo">
       
   <img src="../images/logo.png" alt="logo">
@@ -115,7 +115,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ポートレート風画像生成サンプル
+              FAQ
             
           </span>
         </div>
@@ -198,7 +198,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
@@ -209,7 +209,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" aria-label="クリア" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
         </button>
       </nav>
@@ -221,7 +221,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            検索を初期化
+            Initializing search
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -255,7 +255,7 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NNEngine Manual" class="md-nav__button md-logo" aria-label="NNEngine Manual" data-md-component="logo">
       
@@ -273,27 +273,29 @@
 
   
   
+    
+  
   
     
       
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" type="checkbox" id="__nav_1" checked>
       
       
       
       
         <label class="md-nav__link" for="__nav_1">
-          プラグイン
+          Plugin
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="プラグイン" data-md-level="1">
+      <nav class="md-nav" aria-label="Plugin" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          プラグイン
+          Plugin
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -304,7 +306,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        概要
+        Overview
       </a>
     </li>
   
@@ -318,7 +320,7 @@
   
     <li class="md-nav__item">
       <a href="../system-requirement/" class="md-nav__link">
-        動作環境
+        System Requirements
       </a>
     </li>
   
@@ -332,7 +334,7 @@
   
     <li class="md-nav__item">
       <a href="../install/" class="md-nav__link">
-        インストール
+        Installation
       </a>
     </li>
   
@@ -346,7 +348,7 @@
   
     <li class="md-nav__item">
       <a href="../modules/" class="md-nav__link">
-        モジュール構成
+        Modules
       </a>
     </li>
   
@@ -368,14 +370,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_5">
-          使い方
+          How to use
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="使い方" data-md-level="2">
+      <nav class="md-nav" aria-label="How to use" data-md-level="2">
         <label class="md-nav__title" for="__nav_1_5">
           <span class="md-nav__icon md-icon"></span>
-          使い方
+          How to use
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -386,7 +388,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-onnxruntime-module/" class="md-nav__link">
-        OnnxRuntimeモジュール
+        OnnxRuntime module
       </a>
     </li>
   
@@ -400,7 +402,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-texture-processing-module/" class="md-nav__link">
-        TextureProcessingモジュール
+        TextureProcessing module
       </a>
     </li>
   
@@ -414,7 +416,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-directx-utility-module/" class="md-nav__link">
-        DirectXUtilityモジュール
+        DirectXUtility module
       </a>
     </li>
   
@@ -428,7 +430,7 @@
   
     <li class="md-nav__item">
       <a href="../how-to-use-customized-opencv-module/" class="md-nav__link">
-        CustomizedOpenCVモジュール
+        CustomizedOpenCV module
       </a>
     </li>
   
@@ -457,14 +459,14 @@
       
       
         <label class="md-nav__link" for="__nav_1_6">
-          高度な使い方
+          Advanced usage
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="高度な使い方" data-md-level="2">
+      <nav class="md-nav" aria-label="Advanced usage" data-md-level="2">
         <label class="md-nav__title" for="__nav_1_6">
           <span class="md-nav__icon md-icon"></span>
-          高度な使い方
+          Advanced usage
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -475,7 +477,7 @@
   
     <li class="md-nav__item">
       <a href="../tips-build/" class="md-nav__link">
-        大きなライブラリを除外してビルドする
+        Build without large libraries
       </a>
     </li>
   
@@ -489,7 +491,7 @@
   
     <li class="md-nav__item">
       <a href="../tips-edit-onnx/" class="md-nav__link">
-        ONNXファイルの編集
+        Edit ONNX files
       </a>
     </li>
   
@@ -503,7 +505,7 @@
   
     <li class="md-nav__item">
       <a href="../tips-dynamic-shape/" class="md-nav__link">
-        動的な入出力形状を持つモデル
+        Models with dynamic shape
       </a>
     </li>
   
@@ -524,129 +526,7 @@
   
     <li class="md-nav__item">
       <a href="../ue5-float-bp/" class="md-nav__link">
-        UE5での注意点
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../faq/" class="md-nav__link">
-        よくある質問
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../changelog/" class="md-nav__link">
-        変更履歴
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="https://akiya-research-institute.github.io/NNEngine-API/annotated.html" class="md-nav__link">
-        APIリファレンス
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-    
-  
-  
-    
-      
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_2">
-          デモプロジェクト
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="デモプロジェクト" data-md-level="1">
-        <label class="md-nav__title" for="__nav_2">
-          <span class="md-nav__icon md-icon"></span>
-          デモプロジェクト
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../demo-project-overview/" class="md-nav__link">
-        人物姿勢推定サンプル
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
-        単眼深度推定サンプル
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
-        任意アートスタイル転送サンプル
+        How to use with UE5
       </a>
     </li>
   
@@ -669,18 +549,18 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          ポートレート風画像生成サンプル
+          FAQ
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        ポートレート風画像生成サンプル
+        FAQ
       </a>
       
         
 
 
-<nav class="md-nav md-nav--secondary" aria-label="目次">
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
   
@@ -689,34 +569,27 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      目次
+      Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    環境
+  <a href="#how-can-i-use-webcams" class="md-nav__link">
+    How can I use webcams?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
-    ダウンロード
+  <a href="#how-can-i-perform-3d-human-pose-estimation" class="md-nav__link">
+    How can I perform 3D human pose estimation?
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_4" class="md-nav__link">
-    デモの実行
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#_5" class="md-nav__link">
-    モデル詳細
+  <a href="#how-can-i-apply-the-results-of-pose-estimation-to-a-character" class="md-nav__link">
+    How can I apply the results of pose estimation to a character?
   </a>
   
 </li>
@@ -725,6 +598,126 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../changelog/" class="md-nav__link">
+        Changelog
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="https://akiya-research-institute.github.io/NNEngine-API/annotated.html" class="md-nav__link">
+        API Reference
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+      
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Demo Project
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Demo Project" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Demo Project
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview/" class="md-nav__link">
+        Human pose estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
+        Monocular Depth Estimation
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
+        Artistic Style Transfer
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo-project-overview-u2net-portrait/" class="md-nav__link">
+        Portrait-like Image Generation
+      </a>
     </li>
   
 
@@ -773,7 +766,7 @@
   
     <li class="md-nav__item">
       <a href="../onnx-introduction/" class="md-nav__link">
-        ONNXの概要
+        Overview of ONNX
       </a>
     </li>
   
@@ -799,30 +792,19 @@
               
                 
                 
-                <h1 id="_1">ポートレート風画像生成サンプル</h1>
-<p>ポートレート画のような画像を生成するサンプルプロジェクトです。</p>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/YF9KHffIU3E" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-<h2 id="_2">環境</h2>
-<ul>
-<li>OS: Windows 10 64bit</li>
-<li>Unreal Engine: 4.26.2</li>
-<li><a href="https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade">NNEngine plugin</a> v1.2 or above</li>
-</ul>
-<h2 id="_3">ダウンロード</h2>
-<p><a href="https://github.com/Akiya-Research-Institute/U-2-Net-Portrait-on-UE4">GitHub</a>で公開しています。<br />
-<a href="https://github.com/Akiya-Research-Institute/U-2-Net-Portrait-on-UE4/releases">リリースページ</a>からダウンロードしてください。  </p>
-<h2 id="_4">デモの実行</h2>
-<ol>
-<li>ダウンロードしたzipファイルを展開し、U2NetPortrait.uprojectをダブルクリックします。</li>
-<li>起動後、<code>/Content/NNEngineDemo-U2NetPortrait/Tutorial.uasset</code>の指示に従ってください。</li>
-</ol>
-<h2 id="_5">モデル詳細</h2>
-<p>このサンプルで使用しているモデルの詳細は下記をご覧ください。  </p>
-<ul>
-<li><a href="https://arxiv.org/pdf/2005.09007.pdf">U<sup>2</sup>-Net: Going Deeper with Nested U-Structure for Salient Object Detection</a></li>
-<li><a href="https://github.com/xuebinqin/U-2-Net">GitHub</a></li>
-</ul>
+                <h1 id="faq">FAQ</h1>
+<h2 id="how-can-i-use-webcams">How can I use webcams?</h2>
+<p>See the <a href="https://docs.unrealengine.com/4.27/en-US/WorkingWithMedia/IntegratingMedia/MediaFramework/HowTo/UsingWebCams/">official doc</a>.  </p>
+<div class="admonition warning">
+<p class="admonition-title">UE5+D3D12 does not support webcam input</p>
+<p>Use UE4 or UE5+D3D11 or <a href="https://github.com/bakjos/WebCameraFeed">WebCameraFeed plugin</a> or <a href="https://docs.opencv.org/4.x/d8/dfe/classcv_1_1VideoCapture.html#aabce0d83aa0da9af802455e8cf5fd181">OpenCV</a>.</p>
+</div>
+<h2 id="how-can-i-perform-3d-human-pose-estimation">How can I perform 3D human pose estimation?</h2>
+<p>You can try the <a href="https://google.github.io/mediapipe/solutions/pose.html">MediaPipe Pose model</a>, which estimates 3D pose with a single camera.<br />
+You can download the ONNX version of the model from <a href="https://github.com/PINTO0309/PINTO_model_zoo/tree/main/053_BlazePose">PINTO_model_zoo</a>.</p>
+<h2 id="how-can-i-apply-the-results-of-pose-estimation-to-a-character">How can I apply the results of pose estimation to a character?</h2>
+<p>The easiest way is to use the official <a href="https://docs.unrealengine.com/5.0/en-US/control-rig-full-body-ik-in-unreal-engine/">Full-body IK plugin</a>.<br />
+Also, you can check our free <a href="https://github.com/Akiya-Research-Institute/MocapForAll-Receiver-Plugin-for-UE4">Receiver plugin</a> for our mocap app, which is implemented with Control Rig.</p>
                 
               
               
@@ -839,32 +821,32 @@
         
 <footer class="md-footer">
   
-    <nav class="md-footer__inner md-grid" aria-label="フッター">
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
       
         
-        <a href="../demo-project-overview-style-transfer/" class="md-footer__link md-footer__link--prev" aria-label="前: 任意アートスタイル転送サンプル" rel="prev">
+        <a href="../ue5-float-bp/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How to use with UE5" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                前
+                Previous
               </span>
-              任意アートスタイル転送サンプル
+              How to use with UE5
             </div>
           </div>
         </a>
       
       
         
-        <a href="../onnx-introduction/" class="md-footer__link md-footer__link--next" aria-label="次: ONNXの概要" rel="next">
+        <a href="../changelog/" class="md-footer__link md-footer__link--next" aria-label="Next: Changelog" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                次
+                Next
               </span>
-              ONNXの概要
+              Changelog
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -934,7 +916,7 @@
         
         
       
-      <a href="https://www.unrealengine.com/marketplace/ja/product/74892c770dc149b1b5c4e872804e6ade" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-footer-social__link">
+      <a href="https://www.unrealengine.com/marketplace/en/product/74892c770dc149b1b5c4e872804e6ade" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-footer-social__link">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M320 384H128V224H64v256c0 17.7 14.3 32 32 32h256c17.7 0 32-14.3 32-32V224h-64v160zm314.6-241.8-85.3-128c-6-8.9-16-14.2-26.7-14.2H117.4c-10.7 0-20.7 5.3-26.6 14.2l-85.3 128c-14.2 21.3 1 49.8 26.6 49.8H608c25.5 0 40.7-28.5 26.6-49.8zM512 496c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16V224h-64v272z"/></svg>
       </a>
     
@@ -948,7 +930,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "translations": {"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
