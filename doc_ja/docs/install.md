@@ -12,3 +12,11 @@
     3. WindowsのUE4プラグインフォルダから、Linuxのプロジェクトディレクトリにプラグインをコピーします。
         - コピー元：<*WindowsのUE4インストールフォルダ*>\Engine\Plugins\Marketplace\NNEngine
         - コピー先：<*Linuxで作成した.uporjectのあるディレクトリ*>/Plugins/NNEngine
+    4. 下記のシンボリックリンクを再作成します。
+        - NNEngine/Source/ThirdParty/onnxruntime-linux-1.11.0/lib
+            - libnvonnxparser.so
+            - libnvonnxparser.so.8
+        - NNEngine/Source/ThirdParty/opencv-4.5.4-linux/libs/x64
+            - libopencv_world.so
+            - libopencv_world.so.4.5
+        

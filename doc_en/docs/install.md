@@ -12,3 +12,11 @@
     3. Copy the plugin from the UE4 plugin folder on Windows to the project directory on Linux.
         - Copy from: <*UE4 installation folder on Windows*\>\Engine\Plugins\Marketplace\NNEngine
         - Copy to: <*directory containing the .uporject created on Linux*>/Plugins/NNEngine
+    4. Recreate the following symbolic links:
+        - NNEngine/Source/ThirdParty/onnxruntime-linux-1.11.0/lib
+            - libnvonnxparser.so
+            - libnvonnxparser.so.8
+        - NNEngine/Source/ThirdParty/opencv-4.5.4-linux/libs/x64
+            - libopencv_world.so
+            - libopencv_world.so.4.5
+        

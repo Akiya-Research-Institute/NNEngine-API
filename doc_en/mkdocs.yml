@@ -61,7 +61,7 @@ extra:
     provider: google
     property: UA-2709176-10
   social:
-    - icon: fontawesome/solid/home
+    - icon: material/home
       link: https://vrlab.akiya-souken.co.jp/
     - icon: fontawesome/brands/youtube 
       link: https://www.youtube.com/channel/UC7t4amWNvquSy_ODcGZ4R0g
@@ -69,7 +69,8 @@ extra:
       link: https://twitter.com/Akiya_Souken_VR
     - icon: fontawesome/brands/github 
       link: https://github.com/Akiya-Research-Institute
-    - icon: fontawesome/solid/store-alt
+    # - icon: simple/unrealengine
+    - icon: material/store
       link: https://www.unrealengine.com/marketplace/en/product/74892c770dc149b1b5c4e872804e6ade
   # generator: false
 
