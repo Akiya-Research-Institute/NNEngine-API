@@ -1,4 +1,9 @@
 # 変更履歴
+
+## v1.6 (2023-01-27)
+- Unreal Engine 5.1版を公開しました。
+- UOnnxModelWrapperの破棄時に、OnnxModelのデストラクタ呼び出しを追加しました。
+
 ## v1.5 (2022-04-10)
 - Unreal Engine 5.0版を公開しました。
     - UE5で[Blurprintから単精度のFloat型の入出力をバインドする](../ue5-float-bp.md)際には特別な操作が必要です。

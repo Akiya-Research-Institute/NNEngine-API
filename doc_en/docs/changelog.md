@@ -1,4 +1,9 @@
 # Changelog
+
+## v1.6 (Jan 27, 2023)
+- Added support for Unreal Engine 5.1.
+- Added OnnxModel destructor call when UOnnxModelWrapper is destroyed.
+
 ## v1.5 (Apr 10, 2022)
 - Added support for Unreal Engine 5.0 official release.
     - To bind *single-precision* float inputs/outputs from Blurprint in UE5, see [this page](../ue5-float-bp).
