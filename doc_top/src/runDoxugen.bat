@@ -1,5 +1,5 @@
-rem set frompath="..\..\..\NNEngine"
-set frompath="F:\GitHub\NNEngine"
+set frompath="..\..\..\NNEngine"
+rem set frompath="F:\GitHub\NNEngine"
 set doxypath=".."
 
 rd /s /q  %doxypath%\Plugins

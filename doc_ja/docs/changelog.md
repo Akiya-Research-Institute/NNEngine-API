@@ -1,12 +1,17 @@
 # 変更履歴
 
+## v1.7 (2023-06-23)
+- Unreal Engine 5.2版を公開しました。
+- FOnnxTensorInfoを他モジュールのC++から使用できるよう、DLLEXPORTを追加しました。
+- ONNX Runtimeの最新APIで動作するよう、条件付きコンパイルを追加しました。[ONNX Runtime v1.15.1で動作させる方法はこちら](../tips-latest-ort)をご覧ください。
+
 ## v1.6 (2023-01-27)
 - Unreal Engine 5.1版を公開しました。
 - UOnnxModelWrapperの破棄時に、OnnxModelのデストラクタ呼び出しを追加しました。
 
 ## v1.5 (2022-04-10)
 - Unreal Engine 5.0版を公開しました。
-    - UE5で[Blurprintから単精度のFloat型の入出力をバインドする](../ue5-float-bp.md)際には特別な操作が必要です。
+    - UE5で[Blurprintから単精度のFloat型の入出力をバインドする](../ue5-float-bp)際には特別な操作が必要です。
     - UE5では、OnnxRuntimeモジュールは、エンジンモジュールとの競合を避けるため、OnnxRuntimeNNEngineモジュールに改称しました。既存プロジェクトの移行時にはご注意ください。
 - OnnxRuntimeモジュールを更新しました。
     - [モデル最適化のオプションを指定](../how-to-use-onnxruntime-module/?h=最適化#onnx)できるようになりました。

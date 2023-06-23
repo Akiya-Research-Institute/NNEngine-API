@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.7 (Jun 23, 2023)
+- Unreal Engine 5.2 version is now available.
+- Added DLLEXPORT so that FOnnxTensorInfo can be used from C++ in other modules.
+- Added conditional compilation to work with the latest API of ONNX Runtime. See [Use latest ONNX Runtime](../tips-latest-ort) for more details.
+
 ## v1.6 (Jan 27, 2023)
 - Added support for Unreal Engine 5.1.
 - Added OnnxModel destructor call when UOnnxModelWrapper is destroyed.

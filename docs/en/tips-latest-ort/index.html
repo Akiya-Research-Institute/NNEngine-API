@@ -12,14 +12,14 @@
         <meta name="author" content="Kenji Asaba">
       
       
-        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/how-to-use-texture-processing-module/">
+        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/tips-latest-ort/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
     
     
       
-        <title>TextureProcessing module - NNEngine Manual</title>
+        <title>Use the latest version of ONNX Runtime - NNEngine Manual</title>
       
     
     
@@ -86,7 +86,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-textureprocessing-module" class="md-skip">
+        <a href="#use-the-latest-version-of-onnx-runtime" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TextureProcessing module
+              Use the latest version of ONNX Runtime
             
           </span>
         </div>
@@ -365,14 +365,12 @@
               
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
       
       
       
@@ -407,187 +405,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          TextureProcessing module
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../how-to-use-texture-processing-module/" class="md-nav__link">
         TextureProcessing module
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#create-component" class="md-nav__link">
-    Create component
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simple-scaling" class="md-nav__link">
-    Simple Scaling
-  </a>
-  
-    <nav class="md-nav" aria-label="Simple Scaling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#affine-transform" class="md-nav__link">
-    Affine transform
-  </a>
-  
-    <nav class="md-nav" aria-label="Affine transform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_1" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_1" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-to-find-the-affine-transformation-matrix-1" class="md-nav__link">
-    Function to find the Affine transformation matrix 1
-  </a>
-  
-    <nav class="md-nav" aria-label="Function to find the Affine transformation matrix 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_2" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_2" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-to-find-the-affine-transformation-matrix-2" class="md-nav__link">
-    Function to find the Affine transformation matrix 2
-  </a>
-  
-    <nav class="md-nav" aria-label="Function to find the Affine transformation matrix 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_3" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_3" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-texture-from-an-array-of-bytes-or-floats" class="md-nav__link">
-    Create Texture from an array of bytes or floats
-  </a>
-  
-    <nav class="md-nav" aria-label="Create Texture from an array of bytes or floats">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-texture2d-objects" class="md-nav__link">
-    Create Texture2D objects
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy-data-from-an-array-to-texture2d-objects" class="md-nav__link">
-    Copy data from an array to Texture2D objects
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -632,12 +454,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
       
       
       
@@ -700,11 +524,66 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../tips-latest-ort/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Use the latest version of ONNX Runtime
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Use the latest version of ONNX Runtime
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#build-onnx-runtime" class="md-nav__link">
+    Build ONNX Runtime
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#change-settings-of-nnengine-plugin" class="md-nav__link">
+    Change settings of NNEngine plugin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#replace-onnx-runtime" class="md-nav__link">
+    Replace ONNX Runtime
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -936,109 +815,71 @@
                   
 
 
-<h1 id="how-to-use-textureprocessing-module">How to use TextureProcessing module</h1>
-<p>Use <code>TextureProcessComponent</code> to precess images.<br />
-<code>TextureProcessComponent</code> is a component for converting a UTexture image into a byte array of a specified size, as well as  scaling, cropping, and rotating the image.<br />
-The resulting byte array can be used as input data to AI.
-An example can be found in <code>Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset</code> of the demo project.</p>
-<h2 id="create-component">Create component</h2>
-<ol>
-<li>Create a Blueprint class and add <code>TextureProcessComponent</code>.</li>
-<li>Specify the image size after image processing as the initial values ​​of Destination Width and Destination Height.<br />
-   This <code>TextureProcessComponent</code> will output the result to a byte array with a size of (Destination Height x Destination Width x 3).</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">To use float array</p>
-<p>Use <strong><code>TextureProcessFloatComponent</code></strong> which outputs results into a float array.</p>
-</div>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_add.png" /></p>
-<h2 id="simple-scaling">Simple Scaling</h2>
-<p>You can scale an image to the size specified at initialization by calling the <code>Resize</code> node of <code>TextureProcessComponent</code>.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_resize.png" /></p>
-<h3 id="input">Input</h3>
-<ul>
-<li><code>Input texture</code>: Original image.</li>
-<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
-<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
-</ul>
-<h3 id="output">Output</h3>
+<h1 id="use-the-latest-version-of-onnx-runtime">Use the latest version of ONNX Runtime</h1>
+<p>To use a version of ONNX Runtime other than version 1.8 for Windows, please follow the steps below.
+(Currently, this method only works with the plugin for UE5.2)</p>
+<h2 id="build-onnx-runtime">Build ONNX Runtime</h2>
 <ul>
 <li>
-<p><code>outputHxWxBGR</code>:<br />
-  An array of BGR values of each pixel of the image resized to (Destination Height x Destination Width), while keeping the aspect ratio. If the input and output images have different aspect ratios, part of the output array will be filled with some values.  </p>
+<p>Build ONNX Runtime with DirectML, CUDA, and TensorRT enabled.<br />
+  See the official documentation for build instructions.</p>
 </li>
 <li>
-<p><code>uvScalingFactor</code>:<br />
-  The ratio of the aspect ratios of input and output images. By multiplying the UV coordinates in the output image by this value, you can get the UV coordinates in the input image. For example, if the input image is 16:9 and the output image is square, the uvScalingFactor will be (1, 1.777…).  </p>
+<p>For v1.15.1, you can <a href="https://d3ohm2q3tvfr8c.cloudfront.net/onnxruntime-win-1.15.1.zip">download a pre-built binary file in the development environment here</a>, but we do not guarantee that it works correctly.</p>
+<details class="info">
+<summary>Versions of CUDA, cudNN, TRT used in v1.15.1</summary>
+<p>We have tested with the following versions:</p>
+<ul>
+<li>CUDA 11.8.0</li>
+<li>cuDNN 8.9.2</li>
+<li>TensorRT 8.6.1.6</li>
+</ul>
+<p>The following GPU was used:</p>
+<ul>
+<li>NVIDIA GeForce RTX 3070</li>
+</ul>
+</details>
 </li>
 </ul>
-<h2 id="affine-transform">Affine transform</h2>
-<p>By calling the <code>Affine Transform</code> node of <code>TextureProcessComponent</code>, you can transform the input image and then scale it to the size specified at initialization.<br />
-See a linear algebra textbook for affine transformation itself.</p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_affine.png" /></p>
-<h3 id="input_1">Input</h3>
+<h2 id="change-settings-of-nnengine-plugin">Change settings of NNEngine plugin</h2>
 <ul>
-<li><code>Input texture</code>: Original image.</li>
-<li><code>Inverse Normalized Affine Mat</code>:<br />
-  Specifies the inverse of the matrix which represents the affine transformation when the input / output image size is (1, 1). This is equal to the matrix which represents the affine transformation in UV coordinates.  </li>
-<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
-<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
+<li>
+<p>Copy the plugin folder from the engine folder to the project folder.</p>
+<div class="highlight"><pre><span></span><code>Copy from：&lt;UE install folder&gt;/Engine/Plugins/Marketplace/NNEngine&gt;
+Copy to：&lt;Project folder&gt;/Plugins/NNEngine&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Open the following file:</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/OnnxRuntimeNNEngine/OnnxRuntimeNNEngine.Build.cs&gt;
+</code></pre></div>
+<p>Rewrite line 25 of this file.</p>
+<div class="highlight"><pre><span></span><code>int ortApiVersion = &lt;API version of ONNX Runtime to use. For example, &quot;15&quot; for ONNX Runtime v1.15.1&gt;; 
+</code></pre></div>
+</li>
 </ul>
-<h3 id="output_1">Output</h3>
+<h2 id="replace-onnx-runtime">Replace ONNX Runtime</h2>
 <ul>
-<li><code>outputHxWxBGR</code>:<br />
-  An array of BGR values of each pixel of the image after transformation and resizing to (Destination Height x Destination Width).  </li>
+<li>
+<p>Replace the following folder with your built ONNX Runtime.</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/ThirdParty/onnxruntime&gt;
+</code></pre></div>
+</li>
+<li>
+<p>Move all necessary DLLs to the following folder.</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/ThirdParty/onnxruntime/bin&gt;
+</code></pre></div>
+<p>DLLs</p>
+<ul>
+<li><code>onnxruntime.dll</code></li>
+<li><code>onnxruntime_providers_shared.dll</code></li>
+<li><code>onnxruntime_providers_cuda.dll</code></li>
+<li><code>onnxruntime_providers_tensorrt.dll</code></li>
+<li><code>DirectML.dll</code></li>
+<li><code>zlibwapi.dll</code></li>
 </ul>
-<h2 id="function-to-find-the-affine-transformation-matrix-1">Function to find the Affine transformation matrix 1</h2>
-<p>By calling the <code>Get Inverse Affine Mat</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine1.png" /></p>
-<h3 id="input_2">Input</h3>
-<ul>
-<li><code>Center</code>: The center of the square area in the coordinate of the input image. </li>
-<li><code>Orientation</code>: 
-  The orientation of the Y-axis of the square area in the coordinate of the input image. For example, (0, 1) when there is no rotation, and (-1, 0) when rotating 90 degrees clockwise.  </li>
-<li><code>Size</code>: The length of the side of the square area in the coordinate of the input image.</li>
-</ul>
-<h3 id="output_2">Output</h3>
-<ul>
-<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation</li>
-</ul>
-<h2 id="function-to-find-the-affine-transformation-matrix-2">Function to find the Affine transformation matrix 2</h2>
-<p>By calling the <code>Get Inverse Affine Mat From 2 Points</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine2.png" /></p>
-<h3 id="input_3">Input</h3>
-<ul>
-<li><code>Center</code>: The center of the square area in the coordinate of the input image.</li>
-<li><code>Top Center</code>: The center of the top edge of the square area in the coordinate of the input image.</li>
-<li><code>Scaling Factor</code>:<br />
-  Parameter for adjusting the size of the square area. The side of the square area will be (The distance between Center and Top Center * 2 * this value).  </li>
-</ul>
-<h3 id="output_3">Output</h3>
-<ul>
-<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation </li>
-</ul>
-<h2 id="create-texture-from-an-array-of-bytes-or-floats">Create Texture from an array of bytes or floats</h2>
-<h3 id="create-texture2d-objects">Create Texture2D objects</h3>
-<p>Call <code>CreateTexture2d_xxx_yyy</code> nodes to create Texture2D objects.</p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_createTexture2d.png" /></p>
-<ul>
-<li><code>CreateTexture2d_Gray_Byte</code>: Create Texture2D with one color channel. Each pixel has a uint8 value.</li>
-<li><code>CreateTexture2d_Gray_Float</code>: Create Texture2D with one color channel. Each pixel has a float32 value.</li>
-<li><code>CreateTexture2d_BGRA_Byte</code>: Create Texture2D with 4(BGRA) color channel. Each pixel has 4 uint8 values.</li>
-<li><code>CreateTexture2d_RGBA_Float</code>: Create Texture2D with 4(RGBA) color channel. Each pixel has 4 float32 values.</li>
-</ul>
-<h3 id="copy-data-from-an-array-to-texture2d-objects">Copy data from an array to Texture2D objects</h3>
-<p>Call <code>CopyByteArrayToTexture2D_zzz</code> nodes to copy data from the array to Texture2D.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The size of the input array must be equal to the number of the pixel of output texture.</p>
-</div>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_copyToTexture2d.png" /></p>
-<ul>
-<li><code>CopyByteArrayToTexture2D</code>: Copy the data of a byte array to a Texture2D object.</li>
-<li><code>CopyFloatArrayToTexture2D</code>: Copy the data of a float array to a Texture2D object.</li>
-<li><code>CopyByteArrayToTexture2D_RGB_To_BGRA</code>: Copy the data of a byte array to a Texture2D object while converting RGB format to BGRA format.</li>
-<li><code>CopyFloatArrayToTexture2D_RGB_To_RGBA</code>: Copy the data of a float array to a Texture2D object while converting RGB format to RGBA format.</li>
+<p>For our pre-built v1.15.1 binaries, this step is already done.</p>
+</li>
 </ul>
 
 
@@ -1062,7 +903,7 @@ See a linear algebra textbook for affine transformation itself.</p>
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../how-to-use-onnxruntime-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: OnnxRuntime module" rel="prev">
+        <a href="../tips-dynamic-shape/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Models with dynamic shape" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -1071,20 +912,20 @@ See a linear algebra textbook for affine transformation itself.</p>
               <span class="md-footer__direction">
                 Previous
               </span>
-              OnnxRuntime module
+              Models with dynamic shape
             </div>
           </div>
         </a>
       
       
         
-        <a href="../how-to-use-directx-utility-module/" class="md-footer__link md-footer__link--next" aria-label="Next: DirectXUtility module" rel="next">
+        <a href="../ue5-float-bp/" class="md-footer__link md-footer__link--next" aria-label="Next: How to use with UE5" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              DirectXUtility module
+              How to use with UE5
             </div>
           </div>
           <div class="md-footer__button md-icon">

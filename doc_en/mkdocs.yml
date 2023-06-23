@@ -101,6 +101,7 @@ nav:
       - tips-build.md
       - tips-edit-onnx.md
       - tips-dynamic-shape.md
+      - tips-latest-ort.md
     - ue5-float-bp.md
     - faq.md
     - changelog.md

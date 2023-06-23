@@ -1,25 +1,25 @@
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="ja" class="no-js">
   <head>
     
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
-        <meta name="description" content="Official documentation of NNEngine, a plugin for Unreal Engine that provides easy-to-use functions for accelerated machine learning inference callable from BP and C++ using ONNX Runtime native library.">
+        <meta name="description" content="ONNX形式のAIによる機械学習推論をUnreal EngineのブループリントまたはC++から簡単・高速実行するプラグインであるNNEngineの公式ドキュメント。">
       
       
         <meta name="author" content="Kenji Asaba">
       
       
-        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/how-to-use-texture-processing-module/">
+        <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/tips-latest-ort/">
       
       <link rel="icon" href="../images/favicon.png">
       <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
     
     
       
-        <title>TextureProcessing module - NNEngine Manual</title>
+        <title>最新バージョンのONNX Runtimeを使う - NNEngine Manual</title>
       
     
     
@@ -86,8 +86,8 @@
     <div data-md-component="skip">
       
         
-        <a href="#how-to-use-textureprocessing-module" class="md-skip">
-          Skip to content
+        <a href="#onnx-runtime" class="md-skip">
+          コンテンツにスキップ
         </a>
       
     </div>
@@ -99,7 +99,7 @@
       
 
 <header class="md-header" data-md-component="header">
-  <nav class="md-header__inner md-grid" aria-label="Header">
+  <nav class="md-header__inner md-grid" aria-label="ヘッダー">
     <a href=".." title="NNEngine Manual" class="md-header__button md-logo" aria-label="NNEngine Manual" data-md-component="logo">
       
   <img src="../images/logo.png" alt="logo">
@@ -118,7 +118,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              TextureProcessing module
+              最新バージョンのONNX Runtimeを使う
             
           </span>
         </div>
@@ -204,7 +204,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
@@ -215,7 +215,7 @@
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7 0-.24-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91 1.61 0 2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08Z"/></svg>
           </a>
         
-        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+        <button type="reset" class="md-search__icon md-icon" title="クリア" aria-label="クリア" tabindex="-1">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
         </button>
       </nav>
@@ -227,7 +227,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Initializing search
+            検索を初期化
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -261,7 +261,7 @@
 
   
 
-<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="ナビゲーション" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="NNEngine Manual" class="md-nav__button md-logo" aria-label="NNEngine Manual" data-md-component="logo">
       
@@ -294,14 +294,14 @@
       
       
         <label class="md-nav__link" for="__nav_1">
-          Plugin
+          プラグイン
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Plugin" data-md-level="1">
+      <nav class="md-nav" aria-label="プラグイン" data-md-level="1">
         <label class="md-nav__title" for="__nav_1">
           <span class="md-nav__icon md-icon"></span>
-          Plugin
+          プラグイン
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -312,7 +312,7 @@
   
     <li class="md-nav__item">
       <a href=".." class="md-nav__link">
-        Overview
+        概要
       </a>
     </li>
   
@@ -326,7 +326,7 @@
   
     <li class="md-nav__item">
       <a href="../system-requirement/" class="md-nav__link">
-        System Requirements
+        動作環境
       </a>
     </li>
   
@@ -340,7 +340,7 @@
   
     <li class="md-nav__item">
       <a href="../install/" class="md-nav__link">
-        Installation
+        インストール
       </a>
     </li>
   
@@ -354,8 +354,97 @@
   
     <li class="md-nav__item">
       <a href="../modules/" class="md-nav__link">
-        Modules
+        モジュール構成
       </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" >
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_1_5">
+          使い方
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="使い方" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_5">
+          <span class="md-nav__icon md-icon"></span>
+          使い方
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-onnxruntime-module/" class="md-nav__link">
+        OnnxRuntimeモジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-texture-processing-module/" class="md-nav__link">
+        TextureProcessingモジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-directx-utility-module/" class="md-nav__link">
+        DirectXUtilityモジュール
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-customized-opencv-module/" class="md-nav__link">
+        CustomizedOpenCVモジュール
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -372,20 +461,20 @@
     <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_5" type="checkbox" id="__nav_1_5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" checked>
       
       
       
       
-        <label class="md-nav__link" for="__nav_1_5">
-          How to use
+        <label class="md-nav__link" for="__nav_1_6">
+          高度な使い方
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="How to use" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_5">
+      <nav class="md-nav" aria-label="高度な使い方" data-md-level="2">
+        <label class="md-nav__title" for="__nav_1_6">
           <span class="md-nav__icon md-icon"></span>
-          How to use
+          高度な使い方
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -395,8 +484,36 @@
   
   
     <li class="md-nav__item">
-      <a href="../how-to-use-onnxruntime-module/" class="md-nav__link">
-        OnnxRuntime module
+      <a href="../tips-build/" class="md-nav__link">
+        大きなライブラリを除外してビルドする
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-edit-onnx/" class="md-nav__link">
+        ONNXファイルの編集
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-dynamic-shape/" class="md-nav__link">
+        動的な入出力形状を持つモデル
       </a>
     </li>
   
@@ -419,17 +536,17 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          TextureProcessing module
+          最新バージョンのONNX Runtimeを使う
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        TextureProcessing module
+        最新バージョンのONNX Runtimeを使う
       </a>
       
         
 
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+<nav class="md-nav md-nav--secondary" aria-label="目次">
   
   
   
@@ -438,149 +555,28 @@
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
-      Table of contents
+      目次
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#create-component" class="md-nav__link">
-    Create component
+  <a href="#onnx-runtime_1" class="md-nav__link">
+    ONNX Runtimeのビルド
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#simple-scaling" class="md-nav__link">
-    Simple Scaling
+  <a href="#nnengine" class="md-nav__link">
+    NNEngineプラグインの設定変更
   </a>
-  
-    <nav class="md-nav" aria-label="Simple Scaling">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#affine-transform" class="md-nav__link">
-    Affine transform
+  <a href="#onnx-runtime_2" class="md-nav__link">
+    ONNX Runtimeの置き換え
   </a>
-  
-    <nav class="md-nav" aria-label="Affine transform">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_1" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_1" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-to-find-the-affine-transformation-matrix-1" class="md-nav__link">
-    Function to find the Affine transformation matrix 1
-  </a>
-  
-    <nav class="md-nav" aria-label="Function to find the Affine transformation matrix 1">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_2" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_2" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#function-to-find-the-affine-transformation-matrix-2" class="md-nav__link">
-    Function to find the Affine transformation matrix 2
-  </a>
-  
-    <nav class="md-nav" aria-label="Function to find the Affine transformation matrix 2">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#input_3" class="md-nav__link">
-    Input
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#output_3" class="md-nav__link">
-    Output
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#create-texture-from-an-array-of-bytes-or-floats" class="md-nav__link">
-    Create Texture from an array of bytes or floats
-  </a>
-  
-    <nav class="md-nav" aria-label="Create Texture from an array of bytes or floats">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-texture2d-objects" class="md-nav__link">
-    Create Texture2D objects
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#copy-data-from-an-array-to-texture2d-objects" class="md-nav__link">
-    Copy data from an array to Texture2D objects
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -588,123 +584,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-use-directx-utility-module/" class="md-nav__link">
-        DirectXUtility module
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../how-to-use-customized-opencv-module/" class="md-nav__link">
-        CustomizedOpenCV module
-      </a>
-    </li>
-  
-
-            
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1_6" type="checkbox" id="__nav_1_6" >
-      
-      
-      
-      
-        <label class="md-nav__link" for="__nav_1_6">
-          Advanced usage
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <nav class="md-nav" aria-label="Advanced usage" data-md-level="2">
-        <label class="md-nav__title" for="__nav_1_6">
-          <span class="md-nav__icon md-icon"></span>
-          Advanced usage
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips-build/" class="md-nav__link">
-        Build without large libraries
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips-edit-onnx/" class="md-nav__link">
-        Edit ONNX files
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips-dynamic-shape/" class="md-nav__link">
-        Models with dynamic shape
-      </a>
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../tips-latest-ort/" class="md-nav__link">
-        Use the latest version of ONNX Runtime
-      </a>
     </li>
   
 
@@ -724,7 +603,7 @@
   
     <li class="md-nav__item">
       <a href="../ue5-float-bp/" class="md-nav__link">
-        How to use with UE5
+        UE5での注意点
       </a>
     </li>
   
@@ -738,7 +617,7 @@
   
     <li class="md-nav__item">
       <a href="../faq/" class="md-nav__link">
-        FAQ
+        よくある質問
       </a>
     </li>
   
@@ -752,7 +631,7 @@
   
     <li class="md-nav__item">
       <a href="../changelog/" class="md-nav__link">
-        Changelog
+        変更履歴
       </a>
     </li>
   
@@ -766,7 +645,7 @@
   
     <li class="md-nav__item">
       <a href="https://akiya-research-institute.github.io/NNEngine-API/annotated.html" class="md-nav__link">
-        API Reference
+        APIリファレンス
       </a>
     </li>
   
@@ -798,14 +677,14 @@
       
       
         <label class="md-nav__link" for="__nav_2">
-          Demo Project
+          デモプロジェクト
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <nav class="md-nav" aria-label="Demo Project" data-md-level="1">
+      <nav class="md-nav" aria-label="デモプロジェクト" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Demo Project
+          デモプロジェクト
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -816,7 +695,7 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview/" class="md-nav__link">
-        Human pose estimation
+        人物姿勢推定サンプル
       </a>
     </li>
   
@@ -830,7 +709,7 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview-depth-estimation/" class="md-nav__link">
-        Monocular Depth Estimation
+        単眼深度推定サンプル
       </a>
     </li>
   
@@ -844,7 +723,7 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview-style-transfer/" class="md-nav__link">
-        Artistic Style Transfer
+        任意アートスタイル転送サンプル
       </a>
     </li>
   
@@ -858,7 +737,7 @@
   
     <li class="md-nav__item">
       <a href="../demo-project-overview-u2net-portrait/" class="md-nav__link">
-        Portrait-like Image Generation
+        ポートレート風画像生成サンプル
       </a>
     </li>
   
@@ -908,7 +787,7 @@
   
     <li class="md-nav__item">
       <a href="../onnx-introduction/" class="md-nav__link">
-        Overview of ONNX
+        ONNXの概要
       </a>
     </li>
   
@@ -936,109 +815,71 @@
                   
 
 
-<h1 id="how-to-use-textureprocessing-module">How to use TextureProcessing module</h1>
-<p>Use <code>TextureProcessComponent</code> to precess images.<br />
-<code>TextureProcessComponent</code> is a component for converting a UTexture image into a byte array of a specified size, as well as  scaling, cropping, and rotating the image.<br />
-The resulting byte array can be used as input data to AI.
-An example can be found in <code>Content\NNEngineDemo\MotionCapture_Bp\MotionCapture_BpImplementation.uasset</code> of the demo project.</p>
-<h2 id="create-component">Create component</h2>
-<ol>
-<li>Create a Blueprint class and add <code>TextureProcessComponent</code>.</li>
-<li>Specify the image size after image processing as the initial values ​​of Destination Width and Destination Height.<br />
-   This <code>TextureProcessComponent</code> will output the result to a byte array with a size of (Destination Height x Destination Width x 3).</li>
-</ol>
-<div class="admonition info">
-<p class="admonition-title">To use float array</p>
-<p>Use <strong><code>TextureProcessFloatComponent</code></strong> which outputs results into a float array.</p>
-</div>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_add.png" /></p>
-<h2 id="simple-scaling">Simple Scaling</h2>
-<p>You can scale an image to the size specified at initialization by calling the <code>Resize</code> node of <code>TextureProcessComponent</code>.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_resize.png" /></p>
-<h3 id="input">Input</h3>
-<ul>
-<li><code>Input texture</code>: Original image.</li>
-<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
-<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
-</ul>
-<h3 id="output">Output</h3>
+<h1 id="onnx-runtime">最新バージョンのONNX Runtimeを使う</h1>
+<p>Windows向けでバージョン1.8以外バージョンのONNX Runtimeを使用するには、下記の手順を実行してください。<br />
+（現在、この方法はUE5.2版でのみ機能します）</p>
+<h2 id="onnx-runtime_1">ONNX Runtimeのビルド</h2>
 <ul>
 <li>
-<p><code>outputHxWxBGR</code>:<br />
-  An array of BGR values of each pixel of the image resized to (Destination Height x Destination Width), while keeping the aspect ratio. If the input and output images have different aspect ratios, part of the output array will be filled with some values.  </p>
+<p>DirectML、CUDA、TensorRTを有効にしてONNX Runtimeをビルドします。<br />
+  ビルド手順は公式ドキュメントをご覧ください。</p>
 </li>
 <li>
-<p><code>uvScalingFactor</code>:<br />
-  The ratio of the aspect ratios of input and output images. By multiplying the UV coordinates in the output image by this value, you can get the UV coordinates in the input image. For example, if the input image is 16:9 and the output image is square, the uvScalingFactor will be (1, 1.777…).  </p>
+<p>v1.15.1については<a href="https://d3ohm2q3tvfr8c.cloudfront.net/onnxruntime-win-1.15.1.zip">開発環境にてビルド済みのバイナリファイルをこちらからダウンロード可能</a>ですが、正しく動作することを保証しません。</p>
+<details class="info">
+<summary>v1.15.1で使用するCUDA等のバージョン</summary>
+<p>下記のバージョンで動作確認を行いました。</p>
+<ul>
+<li>CUDA 11.8.0</li>
+<li>cuDNN 8.9.2</li>
+<li>TensorRT 8.6.1.6</li>
+</ul>
+<p>使用したGPUは下記です。</p>
+<ul>
+<li>NVIDIA GeForce RTX 3070</li>
+</ul>
+</details>
 </li>
 </ul>
-<h2 id="affine-transform">Affine transform</h2>
-<p>By calling the <code>Affine Transform</code> node of <code>TextureProcessComponent</code>, you can transform the input image and then scale it to the size specified at initialization.<br />
-See a linear algebra textbook for affine transformation itself.</p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_affine.png" /></p>
-<h3 id="input_1">Input</h3>
+<h2 id="nnengine">NNEngineプラグインの設定変更</h2>
 <ul>
-<li><code>Input texture</code>: Original image.</li>
-<li><code>Inverse Normalized Affine Mat</code>:<br />
-  Specifies the inverse of the matrix which represents the affine transformation when the input / output image size is (1, 1). This is equal to the matrix which represents the affine transformation in UV coordinates.  </li>
-<li><code>Do Flip Image</code>: Whether to flip the image during resizing.</li>
-<li><code>Do Rotate Image</code>: Whether to rotate the image during resizing.</li>
+<li>
+<p>プラグインフォルダをエンジンフォルダからプロジェクトフォルダにコピーします。</p>
+<div class="highlight"><pre><span></span><code>コピー元：&lt;UE install folder&gt;/Engine/Plugins/Marketplace/NNEngine&gt;
+コピー先：&lt;Project folder&gt;/Plugins/NNEngine&gt;
+</code></pre></div>
+</li>
+<li>
+<p>下記のファイルを開きます。</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/OnnxRuntimeNNEngine/OnnxRuntimeNNEngine.Build.cs&gt;
+</code></pre></div>
+<p>このファイルの25行目を書き換えます。</p>
+<div class="highlight"><pre><span></span><code>int ortApiVersion = &lt;使用するONNX RuntimeのAPIバージョン。例えば、ONNX Runtime v1.15.1なら「15」&gt;; 
+</code></pre></div>
+</li>
 </ul>
-<h3 id="output_1">Output</h3>
+<h2 id="onnx-runtime_2">ONNX Runtimeの置き換え</h2>
 <ul>
-<li><code>outputHxWxBGR</code>:<br />
-  An array of BGR values of each pixel of the image after transformation and resizing to (Destination Height x Destination Width).  </li>
+<li>
+<p>ビルドしたONNX Runtimeで下記のフォルダを置き換えます。</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/ThirdParty/onnxruntime&gt;
+</code></pre></div>
+</li>
+<li>
+<p>必要なDLLを全て下記のフォルダに移動します。</p>
+<div class="highlight"><pre><span></span><code>&lt;Project folder&gt;/Plugins/NNEngine/Source/ThirdParty/onnxruntime/bin&gt;
+</code></pre></div>
+<p>対象DLL</p>
+<ul>
+<li><code>onnxruntime.dll</code></li>
+<li><code>onnxruntime_providers_shared.dll</code></li>
+<li><code>onnxruntime_providers_cuda.dll</code></li>
+<li><code>onnxruntime_providers_tensorrt.dll</code></li>
+<li><code>DirectML.dll</code></li>
+<li><code>zlibwapi.dll</code></li>
 </ul>
-<h2 id="function-to-find-the-affine-transformation-matrix-1">Function to find the Affine transformation matrix 1</h2>
-<p>By calling the <code>Get Inverse Affine Mat</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine1.png" /></p>
-<h3 id="input_2">Input</h3>
-<ul>
-<li><code>Center</code>: The center of the square area in the coordinate of the input image. </li>
-<li><code>Orientation</code>: 
-  The orientation of the Y-axis of the square area in the coordinate of the input image. For example, (0, 1) when there is no rotation, and (-1, 0) when rotating 90 degrees clockwise.  </li>
-<li><code>Size</code>: The length of the side of the square area in the coordinate of the input image.</li>
-</ul>
-<h3 id="output_2">Output</h3>
-<ul>
-<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation</li>
-</ul>
-<h2 id="function-to-find-the-affine-transformation-matrix-2">Function to find the Affine transformation matrix 2</h2>
-<p>By calling the <code>Get Inverse Affine Mat From 2 Points</code> node, you can find the inverse matrix of the matrix that represents the affine transformation that crops an image to an arbitrary square area.  </p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_getAffine2.png" /></p>
-<h3 id="input_3">Input</h3>
-<ul>
-<li><code>Center</code>: The center of the square area in the coordinate of the input image.</li>
-<li><code>Top Center</code>: The center of the top edge of the square area in the coordinate of the input image.</li>
-<li><code>Scaling Factor</code>:<br />
-  Parameter for adjusting the size of the square area. The side of the square area will be (The distance between Center and Top Center * 2 * this value).  </li>
-</ul>
-<h3 id="output_3">Output</h3>
-<ul>
-<li><code>Out Inverse Affine Mat</code>: Inverse matrix of the matrix representing the obtained affine transformation </li>
-</ul>
-<h2 id="create-texture-from-an-array-of-bytes-or-floats">Create Texture from an array of bytes or floats</h2>
-<h3 id="create-texture2d-objects">Create Texture2D objects</h3>
-<p>Call <code>CreateTexture2d_xxx_yyy</code> nodes to create Texture2D objects.</p>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_createTexture2d.png" /></p>
-<ul>
-<li><code>CreateTexture2d_Gray_Byte</code>: Create Texture2D with one color channel. Each pixel has a uint8 value.</li>
-<li><code>CreateTexture2d_Gray_Float</code>: Create Texture2D with one color channel. Each pixel has a float32 value.</li>
-<li><code>CreateTexture2d_BGRA_Byte</code>: Create Texture2D with 4(BGRA) color channel. Each pixel has 4 uint8 values.</li>
-<li><code>CreateTexture2d_RGBA_Float</code>: Create Texture2D with 4(RGBA) color channel. Each pixel has 4 float32 values.</li>
-</ul>
-<h3 id="copy-data-from-an-array-to-texture2d-objects">Copy data from an array to Texture2D objects</h3>
-<p>Call <code>CopyByteArrayToTexture2D_zzz</code> nodes to copy data from the array to Texture2D.</p>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>The size of the input array must be equal to the number of the pixel of output texture.</p>
-</div>
-<p><img alt="" loading="lazy" src="../images/TextureProcessing_copyToTexture2d.png" /></p>
-<ul>
-<li><code>CopyByteArrayToTexture2D</code>: Copy the data of a byte array to a Texture2D object.</li>
-<li><code>CopyFloatArrayToTexture2D</code>: Copy the data of a float array to a Texture2D object.</li>
-<li><code>CopyByteArrayToTexture2D_RGB_To_BGRA</code>: Copy the data of a byte array to a Texture2D object while converting RGB format to BGRA format.</li>
-<li><code>CopyFloatArrayToTexture2D_RGB_To_RGBA</code>: Copy the data of a float array to a Texture2D object while converting RGB format to RGBA format.</li>
+<p>開発環境でビルド済みのv1.15.1のバイナリについては、この作業は実施済みです。</p>
+</li>
 </ul>
 
 
@@ -1059,32 +900,32 @@ See a linear algebra textbook for affine transformation itself.</p>
         <footer class="md-footer">
   
     
-    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+    <nav class="md-footer__inner md-grid" aria-label="フッター" >
       
         
-        <a href="../how-to-use-onnxruntime-module/" class="md-footer__link md-footer__link--prev" aria-label="Previous: OnnxRuntime module" rel="prev">
+        <a href="../tips-dynamic-shape/" class="md-footer__link md-footer__link--prev" aria-label="前: 動的な入出力形状を持つモデル" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Previous
+                前
               </span>
-              OnnxRuntime module
+              動的な入出力形状を持つモデル
             </div>
           </div>
         </a>
       
       
         
-        <a href="../how-to-use-directx-utility-module/" class="md-footer__link md-footer__link--next" aria-label="Next: DirectXUtility module" rel="next">
+        <a href="../ue5-float-bp/" class="md-footer__link md-footer__link--next" aria-label="次: UE5での注意点" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
-                Next
+                次
               </span>
-              DirectXUtility module
+              UE5での注意点
             </div>
           </div>
           <div class="md-footer__button md-icon">
@@ -1153,7 +994,7 @@ See a linear algebra textbook for affine transformation itself.</p>
       
       
     
-    <a href="https://www.unrealengine.com/marketplace/en/product/74892c770dc149b1b5c4e872804e6ade" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-social__link">
+    <a href="https://www.unrealengine.com/marketplace/ja/product/74892c770dc149b1b5c4e872804e6ade" target="_blank" rel="noopener" title="www.unrealengine.com" class="md-social__link">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18H6v-4h6m9 0v-2l-1-5H4l-1 5v2h1v6h10v-6h4v6h2v-6m0-10H4v2h16V4Z"/></svg>
     </a>
   
@@ -1168,7 +1009,7 @@ See a linear algebra textbook for affine transformation itself.</p>
       <div class="md-dialog__inner md-typeset"></div>
     </div>
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.tracking", "navigation.sections", "toc.integrate", "search.suggest", "search.highlight", "search.share", "header.autohide"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.more.one": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3082\u30461\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.other": "\u3053\u306e\u30da\u30fc\u30b8\u5185\u306b\u3042\u3068#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.term.missing": "\u691c\u7d22\u306b\u542b\u307e\u308c\u306a\u3044", "select.version.title": "Select version"}}</script>
     
     
       <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>

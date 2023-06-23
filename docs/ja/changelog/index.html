@@ -15,7 +15,7 @@
         <link rel="canonical" href="https://Akiya-Research-Institute.github.io/NNEngine-API/changelog/">
       
       <link rel="icon" href="../images/favicon.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-8.5.10">
     
     
       
@@ -518,6 +518,20 @@
 
             
           
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tips-latest-ort/" class="md-nav__link">
+        最新バージョンのONNX Runtimeを使う
+      </a>
+    </li>
+  
+
+            
+          
         </ul>
       </nav>
     </li>
@@ -591,6 +605,13 @@
       目次
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#v17-2023-06-23" class="md-nav__link">
+    v1.7 (2023-06-23)
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#v16-2023-01-27" class="md-nav__link">
@@ -828,6 +849,12 @@
 
 
 <h1 id="_1">変更履歴</h1>
+<h2 id="v17-2023-06-23">v1.7 (2023-06-23)</h2>
+<ul>
+<li>Unreal Engine 5.2版を公開しました。</li>
+<li>FOnnxTensorInfoを他モジュールのC++から使用できるよう、DLLEXPORTを追加しました。</li>
+<li>ONNX Runtimeの最新APIで動作するよう、条件付きコンパイルを追加しました。<a href="../tips-latest-ort">ONNX Runtime v1.15.1で動作させる方法はこちら</a>をご覧ください。</li>
+</ul>
 <h2 id="v16-2023-01-27">v1.6 (2023-01-27)</h2>
 <ul>
 <li>Unreal Engine 5.1版を公開しました。</li>
@@ -836,7 +863,7 @@
 <h2 id="v15-2022-04-10">v1.5 (2022-04-10)</h2>
 <ul>
 <li>Unreal Engine 5.0版を公開しました。<ul>
-<li>UE5で<a href="../ue5-float-bp.md">Blurprintから単精度のFloat型の入出力をバインドする</a>際には特別な操作が必要です。</li>
+<li>UE5で<a href="../ue5-float-bp">Blurprintから単精度のFloat型の入出力をバインドする</a>際には特別な操作が必要です。</li>
 <li>UE5では、OnnxRuntimeモジュールは、エンジンモジュールとの競合を避けるため、OnnxRuntimeNNEngineモジュールに改称しました。既存プロジェクトの移行時にはご注意ください。</li>
 </ul>
 </li>
