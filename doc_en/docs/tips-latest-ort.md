@@ -1,14 +1,14 @@
 # Use the latest version of ONNX Runtime
 
-To use a version of ONNX Runtime other than version 1.8 for Windows, please follow the steps below.
-(Currently, this method only works with the plugin for UE5.2)
+To use a version of ONNX Runtime other than v1.8, please follow the steps below.  
+(Currently, this method only works with the plugin for UE5.2 on Windows)
 
 ## Build ONNX Runtime
 
 - Build ONNX Runtime with DirectML, CUDA, and TensorRT enabled.  
   See the official documentation for build instructions.
 
-- For v1.15.1, you can [download a pre-built binary file in the development environment here](https://d3ohm2q3tvfr8c.cloudfront.net/onnxruntime-win-1.15.1.zip), but we do not guarantee that it works correctly.
+- For v1.15.1, you can [download a binary file built in the development environment](https://d3ohm2q3tvfr8c.cloudfront.net/onnxruntime-win-1.15.1.zip), but we do not guarantee that it works correctly.
 
     ??? Info "Versions of CUDA, cudNN, TRT used in v1.15.1"
 
