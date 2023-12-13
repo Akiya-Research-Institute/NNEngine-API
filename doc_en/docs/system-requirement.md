@@ -2,16 +2,21 @@
 
 ## Supported Unreal Engine version:
 
-- 4.26
-- 4.27
+- 5.1
+- 5.2
+- 5.3
 
 ## Supported Platforms
 
 | Platform                   | Development | Target Build |
 | -------------------------- | ----------- | ------------ |
 | Windows 10 64bit           | ✅          | ✅          |
-| Ubuntu 18.04.6 Desktop 64bit | ✅          | ✅           | 
-| Android                    |             | ✅(Experimental) |
+| Ubuntu 18.04.6 Desktop 64bit | ⚠️(Experimental) | ⚠️(Experimental) | 
+| Android                    |             | ⚠️(Experimental) |
+
+!!! Warning "Tested only on Windows"
+    Versions for UE5.3 and later have only been tested on Windows.  
+    They have not been fully tested on Ubuntu and Android and we cannot guarantee that they will work properly. Therefore, they are marked as "Experimental".
 
 !!! Warning "Model format for Android"
     To use on Android, DNN models need to be converted to ORT format. See [the official document](https://onnxruntime.ai/docs/reference/ort-format-models.html#convert-onnx-models-to-ort-format) for the details.

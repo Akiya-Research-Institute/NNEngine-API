@@ -829,8 +829,9 @@
 <h1 id="_1">動作環境</h1>
 <h2 id="unreal-engine">対応Unreal Engineバージョン</h2>
 <ul>
-<li>4.26</li>
-<li>4.27</li>
+<li>5.1</li>
+<li>5.2</li>
+<li>5.3</li>
 </ul>
 <h2 id="_2">対応プラットフォーム</h2>
 <table>
@@ -849,16 +850,21 @@
 </tr>
 <tr>
 <td>Ubuntu 18.04.6 Desktop 64bit</td>
-<td>✅</td>
-<td>✅</td>
+<td>⚠️(Experimental)</td>
+<td>⚠️(Experimental)</td>
 </tr>
 <tr>
 <td>Android</td>
 <td></td>
-<td>✅(Experimental)</td>
+<td>⚠️(Experimental)</td>
 </tr>
 </tbody>
 </table>
+<div class="admonition warning">
+<p class="admonition-title">Windowsでのみテストされています</p>
+<p>UE5.3以降のバージョンはWindowsでのみテストされています。
+UbuntuやAndroidでは十分にテストされておらず正しく動作することが保証できません。そのため上記の通りExperimentalとしています。</p>
+</div>
 <div class="admonition warning">
 <p class="admonition-title">Androidでのモデル形式</p>
 <p>Androidで実行するにはDNNモデルをORTフォーマットに変換する必要があります。詳細は<a href="https://onnxruntime.ai/docs/reference/ort-format-models.html#convert-onnx-models-to-ort-format">公式ドキュメント</a>をご確認ください。</p>

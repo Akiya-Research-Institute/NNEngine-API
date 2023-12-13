@@ -2,16 +2,21 @@
 
 ## 対応Unreal Engineバージョン
 
-- 4.26
-- 4.27
+- 5.1
+- 5.2
+- 5.3
 
 ## 対応プラットフォーム
 
 | Platform                   | Development | Target Build |
 | -------------------------- | ----------- | ------------ |
 | Windows 10 64bit           | ✅          | ✅          |
-| Ubuntu 18.04.6 Desktop 64bit | ✅          | ✅           | 
-| Android                    |             | ✅(Experimental) |
+| Ubuntu 18.04.6 Desktop 64bit | ⚠️(Experimental) | ⚠️(Experimental) | 
+| Android                    |             | ⚠️(Experimental) |
+
+!!! Warning "Windowsでのみテストされています"
+    UE5.3以降のバージョンはWindowsでのみテストされています。
+    UbuntuやAndroidでは十分にテストされておらず正しく動作することが保証できません。そのため上記の通りExperimentalとしています。
 
 !!! Warning "Androidでのモデル形式"
     Androidで実行するにはDNNモデルをORTフォーマットに変換する必要があります。詳細は[公式ドキュメント](https://onnxruntime.ai/docs/reference/ort-format-models.html#convert-onnx-models-to-ort-format)をご確認ください。
