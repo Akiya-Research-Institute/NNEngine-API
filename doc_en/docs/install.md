@@ -1,6 +1,6 @@
 # Installation
 
-1. Purchase at [UE Marketplace](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) and install it.
+1. Purchase at [Fab](https://www.fab.com/listings/67591270-75f6-456d-aa89-c64e1e0ee05f) and install it.
 2. Create an Unreal Engine project.
 3. Open the project, open "Edit > Plugins" on the editor menu, enable "NNEngine", and restart the project.
 

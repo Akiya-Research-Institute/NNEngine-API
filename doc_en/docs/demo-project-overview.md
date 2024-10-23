@@ -6,7 +6,7 @@ Example project of human pose estimation, facial capture and eye tracking using 
 
 - OS: Windows 10 64bit or Linux x64 (Ubuntu 18.04.6)
 - Unreal Engine: 4.26, 5.0
-- [NNEngine plugin](https://www.unrealengine.com/marketplace/product/74892c770dc149b1b5c4e872804e6ade) v1.5
+- [NNEngine plugin](https://www.fab.com/listings/67591270-75f6-456d-aa89-c64e1e0ee05f) v1.5
 
 - For Windows
     - Visual Studio is required to be installed. See [the official documentation](https://docs.unrealengine.com/4.27/en-US/ProductionPipelines/DevelopmentSetup/VisualStudioSetup/) for how to install.  
