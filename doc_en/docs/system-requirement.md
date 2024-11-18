@@ -2,9 +2,11 @@
 
 ## Supported Unreal Engine version:
 
-- 5.2
 - 5.3
 - 5.4
+- 5.5
+
+However, when using CUDA or TensorRT, this plugin cannot be used at the same time as the official "NNERuntimeORT" plugin.
 
 ## Supported Platforms
 
@@ -33,7 +35,10 @@
 | Android                    | ✅          |              |          |             | (Not tested yet) |
 
 - To use GPU acceleration with DirectML, a DirectX 12 capable GPU is required.
-- To use GPU acceleration with CUDA and TensorRT, a supported NVIDIA GPU is required and the following versions of CUDA, cuDNN, and TensorRT are required to be installed. 
+- To use GPU acceleration with CUDA and TensorRT, 
+    - a supported NVIDIA GPU is required.
+    - you need to disable "NNERuntimeORT" which is enabled by default sinve UE5.5.
+    - the following versions of CUDA, cuDNN, and TensorRT are required to be installed. 
 
 ### CUDA, cuDNN, TensorRT versions
 

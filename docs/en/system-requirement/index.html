@@ -829,10 +829,11 @@
 <h1 id="system-requirements">System Requirements</h1>
 <h2 id="supported-unreal-engine-version">Supported Unreal Engine version:</h2>
 <ul>
-<li>5.2</li>
 <li>5.3</li>
 <li>5.4</li>
+<li>5.5</li>
 </ul>
+<p>However, when using CUDA or TensorRT, this plugin cannot be used at the same time as the official "NNERuntimeORT" plugin.</p>
 <h2 id="supported-platforms">Supported Platforms</h2>
 <table>
 <thead>
@@ -914,7 +915,12 @@ They have not been fully tested on Ubuntu and Android and we cannot guarantee th
 </table>
 <ul>
 <li>To use GPU acceleration with DirectML, a DirectX 12 capable GPU is required.</li>
-<li>To use GPU acceleration with CUDA and TensorRT, a supported NVIDIA GPU is required and the following versions of CUDA, cuDNN, and TensorRT are required to be installed. </li>
+<li>To use GPU acceleration with CUDA and TensorRT, <ul>
+<li>a supported NVIDIA GPU is required.</li>
+<li>you need to disable "NNERuntimeORT" which is enabled by default sinve UE5.5.</li>
+<li>the following versions of CUDA, cuDNN, and TensorRT are required to be installed. </li>
+</ul>
+</li>
 </ul>
 <h3 id="cuda-cudnn-tensorrt-versions">CUDA, cuDNN, TensorRT versions</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Linux</label></div>

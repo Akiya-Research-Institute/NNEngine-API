@@ -829,10 +829,11 @@
 <h1 id="_1">動作環境</h1>
 <h2 id="unreal-engine">対応Unreal Engineバージョン</h2>
 <ul>
-<li>5.1</li>
-<li>5.2</li>
 <li>5.3</li>
+<li>5.4</li>
+<li>5.5</li>
 </ul>
+<p>ただし、CUDAまたはTensorRTを使用する場合は公式プラグインである「NNERuntimeORT」とは同時に使用することができません。</p>
 <h2 id="_2">対応プラットフォーム</h2>
 <table>
 <thead>
@@ -914,7 +915,12 @@ UbuntuやAndroidでは十分にテストされておらず正しく動作する�
 </table>
 <ul>
 <li>DirectMLによるGPUアクセラレーションには、DirectX 12対応GPUが必要です。</li>
-<li>CUDAまたはTensorRTによるGPUアクセラレーションには、対応するNVIDIA GPUが必要です。また、下記に記載の特定バージョンのCUDA、cuDNN、TensorRTのインストールが必要です。</li>
+<li>CUDAまたはTensorRTによるGPUアクセラレーションには、<ul>
+<li>対応するNVIDIA GPUが必要です。</li>
+<li>UE5.5以降ではデフォルトで有効になっている「NNERuntimeORT」を無効にする必要があります。</li>
+<li>下記に記載の特定バージョンのCUDA、cuDNN、TensorRTのインストールが必要です。</li>
+</ul>
+</li>
 </ul>
 <h3 id="cuda-cudnn-tensorrt">必要なCUDA, cuDNN, TensorRT バージョン</h3>
 <div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">Linux</label></div>

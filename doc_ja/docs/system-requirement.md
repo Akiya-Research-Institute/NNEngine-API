@@ -2,9 +2,11 @@
 
 ## 対応Unreal Engineバージョン
 
-- 5.1
-- 5.2
 - 5.3
+- 5.4
+- 5.5
+
+ただし、CUDAまたはTensorRTを使用する場合は公式プラグインである「NNERuntimeORT」とは同時に使用することができません。
 
 ## 対応プラットフォーム
 
@@ -33,7 +35,10 @@
 | Android                    | ✅          |              |          |             | (Not tested yet) |
 
 - DirectMLによるGPUアクセラレーションには、DirectX 12対応GPUが必要です。
-- CUDAまたはTensorRTによるGPUアクセラレーションには、対応するNVIDIA GPUが必要です。また、下記に記載の特定バージョンのCUDA、cuDNN、TensorRTのインストールが必要です。
+- CUDAまたはTensorRTによるGPUアクセラレーションには、
+    - 対応するNVIDIA GPUが必要です。
+    - UE5.5以降ではデフォルトで有効になっている「NNERuntimeORT」を無効にする必要があります。
+    - 下記に記載の特定バージョンのCUDA、cuDNN、TensorRTのインストールが必要です。
 
 ### 必要なCUDA, cuDNN, TensorRT バージョン
 
